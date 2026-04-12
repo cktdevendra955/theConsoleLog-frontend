@@ -1,66 +1,115 @@
 "use client";
 
-import { Dispatch, SetStateAction } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 import {
-  MdDashboard,
-  MdWork,
-  MdDescription,
-  MdClose,
-} from "react-icons/md";
+  LayoutDashboard,
+  Users,
+  CreditCard,
+  TrendingUp,
+  Mail,
+  Calendar,
+  Settings,
+  HelpCircle,
+  LogOut,
+} from "lucide-react";
 
-interface SidebarProps {
+const navItems = [
+  { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
+  { icon: Users, label: "Customers", path: "/dashboard/customers" },
+  { icon: CreditCard, label: "Transactions", path: "/dashboard/transactions" },
+  { icon: TrendingUp, label: "Analytics", path: "/dashboard/analytics" },
+  { icon: Mail, label: "Messages", path: "/dashboard/messages" },
+  { icon: Calendar, label: "Calendar", path: "/dashboard/calendar" },
+];
+
+const secondaryNavItems = [
+  { icon: Settings, label: "Settings", path: "/dashboard/settings" },
+  { icon: HelpCircle, label: "Support", path: "/dashboard/support" },
+];
+
+export default function Sidebar({
+  isOpen,
+  isMobile = false,
+}: {
   isOpen: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
-}
+  isMobile?: boolean;
+}) {
+  const pathname = usePathname();
 
-export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
   return (
-    <>
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 z-40 md:hidden"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
+    <motion.aside
+      animate={{ width: isMobile ? 256 : isOpen ? 256 : 80 }}
+      className={`flex flex-col border-r ${
+        isMobile
+          ? "w-64 bg-white"
+          : "hidden md:flex bg-card/80 backdrop-blur-xl"
+      }`}
+    >
+      {/* 🔥 FULL HEIGHT CONTAINER */}
+      <div className="flex flex-col h-[100dvh]">
+        
+        {/* Logo */}
+        <div className="p-6 flex items-center gap-3 shrink-0">
+          <div className="w-8 h-8 bg-primary text-white flex items-center justify-center rounded-lg font-bold">
+            Z
+          </div>
+          {(isOpen || isMobile) && <span className="font-bold">Zenith</span>}
+        </div>
 
-      <aside
-        className={`
-          fixed top-0 left-0 h-full w-[260px] bg-white border-r p-6 z-50
-          transform transition-transform duration-300
-          ${isOpen ? "translate-x-0" : "-translate-x-full"}
-          md:translate-x-0
-        `}
-      >
-        {/* Mobile Close */}
-        <div className="flex justify-between items-center mb-6 md:hidden">
-          <h2 className="font-bold text-lg">Menu</h2>
-          <button onClick={() => setIsOpen(false)}>
-            <MdClose size={24} />
+        {/* Scrollable Nav */}
+        <div className="flex-1 overflow-y-auto px-3 space-y-1 overscroll-contain">
+          {navItems.map((item) => {
+            const isActive = pathname === item.path;
+
+            return (
+              <Link key={item.label} href={item.path}>
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  className={`flex items-center gap-3 h-11 px-3 rounded-md ${
+                    isActive
+                      ? "bg-primary text-white"
+                      : "text-muted-foreground hover:bg-muted"
+                  } ${!isOpen && !isMobile && "justify-center px-0"}`}
+                >
+                  <item.icon className="h-5 w-5" />
+                  {(isOpen || isMobile) && <span>{item.label}</span>}
+                </motion.div>
+              </Link>
+            );
+          })}
+
+          <div className="my-4 border-t" />
+
+          {secondaryNavItems.map((item) => {
+            const isActive = pathname === item.path;
+
+            return (
+              <Link key={item.label} href={item.path}>
+                <div
+                  className={`flex items-center gap-3 h-11 px-3 rounded-md ${
+                    isActive
+                      ? "bg-primary text-white"
+                      : "text-muted-foreground hover:bg-muted"
+                  }`}
+                >
+                  <item.icon className="h-5 w-5" />
+                  {(isOpen || isMobile) && <span>{item.label}</span>}
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* Footer */}
+        <div className="p-4 border-t shrink-0">
+          <button className="flex items-center gap-3 text-muted-foreground hover:text-red-500">
+            <LogOut className="h-5 w-5" />
+            {(isOpen || isMobile) && "Logout"}
           </button>
         </div>
-
-        {/* Logo */}
-        <div className="hidden md:block mb-8">
-          <h1 className="text-xl font-bold text-indigo-600">ReferEdge</h1>
-        </div>
-
-        {/* Nav */}
-        <nav className="flex flex-col gap-2">
-          <NavItem icon={<MdDashboard />} label="Dashboard" />
-          <NavItem icon={<MdWork />} label="Jobs" />
-          <NavItem icon={<MdDescription />} label="Resume" />
-        </nav>
-      </aside>
-    </>
-  );
-}
-
-function NavItem({ icon, label }: { icon: React.ReactNode; label: string }) {
-  return (
-    <div className="flex items-center gap-3 px-4 py-3 rounded-lg cursor-pointer text-slate-600 hover:bg-slate-100">
-      {icon}
-      <span>{label}</span>
-    </div>
+      </div>
+    </motion.aside>
   );
 }
