@@ -1,118 +1,325 @@
 "use client";
 
-import React, { useState } from 'react';
-// Importing specific icons from Material Design (md) set
-import { MdPerson, MdWork, MdAdd, MdDownload } from 'react-icons/md';
-
-interface ResumeData {
-  name: string;
-  role: string;
-  experience: string;
-}
 
 export default function SimpleResume() {
-  const [data, setData] = useState<ResumeData>({
-    name: "Alex Rivers",
-    role: "Senior Product Designer",
-    experience: "Spearheaded the redesign of the Checkout experience..."
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setData(prev => ({ ...prev, [name]: value }));
-  };
+  
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col md:flex-row font-sans">
-      
-      {/* LEFT PANEL: The Form */}
-      <section className="w-full md:w-1/2 p-8 space-y-8 bg-white border-r border-slate-200 overflow-y-auto">
-        <div>
-          <h2 className="text-2xl font-bold text-slate-900">ReferEdge Editor</h2>
-          <p className="text-slate-500 text-sm">Update your information to see live changes.</p>
-        </div>
-
-        {/* Name Input */}
-        <div className="space-y-2">
-          <label className="flex items-center gap-2 text-xs font-bold uppercase text-slate-400">
-            <MdPerson size={16} className="text-indigo-500" /> Full Name
-          </label>
-          <input 
-            name="name"
-            value={data.name}
-            onChange={handleChange}
-            className="w-full p-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all"
-            type="text" 
-          />
-        </div>
-
-        {/* Role Input */}
-        <div className="space-y-2">
-          <label className="flex items-center gap-2 text-xs font-bold uppercase text-slate-400">
-            <MdWork size={16} className="text-indigo-500" /> Job Title
-          </label>
-          <input 
-            name="role"
-            value={data.role}
-            onChange={handleChange}
-            className="w-full p-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none transition-all"
-            type="text" 
-          />
-        </div>
-
-        {/* Experience Input */}
-        <div className="space-y-2">
-          <div className="flex justify-between items-center">
-            <label className="flex items-center gap-2 text-xs font-bold uppercase text-slate-400">
-               Experience
-            </label>
-            <button className="text-indigo-600 text-xs font-bold flex items-center gap-1 hover:underline">
-              <MdAdd size={16} /> Add Role
-            </button>
-          </div>
-          <textarea 
-            name="experience"
-            value={data.experience}
-            onChange={handleChange}
-            rows={5}
-            className="w-full p-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-indigo-500 outline-none text-sm leading-relaxed"
-          />
-        </div>
-      </section>
-
-      {/* RIGHT PANEL: Live Preview */}
-      <section className="w-full md:w-1/2 bg-slate-100 p-6 md:p-12 flex flex-col items-center overflow-y-auto">
-        
-        {/* The Resume Paper */}
-        <div className="w-full max-w-[500px] bg-white shadow-2xl p-10 min-h-[600px] flex flex-col">
-          
-          <div className="border-b-2 border-slate-900 pb-4 mb-8">
-            <h1 className="text-3xl font-black text-slate-900 uppercase tracking-tighter">
-              {data.name || "Your Name"}
-            </h1>
-            <p className="text-xs font-bold text-slate-500 uppercase tracking-[3px]">
-              {data.role || "Professional Title"}
-            </p>
-          </div>
-
-          <div className="mb-6">
-            <h3 className="text-[10px] font-bold text-slate-300 uppercase tracking-[2px] mb-4">Work Experience</h3>
-            <div className="text-[13px] text-slate-700 leading-loose italic">
-              {data.experience || "Your work history will appear here..."}
+    <div className="bg-background text-on-surface min-h-screen">
+      <main className=" pt-20 pb-24 px-6 md:px-12">
+        <div className="max-w-4xl mx-auto">
+          <div className="sticky top-16 z-40 bg-background/95 backdrop-blur-md py-4 mb-8">
+            <div className="flex justify-between items-center">
+              <div>
+                <span className="text-primary font-bold text-xs tracking-widest uppercase">
+                  Step 1 of 3
+                </span>
+                <h1 className="headline-md font-bold tracking-tight">
+                  Resume Details
+                </h1>
+              </div>
+              <button className="flex items-center gap-2 px-6 py-3 cta-gradient text-white rounded-xl font-semibold shadow-md active:scale-95 transition-all">
+                <span>Next: Choose Template</span>
+                <span className="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
+            <div className="w-full bg-surface-container-high h-1.5 rounded-full mt-4">
+              <div className="bg-primary h-full w-1/3 rounded-full shadow-[0_0_8px_rgba(53,37,205,0.4)]"></div>
             </div>
           </div>
-
-          <div className="mt-auto pt-10 flex justify-center opacity-10">
-            <div className="w-12 h-1 bg-slate-900 rounded-full"></div>
+          <div className="flex flex-col gap-8">
+            <section className="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">
+                  person
+                </span>
+                <h2 className="title-lg font-semibold text-on-surface">
+                  Personal Information
+                </h2>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="label-md text-on-surface-variant font-semibold">
+                    Full Name
+                  </label>
+                  <input
+                    className="w-full bg-surface-container-low border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/30 focus:bg-white transition-all outline-none"
+                    placeholder="e.g. Julianne Sterling"
+                    type="text"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="label-md text-on-surface-variant font-semibold">
+                    Professional Title
+                  </label>
+                  <input
+                    className="w-full bg-surface-container-low border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/30 focus:bg-white transition-all outline-none"
+                    placeholder="e.g. Senior Product Designer"
+                    type="text"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="label-md text-on-surface-variant font-semibold">
+                    Email Address
+                  </label>
+                  <input
+                    className="w-full bg-surface-container-low border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/30 focus:bg-white transition-all outline-none"
+                    placeholder="julianne@example.com"
+                    type="email"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="label-md text-on-surface-variant font-semibold">
+                    Phone Number
+                  </label>
+                  <input
+                    className="w-full bg-surface-container-low border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/30 focus:bg-white transition-all outline-none"
+                    placeholder="+1 (555) 000-0000"
+                    type="tel"
+                  />
+                </div>
+              </div>
+            </section>
+            <section className="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">
+                  description
+                </span>
+                <h2 className="title-lg font-semibold text-on-surface">
+                  Professional Summary
+                </h2>
+              </div>
+              <div className="space-y-2">
+                <label className="label-md text-on-surface-variant font-semibold">
+                  Highlight your core strengths and career goals
+                </label>
+                <textarea
+                  className="w-full bg-surface-container-low border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/30 focus:bg-white transition-all outline-none resize-none"
+                  placeholder="Innovative Product Designer with 8+ years of experience in..."
+                ></textarea>
+                <p className="text-xs text-on-surface-variant mt-2">
+                  Pro tip: Use strong action verbs and quantify achievements
+                  where possible.
+                </p>
+              </div>
+            </section>
+            <section className="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+              <div className="flex justify-between items-center mb-8">
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">
+                    work
+                  </span>
+                  <h2 className="title-lg font-semibold text-on-surface">
+                    Work Experience
+                  </h2>
+                </div>
+                <button className="flex items-center gap-1 text-primary label-md font-bold hover:bg-primary-fixed px-3 py-1.5 rounded-lg transition-all">
+                  <span className="material-symbols-outlined text-sm">add</span>{" "}
+                  Add New
+                </button>
+              </div>
+              <div className="bg-surface-container-low rounded-xl p-6 relative group border-l-4 border-primary/20">
+                <button className="absolute top-4 right-4 text-on-surface-variant/40 hover:text-error transition-colors">
+                  <span className="material-symbols-outlined">delete</span>
+                </button>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="label-md text-on-surface-variant font-semibold">
+                      Job Title
+                    </label>
+                    <input
+                      className="w-full bg-white border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/30 transition-all outline-none"
+                      placeholder="Senior UX Designer"
+                      type="text"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="label-md text-on-surface-variant font-semibold">
+                      Company
+                    </label>
+                    <input
+                      className="w-full bg-white border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/30 transition-all outline-none"
+                      placeholder="Creative Pulse Agency"
+                      type="text"
+                    />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <label className="label-md text-on-surface-variant font-semibold">
+                        Start Date
+                      </label>
+                      <input
+                        className="w-full bg-white border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/30 transition-all outline-none"
+                        type="month"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="label-md text-on-surface-variant font-semibold">
+                        End Date
+                      </label>
+                      <input
+                        className="w-full bg-white border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/30 transition-all outline-none"
+                        type="month"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex items-center pt-8">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input
+                        className="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary transition-all"
+                        type="checkbox"
+                      />
+                      <span className="body-lg text-on-surface-variant">
+                        I currently work here
+                      </span>
+                    </label>
+                  </div>
+                  <div className="md:col-span-2 space-y-2">
+                    <label className="label-md text-on-surface-variant font-semibold">
+                      Responsibilities &amp; Achievements
+                    </label>
+                    <textarea
+                      className="w-full bg-white border-none rounded-xl py-3 px-4 focus:ring-2 focus:ring-primary/30 transition-all outline-none resize-none"
+                      placeholder="• Led the redesign of the mobile app increasing user retention by 25%..."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+              <div className="flex items-center gap-3 mb-8">
+                <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">
+                  psychology
+                </span>
+                <h2 className="title-lg font-semibold text-on-surface">
+                  Skills &amp; Expertise
+                </h2>
+              </div>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <div className="bg-primary-fixed px-4 py-2 rounded-full flex items-center gap-2">
+                  <span className="label-md text-on-primary-fixed-variant">
+                    User Research
+                  </span>
+                  <span className="material-symbols-outlined text-sm cursor-pointer hover:text-primary">
+                    close
+                  </span>
+                </div>
+                <div className="bg-primary-fixed px-4 py-2 rounded-full flex items-center gap-2">
+                  <span className="label-md text-on-primary-fixed-variant">
+                    Figma
+                  </span>
+                  <span className="material-symbols-outlined text-sm cursor-pointer hover:text-primary">
+                    close
+                  </span>
+                </div>
+                <div className="bg-primary-fixed px-4 py-2 rounded-full flex items-center gap-2">
+                  <span className="label-md text-on-primary-fixed-variant">
+                    React Architecture
+                  </span>
+                  <span className="material-symbols-outlined text-sm cursor-pointer hover:text-primary">
+                    close
+                  </span>
+                </div>
+                <div className="bg-primary-fixed px-4 py-2 rounded-full flex items-center gap-2">
+                  <span className="label-md text-on-primary-fixed-variant">
+                    Design Systems
+                  </span>
+                  <span className="material-symbols-outlined text-sm cursor-pointer hover:text-primary">
+                    close
+                  </span>
+                </div>
+                <div className="bg-surface-container-low px-4 py-2 rounded-full border border-dashed border-outline-variant hover:border-primary transition-all">
+                  <input
+                    className="bg-transparent border-none p-0 label-md w-24 focus:ring-0 placeholder-on-surface-variant/40"
+                    placeholder="Add skill..."
+                    type="text"
+                  />
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <span className="text-xs text-on-surface-variant font-medium">
+                  Suggestions:
+                </span>
+                <button className="text-xs text-primary hover:underline">
+                  Accessibility
+                </button>
+                <button className="text-xs text-primary hover:underline">
+                  Strategic Planning
+                </button>
+                <button className="text-xs text-primary hover:underline">
+                  SEO
+                </button>
+              </div>
+            </section>
+            <section className="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+              <div className="flex justify-between items-center mb-8">
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">
+                    rocket_launch
+                  </span>
+                  <h2 className="title-lg font-semibold text-on-surface">
+                    Projects
+                  </h2>
+                </div>
+                <button className="flex items-center gap-1 text-primary label-md font-bold hover:bg-primary-fixed px-3 py-1.5 rounded-lg transition-all">
+                  <span className="material-symbols-outlined text-sm">add</span>{" "}
+                  Add Project
+                </button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-surface-container-low p-6 rounded-xl space-y-4">
+                  <div className="space-y-1">
+                    <label className="label-md text-on-surface-variant font-semibold">
+                      Project Name
+                    </label>
+                    <input
+                      className="w-full bg-white border-none rounded-lg py-2 px-3 text-sm focus:ring-2 focus:ring-primary/30 outline-none"
+                      placeholder="NeoBank Mobile App"
+                      type="text"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="label-md text-on-surface-variant font-semibold">
+                      Link
+                    </label>
+                    <input
+                      className="w-full bg-white border-none rounded-lg py-2 px-3 text-sm focus:ring-2 focus:ring-primary/30 outline-none"
+                      placeholder="https://github.com/..."
+                      type="url"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <label className="label-md text-on-surface-variant font-semibold">
+                      Brief Description
+                    </label>
+                    <textarea
+                      className="w-full bg-white border-none rounded-lg py-2 px-3 text-sm focus:ring-2 focus:ring-primary/30 outline-none resize-none"
+                      placeholder="Full-scale fintech UX audit and redesign..."
+                    ></textarea>
+                  </div>
+                </div>
+                <div className="bg-surface-container-low/50 border border-dashed border-outline-variant rounded-xl flex flex-col items-center justify-center p-6 text-on-surface-variant/40">
+                  <span className="material-symbols-outlined text-3xl mb-2">
+                    add_circle
+                  </span>
+                  <p className="label-md font-semibold">Add another project</p>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div className="fixed bottom-8 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-12 z-50">
+            <div className="flex items-center gap-4 bg-white/80 backdrop-blur-xl p-2 rounded-2xl shadow-2xl border border-white/40">
+              <button className="flex items-center justify-center w-12 h-12 bg-surface-container-high text-on-surface-variant rounded-xl hover:bg-surface-container-highest transition-all">
+                <span className="material-symbols-outlined">save</span>
+              </button>
+              <button className="px-8 h-12 cta-gradient text-white rounded-xl font-bold flex items-center gap-3 active:scale-95 transition-all">
+                <span>Save &amp; Continue</span>
+                <span className="material-symbols-outlined">arrow_forward</span>
+              </button>
+            </div>
           </div>
         </div>
-
-        {/* Action Button */}
-        <button className="mt-8 flex items-center gap-2 bg-slate-900 text-white px-8 py-3 rounded-xl font-bold hover:bg-indigo-600 transition-colors shadow-lg">
-          <MdDownload size={20} /> Download PDF
-        </button>
-      </section>
-
+      </main>
     </div>
   );
 }
