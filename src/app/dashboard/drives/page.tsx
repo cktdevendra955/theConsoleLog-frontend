@@ -50,14 +50,14 @@ export default function HiringDrivePage() {
                   search
                 </span>
                 <input
-                  className="w-full pl-12 pr-4 py-4 bg-surface-container-lowest border-none rounded-2xl shadow-sm focus:ring-4 focus:ring-primary/10 text-body-lg"
+                  className="w-full pl-12 pr-4 py-4 bg-white border-none rounded-2xl shadow-sm focus:ring-4 focus:ring-primary/10 text-body-lg"
                   placeholder="Search by job title or keyword..."
                   type="text"
                 />
               </div>
               <div className="lg:col-span-2 flex flex-wrap items-center gap-3">
                 <div className="relative">
-                  <select className="appearance-none pl-4 pr-10 py-4 bg-surface-container-lowest border-none rounded-2xl shadow-sm text-sm font-medium focus:ring-4 focus:ring-primary/10">
+                  <select className="appearance-none pl-4 pr-10 py-4 bg-white border-none rounded-2xl shadow-sm text-sm font-medium focus:ring-4 focus:ring-primary/10">
                     <option>Role</option>
                     <option>Design</option>
                     <option>Engineering</option>
@@ -68,7 +68,7 @@ export default function HiringDrivePage() {
                   </span>
                 </div>
                 <div className="relative">
-                  <select className="appearance-none pl-4 pr-10 py-4 bg-surface-container-lowest border-none rounded-2xl shadow-sm text-sm font-medium focus:ring-4 focus:ring-primary/10">
+                  <select className="appearance-none pl-4 pr-10 py-4 bg-white border-none rounded-2xl shadow-sm text-sm font-medium focus:ring-4 focus:ring-primary/10">
                     <option>Location</option>
                     <option>Remote</option>
                     <option>New York</option>
@@ -79,7 +79,7 @@ export default function HiringDrivePage() {
                   </span>
                 </div>
                 <div className="relative">
-                  <select className="appearance-none pl-4 pr-10 py-4 bg-surface-container-lowest border-none rounded-2xl shadow-sm text-sm font-medium focus:ring-4 focus:ring-primary/10">
+                  <select className="appearance-none pl-4 pr-10 py-4 bg-white border-none rounded-2xl shadow-sm text-sm font-medium focus:ring-4 focus:ring-primary/10">
                     <option>Status</option>
                     <option>Active</option>
                     <option>Closed</option>
@@ -95,7 +95,7 @@ export default function HiringDrivePage() {
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="group bg-surface-container-lowest rounded-3xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] hover:shadow-[0_32px_64px_rgba(25,28,30,0.06)] transition-all duration-300 flex flex-col">
+            <div className="group bg-white rounded-3xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] hover:shadow-[0_32px_64px_rgba(25,28,30,0.06)] transition-all duration-300 flex flex-col">
               <div className="flex justify-between items-start mb-6">
                 <div className="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
                   <img
@@ -152,7 +152,7 @@ export default function HiringDrivePage() {
                 </button>
               </div>
             </div>
-            <div className="group bg-surface-container-lowest rounded-3xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] hover:shadow-[0_32px_64px_rgba(25,28,30,0.06)] transition-all duration-300 flex flex-col">
+            <div className="group bg-white rounded-3xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] hover:shadow-[0_32px_64px_rgba(25,28,30,0.06)] transition-all duration-300 flex flex-col">
               <div className="flex justify-between items-start mb-6">
                 <div className="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
                   <img
@@ -209,7 +209,7 @@ export default function HiringDrivePage() {
                 </button>
               </div>
             </div>
-            <div className="group bg-surface-container-lowest rounded-3xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] hover:shadow-[0_32px_64px_rgba(25,28,30,0.06)] transition-all duration-300 flex flex-col">
+            <div className="group bg-white rounded-3xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] hover:shadow-[0_32px_64px_rgba(25,28,30,0.06)] transition-all duration-300 flex flex-col">
               <div className="flex justify-between items-start mb-6">
                 <div className="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
                   <img
@@ -266,7 +266,7 @@ export default function HiringDrivePage() {
                 </button>
               </div>
             </div>
-            <div className="group bg-surface-container-lowest rounded-3xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] hover:shadow-[0_32px_64px_rgba(25,28,30,0.06)] transition-all duration-300 flex flex-col">
+            <div className="group bg-white rounded-3xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] hover:shadow-[0_32px_64px_rgba(25,28,30,0.06)] transition-all duration-300 flex flex-col">
               <div className="flex justify-between items-start mb-6">
                 <div className="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
                   <img
@@ -323,7 +323,7 @@ export default function HiringDrivePage() {
                 </button>
               </div>
             </div>
-            <div className="group bg-surface-container-lowest rounded-3xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] hover:shadow-[0_32px_64px_rgba(25,28,30,0.06)] transition-all duration-300 flex flex-col">
+            <div className="group bg-white rounded-3xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] hover:shadow-[0_32px_64px_rgba(25,28,30,0.06)] transition-all duration-300 flex flex-col">
               <div className="flex justify-between items-start mb-6">
                 <div className="w-14 h-14 bg-surface-container-low rounded-2xl flex items-center justify-center p-2 group-hover:scale-105 transition-transform">
                   <img

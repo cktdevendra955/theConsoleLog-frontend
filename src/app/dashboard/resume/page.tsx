@@ -8,27 +8,9 @@ export default function SimpleResume() {
     <div className="bg-background text-on-surface min-h-screen">
       <main className=" pt-20 pb-24 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
-          <div className="sticky top-16 z-40 bg-background/95 backdrop-blur-md py-4 mb-8">
-            <div className="flex justify-between items-center">
-              <div>
-                <span className="text-primary font-bold text-xs tracking-widest uppercase">
-                  Step 1 of 3
-                </span>
-                <h1 className="headline-md font-bold tracking-tight">
-                  Resume Details
-                </h1>
-              </div>
-              <button className="flex items-center gap-2 px-6 py-3 cta-gradient text-white rounded-xl font-semibold shadow-md active:scale-95 transition-all">
-                <span>Next: Choose Template</span>
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </button>
-            </div>
-            <div className="w-full bg-surface-container-high h-1.5 rounded-full mt-4">
-              <div className="bg-primary h-full w-1/3 rounded-full shadow-[0_0_8px_rgba(53,37,205,0.4)]"></div>
-            </div>
-          </div>
+         
           <div className="flex flex-col gap-8">
-            <section className="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+            <section className="bg-white rounded-xl p-8 shadow-sm">
               <div className="flex items-center gap-3 mb-8">
                 <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">
                   person
@@ -80,7 +62,7 @@ export default function SimpleResume() {
                 </div>
               </div>
             </section>
-            <section className="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+            <section className="bg-white rounded-xl p-8 shadow-sm">
               <div className="flex items-center gap-3 mb-8">
                 <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">
                   description
@@ -103,7 +85,7 @@ export default function SimpleResume() {
                 </p>
               </div>
             </section>
-            <section className="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+            <section className="bg-white rounded-xl p-8 shadow-sm">
               <div className="flex justify-between items-center mb-8">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">
@@ -186,7 +168,7 @@ export default function SimpleResume() {
                 </div>
               </div>
             </section>
-            <section className="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+            <section className="bg-white rounded-xl p-8 shadow-sm">
               <div className="flex items-center gap-3 mb-8">
                 <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">
                   psychology
@@ -251,7 +233,7 @@ export default function SimpleResume() {
                 </button>
               </div>
             </section>
-            <section className="bg-surface-container-lowest rounded-xl p-8 shadow-sm">
+            <section className="bg-white rounded-xl p-8 shadow-sm">
               <div className="flex justify-between items-center mb-8">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary p-2 bg-primary-fixed rounded-lg">
@@ -307,17 +289,7 @@ export default function SimpleResume() {
               </div>
             </section>
           </div>
-          <div className="fixed bottom-8 left-1/2 -translate-x-1/2 md:translate-x-0 md:left-auto md:right-12 z-50">
-            <div className="flex items-center gap-4 bg-white/80 backdrop-blur-xl p-2 rounded-2xl shadow-2xl border border-white/40">
-              <button className="flex items-center justify-center w-12 h-12 bg-surface-container-high text-on-surface-variant rounded-xl hover:bg-surface-container-highest transition-all">
-                <span className="material-symbols-outlined">save</span>
-              </button>
-              <button className="px-8 h-12 cta-gradient text-white rounded-xl font-bold flex items-center gap-3 active:scale-95 transition-all">
-                <span>Save &amp; Continue</span>
-                <span className="material-symbols-outlined">arrow_forward</span>
-              </button>
-            </div>
-          </div>
+          
         </div>
       </main>
     </div>

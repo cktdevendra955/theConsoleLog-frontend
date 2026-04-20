@@ -47,7 +47,7 @@ export default function Page() {
           {/* <!-- Bento Grid of Saved Jobs --> */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* <!-- Job Card 1 - Featured/High Match --> */}
-            <div className="lg:col-span-8 group relative bg-surface-container-lowest p-8 rounded-3xl editorial-shadow transition-all hover:-translate-y-1 duration-300">
+            <div className="lg:col-span-8 group relative bg-white p-8 rounded-3xl editorial-shadow transition-all hover:-translate-y-1 duration-300">
               <div className="flex justify-between items-start mb-10">
                 <div className="flex gap-5">
                   <div className="w-16 h-16 rounded-2xl bg-surface-container flex items-center justify-center overflow-hidden">
@@ -102,7 +102,7 @@ export default function Page() {
               </div>
             </div>
             {/* <!-- Match Insight Widget (Asymmetric Element) --> */}
-            <div className="lg:col-span-4 bg-primary text-white p-8 rounded-3xl editorial-shadow overflow-hidden relative">
+            <div className="lg:col-span-4 bg-primary p-8 rounded-3xl editorial-shadow overflow-hidden relative">
               <div className="relative z-10">
                 <span className="material-symbols-outlined text-tertiary-fixed-dim mb-4 text-4xl">
                   stars
@@ -110,7 +110,7 @@ export default function Page() {
                 <h4 className="text-xl font-bold tracking-tight mb-3 leading-snug">
                   Designer-Role Alignment
                 </h4>
-                <p className="text-white/70 text-sm mb-6 leading-relaxed">
+                <p className=" text-sm mb-6 leading-relaxed">
                   Your profile matches 98% of the requirements for the Senior
                   Product Designer role at Linear. Your systems thinking and
                   portfolio were flagged as strong matches.
@@ -128,7 +128,7 @@ export default function Page() {
               <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
             </div>
             {/* <!-- Job Card 2 --> */}
-            <div className="lg:col-span-4 bg-surface-container-lowest p-6 rounded-3xl editorial-shadow transition-all hover:-translate-y-1 duration-300">
+            <div className="lg:col-span-4 bg-white p-6 rounded-3xl editorial-shadow transition-all hover:-translate-y-1 duration-300">
               <div className="flex justify-between items-start mb-6">
                 <div className="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center overflow-hidden">
                   <img
@@ -163,7 +163,7 @@ export default function Page() {
               </div>
             </div>
             {/* <!-- Job Card 3 --> */}
-            <div className="lg:col-span-4 bg-surface-container-lowest p-6 rounded-3xl editorial-shadow transition-all hover:-translate-y-1 duration-300">
+            <div className="lg:col-span-4 bg-white p-6 rounded-3xl editorial-shadow transition-all hover:-translate-y-1 duration-300">
               <div className="flex justify-between items-start mb-6">
                 <div className="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center overflow-hidden">
                   <img
@@ -198,7 +198,7 @@ export default function Page() {
               </div>
             </div>
             {/* <!-- Job Card 4 --> */}
-            <div className="lg:col-span-4 bg-surface-container-lowest p-6 rounded-3xl editorial-shadow transition-all hover:-translate-y-1 duration-300">
+            <div className="lg:col-span-4 bg-white p-6 rounded-3xl editorial-shadow transition-all hover:-translate-y-1 duration-300">
               <div className="flex justify-between items-start mb-6">
                 <div className="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center overflow-hidden">
                   <img

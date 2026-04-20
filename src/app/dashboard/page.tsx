@@ -46,7 +46,7 @@ export default function Page() {
         {/* STATS */}
         <div className="grid grid-cols-12 gap-6 mb-12">
           
-          <div className="col-span-12 md:col-span-3 bg-surface-container-lowest p-8 rounded-xxl shadow-sm flex flex-col justify-between h-48">
+          <div className="col-span-12 md:col-span-3 bg-white p-8 rounded-xxl shadow-sm flex flex-col justify-between h-48">
             <Send className="w-8 h-8 text-primary-container" />
             <div>
               <h3 className="text-4xl font-bold text-editorial-tight text-on-surface">
@@ -58,7 +58,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="col-span-12 md:col-span-3 bg-surface-container-lowest p-8 rounded-xxl shadow-sm flex flex-col justify-between h-48">
+          <div className="col-span-12 md:col-span-3 bg-white p-8 rounded-xxl shadow-sm flex flex-col justify-between h-48">
             <CalendarCheck className="w-8 h-8 text-tertiary-container" />
             <div>
               <h3 className="text-4xl font-bold text-editorial-tight text-on-surface">
@@ -70,7 +70,7 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="col-span-12 md:col-span-6 bg-surface-container-low p-8 rounded-xxl flex flex-col justify-between overflow-hidden relative group">
+          <div className="col-span-12 md:col-span-6 bg-white p-8 rounded-xxl flex flex-col justify-between overflow-hidden relative group">
             <div className="relative z-10">
               <h3 className="text-xl font-semibold mb-2">Profile Completion</h3>
               <p className="text-sm text-on-surface-variant mb-6">
@@ -108,7 +108,7 @@ export default function Page() {
               <div className="space-y-4">
 
                 {/* Card 1 */}
-                <div className="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex items-center gap-6">
+                <div className="bg-white p-6 rounded-xl shadow-sm flex items-center gap-6">
                   <div className="w-14 h-14 bg-surface-container rounded-xl"></div>
 
                   <div className="flex-1">
@@ -126,7 +126,7 @@ export default function Page() {
                 </div>
 
                 {/* Card 2 */}
-                <div className="bg-surface-container-lowest p-6 rounded-xl shadow-sm flex items-center gap-6">
+                <div className="bg-white p-6 rounded-xl shadow-sm flex items-center gap-6">
                   <div className="w-14 h-14 bg-surface-container rounded-xl"></div>
 
                   <div className="flex-1">
@@ -151,10 +151,10 @@ export default function Page() {
               <h2 className="text-2xl font-bold mb-6">
                 Application History
               </h2>
-              <div className="bg-surface-container-lowest rounded-xxl overflow-hidden shadow-sm">
+              <div className="bg-white rounded-xxl overflow-hidden shadow-sm">
                 <table className="w-full text-left">
                   <thead>
-                    <tr className="bg-surface-container-low">
+                    <tr className="bg-white">
                       <th className="px-6 py-4 text-xs">COMPANY</th>
                       <th className="px-6 py-4 text-xs">ROLE</th>
                       <th className="px-6 py-4 text-xs">DATE</th>
@@ -178,7 +178,7 @@ export default function Page() {
           {/* RIGHT SIDE */}
           <div className="col-span-12 lg:col-span-4 space-y-8">
 
-            <div className="bg-primary text-white p-8 rounded-xxl relative">
+            <div className="bg-primary  p-8 rounded-xxl relative">
               <div className="flex justify-between items-start mb-8">
                 <Video className="w-10 h-10" />
                 <span className="text-xs">TOMORROW</span>
@@ -195,7 +195,7 @@ export default function Page() {
             </div>
 
             {/* Quick Actions */}
-            <div className="bg-surface-container-low p-6 rounded-xxl">
+            <div className="bg-white p-6 rounded-xxl">
               <div className="grid grid-cols-2 gap-3">
 
                 <button className="p-4 flex flex-col items-center gap-2">

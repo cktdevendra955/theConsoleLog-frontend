@@ -31,7 +31,7 @@ export default function Interviews() {
               </p>
             </div>
             <div className="flex p-1 bg-surface-container-low rounded-xl">
-              <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-surface-container-lowest shadow-sm text-primary font-semibold text-sm transition-all">
+              <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white shadow-sm text-primary font-semibold text-sm transition-all">
                 <span className="material-symbols-outlined text-[18px]">
                   list
                 </span>
@@ -62,7 +62,7 @@ export default function Interviews() {
                 </a>
               </div>
               {/* <!-- Interview Card 1: Featured/Next --> */}
-              <div className="bg-surface-container-lowest rounded-xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] relative overflow-hidden group">
+              <div className="bg-white rounded-xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] relative overflow-hidden group">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-all group-hover:bg-primary/10"></div>
                 <div className="flex items-start justify-between relative z-10">
                   <div className="flex gap-5">
@@ -118,7 +118,7 @@ export default function Interviews() {
                 </div>
               </div>
               {/* <!-- Interview Card 2 --> */}
-              <div className="bg-surface-container-lowest rounded-xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02)] border border-transparent hover:border-outline-variant/30 transition-all">
+              <div className="bg-white rounded-xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02)] border border-transparent hover:border-outline-variant/30 transition-all">
                 <div className="flex items-start justify-between">
                   <div className="flex gap-5">
                     <div className="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center p-3">
@@ -184,7 +184,7 @@ export default function Interviews() {
                 </div>
               </div>
               {/* <!-- Interview Card 3 --> */}
-              <div className="bg-surface-container-lowest rounded-xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02)]">
+              <div className="bg-white rounded-xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02)]">
                 <div className="flex items-start justify-between">
                   <div className="flex gap-5">
                     <div className="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center p-3">

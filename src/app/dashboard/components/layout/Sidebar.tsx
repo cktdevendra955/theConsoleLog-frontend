@@ -51,10 +51,10 @@ export default function Sidebar({
       className={`flex flex-col border-r ${
         isMobile
           ? "w-64 bg-white"
-          : "hidden md:flex bg-card/80 backdrop-blur-xl"
+          : "hidden md:flex bg-card/80 backdrop-blur-xl "
       }`}
     >
-      <div className="flex flex-col h-[100dvh]">
+      <div className="flex flex-col h-[100dvh] ">
         
         
         <div className="p-6 flex items-center gap-3 shrink-0">

@@ -70,7 +70,7 @@ export default function Portfolio() {
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-ambient transition-all duration-300">
+              <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-ambient transition-all duration-300">
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
                     alt="Stellar Minimal theme"
@@ -116,7 +116,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-              <div className="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-ambient transition-all duration-300">
+              <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-ambient transition-all duration-300">
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
                     alt="Vogue Editorial theme"
@@ -162,7 +162,7 @@ export default function Portfolio() {
                   </div>
                 </div>
               </div>
-              <div className="group bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm hover:shadow-ambient transition-all duration-300">
+              <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-ambient transition-all duration-300">
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img
                     alt="Nexus Agency theme"
@@ -212,42 +212,7 @@ export default function Portfolio() {
           </section>
         </main>
       </div>
-      <footer className="bg-[#f7f9fb] dark:bg-slate-950 full-width bottom-0 border-t border-[#f2f4f6] dark:border-slate-800 flex flex-col md:flex-row justify-between items-center px-12 py-10 ml-64">
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <span className="text-lg font-bold text-[#191c1e] dark:text-slate-100">
-            Atelier
-          </span>
-          <div className="flex gap-6">
-            <a
-              className="label-md text-xs tracking-widest text-[#191c1e]/50 dark:text-slate-500 hover:text-[#3525cd] dark:hover:text-white transition-colors"
-              href="#"
-            >
-              Terms
-            </a>
-            <a
-              className="label-md text-xs tracking-widest text-[#191c1e]/50 dark:text-slate-500 hover:text-[#3525cd] dark:hover:text-white transition-colors"
-              href="#"
-            >
-              Privacy
-            </a>
-            <a
-              className="label-md text-xs tracking-widest text-[#191c1e]/50 dark:text-slate-500 hover:text-[#3525cd] dark:hover:text-white transition-colors"
-              href="#"
-            >
-              License
-            </a>
-            <a
-              className="label-md text-xs tracking-widest text-[#191c1e]/50 dark:text-slate-500 hover:text-[#3525cd] dark:hover:text-white transition-colors"
-              href="#"
-            >
-              Careers
-            </a>
-          </div>
-        </div>
-        <p className="label-md text-xs tracking-widest text-[#191c1e]/50 dark:text-slate-500 mt-6 md:mt-0">
-          © 2024 Digital Atelier. All rights reserved.
-        </p>
-      </footer>
+      
     </body>
   );
 }
