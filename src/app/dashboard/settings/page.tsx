@@ -18,7 +18,7 @@ export default function SettingsPage() {
         </header>
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 lg:col-span-4 space-y-8">
-            <div className="bg-surface-container-lowest rounded-[1.5rem] p-8 shadow-[0_12px_24px_rgba(25,28,30,0.04)]">
+            <div className="bg-white rounded-[1.5rem] p-8 shadow-[0_12px_24px_rgba(25,28,30,0.04)]">
               <nav className="flex flex-col gap-6">
                 <a
                   className="flex items-center justify-between group"
@@ -107,7 +107,7 @@ export default function SettingsPage() {
                   Complete your profile to increase your chances of being
                   spotted by top recruiters by 40%.
                 </p>
-                <button className="bg-on-tertiary-fixed text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity">
+                <button className="bg-on-tertiary-fixed  px-6 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity">
                   Update Profile
                 </button>
               </div>
@@ -121,7 +121,7 @@ export default function SettingsPage() {
           </div>
           <div className="col-span-12 lg:col-span-8 space-y-8">
             <section
-              className="bg-surface-container-lowest rounded-[1.5rem] p-10 shadow-[0_12px_24px_rgba(25,28,30,0.04)]"
+              className="bg-white rounded-[1.5rem] p-10 shadow-[0_12px_24px_rgba(25,28,30,0.04)]"
               id="profile"
             >
               <div className="flex items-center justify-between mb-10">
@@ -202,7 +202,7 @@ export default function SettingsPage() {
               </div>
             </section>
             <section
-              className="bg-surface-container-lowest rounded-[1.5rem] p-10 shadow-[0_12px_24px_rgba(25,28,30,0.04)]"
+              className="bg-white rounded-[1.5rem] p-10 shadow-[0_12px_24px_rgba(25,28,30,0.04)]"
               id="notifications"
             >
               <h3 className="text-[1.75rem] font-semibold tracking-[-0.02em] text-on-surface mb-8">
@@ -265,7 +265,7 @@ export default function SettingsPage() {
               </div>
             </section>
             <section
-              className="bg-surface-container-lowest rounded-[1.5rem] p-10 shadow-[0_12px_24px_rgba(25,28,30,0.04)]"
+              className="bg-white rounded-[1.5rem] p-10 shadow-[0_12px_24px_rgba(25,28,30,0.04)]"
               id="security"
             >
               <h3 className="text-[1.75rem] font-semibold tracking-[-0.02em] text-on-surface mb-8">
@@ -310,7 +310,7 @@ export default function SettingsPage() {
                       </p>
                     </div>
                   </div>
-                  <button className="bg-primary text-white px-5 py-2 rounded-xl text-xs font-bold shadow-md shadow-primary/20 hover:opacity-90 transition-opacity">
+                  <button className="bg-primary  px-5 py-2 rounded-xl text-xs font-bold shadow-md shadow-primary/20 hover:opacity-90 transition-opacity">
                     Enable
                   </button>
                 </div>
@@ -343,7 +343,7 @@ export default function SettingsPage() {
               <button className="px-8 py-3.5 rounded-full text-on-surface-variant font-semibold hover:bg-surface-container-low transition-colors">
                 Discard Changes
               </button>
-              <button className="px-8 py-3.5 rounded-full bg-gradient-to-br from-primary to-primary-container text-white font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
+              <button className="px-8 py-3.5 rounded-full bg-gradient-to-br from-primary to-primary-container  font-bold shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-95 transition-all">
                 Save All Changes
               </button>
             </div>
@@ -365,7 +365,7 @@ export default function SettingsPage() {
         </span>
         <div className="bg-primary p-3 rounded-full -mt-10 shadow-lg shadow-primary/40">
           <span
-            className="material-symbols-outlined text-white"
+            className="material-symbols-outlined "
             data-icon="search"
           >
             search

@@ -37,7 +37,7 @@ export default function Page() {
             <button className="px-6 py-3 rounded-xxl bg-surface-container-high text-primary font-semibold text-sm hover:opacity-80 transition-all">
               Update Resume
             </button>
-            <button className="px-8 py-3 rounded-xxl bg-gradient-to-br from-primary to-primary-container text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all">
+            <button className="px-8 py-3 rounded-xxl bg-gradient-to-br from-primary to-primary-container  font-semibold text-sm shadow-md hover:shadow-lg transition-all">
               Quick Apply
             </button>
           </div>
@@ -226,7 +226,7 @@ export default function Page() {
       </main>
 
       {/* FLOAT BUTTON */}
-      <button className="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center">
+      <button className="fixed bottom-8 right-8 w-14 h-14 bg-primary  rounded-full flex items-center justify-center">
         <Plus className="w-6 h-6" />
       </button>
 

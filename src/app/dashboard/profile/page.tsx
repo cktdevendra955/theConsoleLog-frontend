@@ -356,14 +356,14 @@ export default function Profile() {
             <button className="px-8 py-3 font-bold text-on-surface hover:opacity-70 transition-opacity">
               Cancel
             </button>
-            <button className="px-8 py-3 bg-primary-gradient text-white rounded-2xl font-bold shadow-lg shadow-primary/20 hover:-translate-y-0.5 transition-all">
+            <button className="px-8 py-3 bg-primary-gradient  rounded-2xl font-bold shadow-lg shadow-primary/20 hover:-translate-y-0.5 transition-all">
               Save Changes
             </button>
           </div>
         </div>
       </div>
       {/* <!-- Floating Action Button (FAB) - Suppression Logic: Render on Home/Dashboard, hide on Focus/Profile if preferred, but here we add it for "Add New Experience" context --> */}
-      <button className="fixed bottom-10 right-10 w-16 h-16 bg-primary-gradient text-white rounded-2xl shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
+      <button className="fixed bottom-10 right-10 w-16 h-16 bg-primary-gradient  rounded-2xl shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
         <span className="material-symbols-outlined text-3xl">add</span>
       </button>
     </div>

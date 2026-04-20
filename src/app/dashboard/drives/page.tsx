@@ -88,7 +88,7 @@ export default function HiringDrivePage() {
                     expand_more
                   </span>
                 </div>
-                <button className="bg-primary text-white p-4 rounded-2xl shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
+                <button className="bg-primary  p-4 rounded-2xl shadow-lg hover:shadow-primary/20 transition-all active:scale-95">
                   <span className="material-symbols-outlined block">tune</span>
                 </button>
               </div>
@@ -147,7 +147,7 @@ export default function HiringDrivePage() {
                 <button className="py-3 px-4 bg-surface-container-high text-primary font-bold text-sm rounded-xl hover:bg-secondary-fixed transition-colors">
                   View Details
                 </button>
-                <button className="py-3 px-4 primary-gradient text-white font-bold text-sm rounded-xl shadow-sm hover:shadow-md transition-all">
+                <button className="py-3 px-4 primary-gradient  font-bold text-sm rounded-xl shadow-sm hover:shadow-md transition-all">
                   Apply Now
                 </button>
               </div>
@@ -204,7 +204,7 @@ export default function HiringDrivePage() {
                 <button className="py-3 px-4 bg-surface-container-high text-primary font-bold text-sm rounded-xl hover:bg-secondary-fixed transition-colors">
                   View Details
                 </button>
-                <button className="py-3 px-4 primary-gradient text-white font-bold text-sm rounded-xl shadow-sm hover:shadow-md transition-all">
+                <button className="py-3 px-4 primary-gradient  font-bold text-sm rounded-xl shadow-sm hover:shadow-md transition-all">
                   Apply Now
                 </button>
               </div>
@@ -261,7 +261,7 @@ export default function HiringDrivePage() {
                 <button className="py-3 px-4 bg-surface-container-high text-primary font-bold text-sm rounded-xl hover:bg-secondary-fixed transition-colors">
                   View Details
                 </button>
-                <button className="py-3 px-4 primary-gradient text-white font-bold text-sm rounded-xl shadow-sm hover:shadow-md transition-all">
+                <button className="py-3 px-4 primary-gradient  font-bold text-sm rounded-xl shadow-sm hover:shadow-md transition-all">
                   Apply Now
                 </button>
               </div>
@@ -318,7 +318,7 @@ export default function HiringDrivePage() {
                 <button className="py-3 px-4 bg-surface-container-high text-primary font-bold text-sm rounded-xl hover:bg-secondary-fixed transition-colors">
                   View Details
                 </button>
-                <button className="py-3 px-4 primary-gradient text-white font-bold text-sm rounded-xl shadow-sm hover:shadow-md transition-all">
+                <button className="py-3 px-4 primary-gradient  font-bold text-sm rounded-xl shadow-sm hover:shadow-md transition-all">
                   Apply Now
                 </button>
               </div>
@@ -375,7 +375,7 @@ export default function HiringDrivePage() {
                 <button className="py-3 px-4 bg-surface-container-high text-primary font-bold text-sm rounded-xl hover:bg-secondary-fixed transition-colors">
                   View Details
                 </button>
-                <button className="py-3 px-4 primary-gradient text-white font-bold text-sm rounded-xl shadow-sm hover:shadow-md transition-all">
+                <button className="py-3 px-4 primary-gradient  font-bold text-sm rounded-xl shadow-sm hover:shadow-md transition-all">
                   Apply Now
                 </button>
               </div>
@@ -399,7 +399,7 @@ export default function HiringDrivePage() {
           </div>
         </div>
       </main>
-      <button className="fixed bottom-8 right-8 w-16 h-16 primary-gradient text-white rounded-2xl shadow-2xl shadow-primary/40 flex items-center justify-center group hover:-translate-y-1 transition-all z-50">
+      <button className="fixed bottom-8 right-8 w-16 h-16 primary-gradient  rounded-2xl shadow-2xl shadow-primary/40 flex items-center justify-center group hover:-translate-y-1 transition-all z-50">
         <span className="material-symbols-outlined text-3xl group-hover:rotate-90 transition-transform">
           add
         </span>

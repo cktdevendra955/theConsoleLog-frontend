@@ -62,7 +62,7 @@ export default function Sidebar({
             Z
           </div>
           {(isOpen || isMobile) && (
-            <span className="font-bold text-lg">Zenith</span>
+            <span className="font-bold text-lg">Console</span>
           )}
         </div>
 

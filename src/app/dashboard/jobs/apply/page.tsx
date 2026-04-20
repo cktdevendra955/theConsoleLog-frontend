@@ -21,17 +21,17 @@ export default function Page() {
               </p>
             </div>
             <div className="flex gap-3">
-              <button className="bg-surface-container-high text-primary px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-[0.98] active:opacity-80">
+              <button className="bg-white text-primary px-6 py-3 rounded-full font-semibold text-sm transition-all hover:scale-[0.98] active:opacity-80">
                 Export Report
               </button>
-              <button className="bg-gradient-to-br from-primary to-primary-container text-white px-8 py-3 rounded-full font-semibold text-sm shadow-premium transition-all hover:scale-[0.98] active:opacity-80 flex items-center gap-2">
+              <button className="bg-gradient-to-br from-primary to-primary-container  px-8 py-3 rounded-full font-semibold text-sm shadow-premium transition-all hover:scale-[0.98] active:opacity-80 flex items-center gap-2">
                 <span className="material-symbols-outlined text-sm">add</span>
                 Track Manually
               </button>
             </div>
           </div>
           {/* <!-- Filters & Sorting --> */}
-          <div className="bg-surface-container-low rounded-2xl p-4 flex flex-wrap items-center justify-between gap-4 mb-8">
+          <div className="bg-white rounded-2xl p-4 flex flex-wrap items-center justify-between gap-4 mb-8">
             <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 md:pb-0">
               <button className="px-5 py-2 rounded-full bg-white text-primary text-sm font-bold shadow-sm whitespace-nowrap">All Applications (12)</button>
               <button className="px-5 py-2 rounded-full hover:bg-white/50 text-on-surface-variant text-sm font-medium transition-all whitespace-nowrap">Interviewing (3)</button>
@@ -60,7 +60,7 @@ export default function Page() {
               <div className="col-span-1 text-right">Actions</div>
             </div>
             {/* <!-- Row 1: Shortlisted --> */}
-            <div className="bg-surface-container-lowest rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 items-center gap-6 shadow-premium group transition-all hover:bg-white">
+            <div className="bg-white rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 items-center gap-6 shadow-premium group transition-all hover:bg-white">
               <div className="col-span-4 flex items-center gap-5">
                 <div className="w-14 h-14 bg-surface-container rounded-xl flex items-center justify-center overflow-hidden">
                   <img alt="Company Logo" className="w-8 h-8 object-contain" data-alt="minimalist tech logo of a modern software company on a clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK8WASIMu-xe3zn150XvMWiOb8EeUdi1xz0n7uy9cYkDirsNTSbOusySJ9gx1fpolc56et8oYdrwW1ypBH1SdDXMlFdo9JqiojthD2x_391-FpRwKdY4GLE2EU0sl3a1kFPjZBd2XqbrG-Da9cy1fUC7E6bofXpuC-SNP5VK87LqtJGuSNOxbN9ZkBRC3c9wGwlnVVOVRH_9b7TKm7q1acREoFKR-hlQBld99O8uz6agmhd8FBn1vakV_GcTPA5g5HTyusvM28K95p" />
@@ -99,7 +99,7 @@ export default function Page() {
               </div>
             </div>
             {/* <!-- Row 2: Interview Scheduled --> */}
-            <div className="bg-surface-container-lowest rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 items-center gap-6 shadow-premium transition-all hover:bg-white ring-2 ring-primary/10">
+            <div className="bg-white rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 items-center gap-6 shadow-premium transition-all hover:bg-white ring-2 ring-primary/10">
               <div className="col-span-4 flex items-center gap-5">
                 <div className="w-14 h-14 bg-surface-container rounded-xl flex items-center justify-center overflow-hidden">
                   <img alt="Company Logo" className="w-8 h-8 object-contain" data-alt="vibrant neon circular logo for a creative studio on a black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA192iV9kvv7p1nnPQ7TBgvd1NhOBA0aESkpzZe06o_XBXDnZeaH-91m132oDkTjAb-OWIQ01G0oISIX4iyWmqSjVrLlDH8Zs1Br7uHQQcEP6pPcqE6b8VbL-h-2hJ5DmgGwFEs8dMqsGE9ep1Tc24bjE48yM8FYUMZ4WJmiwPsBkAhuL6hYvUK0DuzKtUAgJjptQDyHQWn1QnRnbBtSnEB8_SP2gOEZTCv4YQdKxJwFC52ORPpN8Ls3FllNNh8aro3iqBWZJwpGP_C" />
@@ -120,7 +120,7 @@ export default function Page() {
                 <span className="bg-tertiary-container/10 text-tertiary px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider whitespace-nowrap">Interview Scheduled</span>
               </div>
               <div className="col-span-3">
-                <div className="bg-surface-container-low rounded-xl p-3 flex items-center gap-3 border border-primary/10">
+                <div className="bg-white rounded-xl p-3 flex items-center gap-3 border border-primary/10">
                   <span className="material-symbols-outlined text-primary">calendar_today</span>
                   <div>
                     <p className="text-[10px] font-bold uppercase text-primary">TOMORROW • 10:00 AM</p>
@@ -129,13 +129,13 @@ export default function Page() {
                 </div>
               </div>
               <div className="col-span-1 text-right">
-                <button className="bg-primary text-white text-[10px] font-bold py-2 px-3 rounded-lg hover:bg-primary-container transition-all">
+                <button className="bg-primary  text-[10px] font-bold py-2 px-3 rounded-lg hover:bg-primary-container transition-all">
                   JOIN
                 </button>
               </div>
             </div>
             {/* <!-- Row 3: Applied --> */}
-            <div className="bg-surface-container-lowest rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 items-center gap-6 shadow-premium group transition-all hover:bg-white opacity-80 hover:opacity-100">
+            <div className="bg-white rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 items-center gap-6 shadow-premium group transition-all hover:bg-white opacity-80 hover:opacity-100">
               <div className="col-span-4 flex items-center gap-5">
                 <div className="w-14 h-14 bg-surface-container rounded-xl flex items-center justify-center overflow-hidden">
                   <img alt="Company Logo" className="w-8 h-8 object-contain" data-alt="clean geometric logotype for an architecture firm featuring sharp lines and grey tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgZx35Jl7jhdicNC7oExOGllxtGuQe5193Hgy5dbw0kWs0g4BJObWNXi-mRWzsHWozohGYKfmyhUTivcWrd6kUUXTZKfNWGCBUlVoYj30m9HwULnjmEoG46odpSSB0HkNzWDI1sIVE2hKzrCVNOoh-DZ-rXo5O9Yv-YigSLJWB6HWN8xH8ii_XubHVqq4u171In-riehVHcK71nt3iIAMtS5lXGjymTwwesvblTu1q6Zqwy6S-NYeRIVIQfHtmUDG6hL_8s-00cv2v" />
@@ -171,7 +171,7 @@ export default function Page() {
               </div>
             </div>
             {/* <!-- Row 4: Rejected --> */}
-            <div className="bg-surface-container-lowest rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 items-center gap-6 shadow-premium group transition-all opacity-60">
+            <div className="bg-white rounded-2xl p-6 md:p-8 grid grid-cols-1 md:grid-cols-12 items-center gap-6 shadow-premium group transition-all opacity-60">
               <div className="col-span-4 flex items-center gap-5">
                 <div className="w-14 h-14 bg-surface-container rounded-xl flex items-center justify-center grayscale">
                   <img alt="Company Logo" className="w-8 h-8 object-contain" data-alt="simple black and white logo of a social media company" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5koLjTIjI3vTMNFvQ9rMEJywu5ASwY4tUKcS_0mMfh0ttOoNa_4DYsonNHymYKRljbOpq_hduDtu8vMCuamfZJCtUY36Q8SG1a0aL4LXmyCibLYkBIbQbWfUdcQOJjo5u5OHCv7Hip1i9ct7tomOT2yPlpIadtk6c2gJIrBYx5mG9WnJKHnGg3pkyU4pBw6M-kQiTVBS2nsAWS32lwSTrOo5nvPyd3xhBlKG-bfL-I41LxlgvEgw7BibSxwTVsdStNGcxE6EQExxE" />
@@ -200,12 +200,12 @@ export default function Page() {
           </div>
           {/* <!-- Asymmetric Bento Insights Section --> */}
           <div className="mt-20 grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="lg:col-span-2 bg-gradient-to-br from-primary to-primary-container rounded-[2rem] p-10 text-white relative overflow-hidden">
+            <div className="lg:col-span-2 bg-gradient-to-br from-primary to-primary-container rounded-[2rem] p-10 relative overflow-hidden">
               <div className="relative z-10">
                 <span className="inline-block px-4 py-1 rounded-full bg-white/20 text-[10px] font-bold uppercase tracking-widest mb-6">Weekly Insight</span>
                 <h3 className="text-4xl font-bold tracking-tight mb-4">Your application speed is <span className="text-tertiary-fixed">40% faster</span> than the average candidate.</h3>
-                <p className="text-white/80 max-w-md leading-relaxed mb-8">Data shows that candidates who follow up within 3 days of an interview scheduled status have a 25% higher success rate.</p>
-                <button className="bg-white text-primary px-8 py-4 rounded-full font-bold text-sm shadow-xl transition-transform hover:scale-105 active:scale-95">
+                <p className="max-w-md leading-relaxed mb-8">Data shows that candidates who follow up within 3 days of an interview scheduled status have a 25% higher success rate.</p>
+                <button className=" text-primary px-8 py-4 rounded-full font-bold text-sm shadow-xl transition-transform hover:scale-105 active:scale-95">
                   View Strategy Guide
                 </button>
               </div>
@@ -217,7 +217,7 @@ export default function Page() {
                 <h4 className="text-label-md text-on-surface-variant mb-6">Upcoming Deadlines</h4>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0">
                       <span className="material-symbols-outlined text-primary text-xl">assignment</span>
                     </div>
                     <div>
@@ -226,7 +226,7 @@ export default function Page() {
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-xl bg-surface-container-low flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0">
                       <span className="material-symbols-outlined text-primary text-xl">record_voice_over</span>
                     </div>
                     <div>
@@ -253,7 +253,7 @@ export default function Page() {
           <span className="material-symbols-outlined">work</span>
           <span className="text-[10px] font-bold">Applied</span>
         </button>
-        <div className="w-12 h-12 bg-primary rounded-full -mt-8 shadow-lg flex items-center justify-center text-white ring-4 ring-surface">
+        <div className="w-12 h-12 bg-primary rounded-full -mt-8 shadow-lg flex items-center justify-center  ring-4 ring-surface">
           <span className="material-symbols-outlined">search</span>
         </div>
         <button className="flex flex-col items-center gap-1 text-on-surface-variant">

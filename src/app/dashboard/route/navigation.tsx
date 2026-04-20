@@ -50,12 +50,6 @@ export const NAV_ITEMS: NavItem[] = [
     section: "main",
   },
   {
-    label: "Intrnship",
-    path: ROUTES.INTERNSHIP,
-    icon: TrendingUp,
-    section: "main",
-  },
-  {
     label: "Interviews",
     path: ROUTES.INTERVIEWS,
     icon: Calendar,

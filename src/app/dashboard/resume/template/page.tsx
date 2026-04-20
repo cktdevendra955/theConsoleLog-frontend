@@ -22,7 +22,7 @@ export default function Templates() {
             <button className="px-6 py-3 rounded-xl font-semibold text-primary bg-surface-container-high hover:bg-surface-container-highest transition-all duration-200">
               Back to Info
             </button>
-            <button className="px-8 py-3 rounded-xl font-semibold text-white bg-gradient-to-br from-primary to-primary-container shadow-lg hover:shadow-primary/20 transition-all duration-200 active:scale-95">
+            <button className="px-8 py-3 rounded-xl font-semibold  bg-gradient-to-br from-primary to-primary-container shadow-lg hover:shadow-primary/20 transition-all duration-200 active:scale-95">
               Continue to Editor
             </button>
           </div>
@@ -69,7 +69,7 @@ export default function Templates() {
                   Preview
                 </div>
               </div>
-              <div className="absolute top-3 right-3 bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center shadow-md">
+              <div className="absolute top-3 right-3 bg-primary  w-8 h-8 rounded-full flex items-center justify-center shadow-md">
                 <span
                   className="material-symbols-outlined text-sm"
                   data-icon="check"
@@ -259,7 +259,7 @@ export default function Templates() {
           <button className="flex-1 py-3 rounded-xl font-semibold text-primary bg-surface-container-high transition-all active:scale-95">
             Previous
           </button>
-          <button className="flex-[2] py-3 rounded-xl font-semibold text-white bg-primary shadow-lg transition-all active:scale-95">
+          <button className="flex-[2] py-3 rounded-xl font-semibold  bg-primary shadow-lg transition-all active:scale-95">
             Continue to Editor
           </button>
         </div>

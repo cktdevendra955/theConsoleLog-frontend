@@ -32,23 +32,23 @@ export default function Portfolio() {
                     <span className="px-3 py-1 bg-tertiary-fixed-dim/20 backdrop-blur-md text-tertiary-fixed-dim rounded-full text-xs font-semibold tracking-wider uppercase border border-tertiary-fixed-dim/30">
                       Editors' Choice
                     </span>
-                    <span className="px-3 py-1 bg-white/10 backdrop-blur-md text-white rounded-full text-xs font-semibold tracking-wider uppercase border border-white/20">
+                    <span className="px-3 py-1 bg-white/10 backdrop-blur-md  rounded-full text-xs font-semibold tracking-wider uppercase border border-white/20">
                       Editorial
                     </span>
                   </div>
-                  <h2 className="headline-md text-white mb-2">
+                  <h2 className="headline-md  mb-2">
                     The Architect Pro
                   </h2>
-                  <p className="body-lg text-white/80 line-clamp-2">
+                  <p className="body-lg /80 line-clamp-2">
                     A high-contrast, modernist framework designed for structural
                     designers and high-end creative firms.
                   </p>
                 </div>
                 <div className="flex gap-4">
-                  <button className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-xl text-white rounded-xl font-medium transition-all">
+                  <button className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-xl  rounded-xl font-medium transition-all">
                     Live Preview
                   </button>
-                  <button className="px-8 py-4 bg-gradient-primary text-white rounded-xl font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95">
+                  <button className="px-8 py-4 bg-gradient-primary  rounded-xl font-medium shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all active:scale-95">
                     Apply Theme
                   </button>
                 </div>
@@ -110,7 +110,7 @@ export default function Portfolio() {
                     <button className="flex-1 py-3 text-sm font-medium bg-surface-container-low text-on-surface rounded-xl hover:bg-surface-container-high transition-colors">
                       Preview
                     </button>
-                    <button className="flex-1 py-3 text-sm font-medium bg-gradient-primary text-white rounded-xl shadow-md shadow-primary/10 hover:shadow-primary/20 transition-all">
+                    <button className="flex-1 py-3 text-sm font-medium bg-gradient-primary  rounded-xl shadow-md shadow-primary/10 hover:shadow-primary/20 transition-all">
                       Apply
                     </button>
                   </div>
@@ -156,7 +156,7 @@ export default function Portfolio() {
                     <button className="flex-1 py-3 text-sm font-medium bg-surface-container-low text-on-surface rounded-xl hover:bg-surface-container-high transition-colors">
                       Preview
                     </button>
-                    <button className="flex-1 py-3 text-sm font-medium bg-gradient-primary text-white rounded-xl shadow-md shadow-primary/10 hover:shadow-primary/20 transition-all">
+                    <button className="flex-1 py-3 text-sm font-medium bg-gradient-primary  rounded-xl shadow-md shadow-primary/10 hover:shadow-primary/20 transition-all">
                       Apply
                     </button>
                   </div>
@@ -202,7 +202,7 @@ export default function Portfolio() {
                     <button className="flex-1 py-3 text-sm font-medium bg-surface-container-low text-on-surface rounded-xl hover:bg-surface-container-high transition-colors">
                       Preview
                     </button>
-                    <button className="flex-1 py-3 text-sm font-medium bg-gradient-primary text-white rounded-xl shadow-md shadow-primary/10 hover:shadow-primary/20 transition-all">
+                    <button className="flex-1 py-3 text-sm font-medium bg-gradient-primary  rounded-xl shadow-md shadow-primary/10 hover:shadow-primary/20 transition-all">
                       Apply
                     </button>
                   </div>

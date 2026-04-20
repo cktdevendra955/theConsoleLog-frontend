@@ -112,7 +112,7 @@ export default function Interviews() {
                       Google Meet • 45 min
                     </span>
                   </div>
-                  <button className="bg-primary-gradient text-white px-6 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all hover:-translate-y-0.5 active:translate-y-0">
+                  <button className="bg-primary-gradient  px-6 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all hover:-translate-y-0.5 active:translate-y-0">
                     Join Interview
                   </button>
                 </div>

@@ -39,7 +39,7 @@ export default function Page() {
               <button className="px-6 py-2.5 rounded-full bg-surface-container-high text-primary font-semibold text-sm transition-all hover:scale-95 active:opacity-80">
                 Filter by Match %
               </button>
-              <button className="px-6 py-2.5 rounded-full bg-gradient-to-br from-primary to-primary-container text-white font-semibold text-sm editorial-shadow transition-all hover:scale-95 active:opacity-80">
+              <button className="px-6 py-2.5 rounded-full bg-gradient-to-br from-primary to-primary-container  font-semibold text-sm editorial-shadow transition-all hover:scale-95 active:opacity-80">
                 Search New Jobs
               </button>
             </div>
@@ -95,7 +95,7 @@ export default function Page() {
                   <button className="w-12 h-12 flex items-center justify-center rounded-2xl bg-surface-container-low text-error hover:bg-error/10 transition-colors">
                     <span className="material-symbols-outlined">delete</span>
                   </button>
-                  <button className="px-8 py-3 rounded-2xl bg-gradient-to-br from-primary to-primary-container text-white font-bold tracking-tight editorial-shadow hover:scale-95 transition-transform">
+                  <button className="px-8 py-3 rounded-2xl bg-gradient-to-br from-primary to-primary-container  font-bold tracking-tight editorial-shadow hover:scale-95 transition-transform">
                     Apply Now
                   </button>
                 </div>
@@ -269,7 +269,7 @@ export default function Page() {
       </main>
       {/* <!-- Contextual FAB (Only for Home/Job Browsing, kept simple here) --> */}
       <div className="fixed bottom-8 right-8 z-50">
-        <button className="w-14 h-14 rounded-full bg-primary text-white editorial-shadow flex items-center justify-center hover:scale-110 active:scale-90 transition-all duration-200">
+        <button className="w-14 h-14 rounded-full bg-primary  editorial-shadow flex items-center justify-center hover:scale-110 active:scale-90 transition-all duration-200">
           <span className="material-symbols-outlined text-2xl">
             magic_button
           </span>

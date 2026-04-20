@@ -5,7 +5,7 @@ export default function HiringDrivePageDatils() {
       <main className="pt-24 pb-12 px-8 max-w-7xl mx-auto">
         <header className="mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
           <div className="flex gap-6 items-start">
-            <div className="w-20 h-20 bg-surface-container-lowest rounded-xl flex items-center justify-center shadow-sm p-4">
+            <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-sm p-4">
               <img
                 className="w-full h-full object-contain"
                 data-alt="Minimalist geometric tech company logo with abstract blue shapes on a clean white background"
@@ -39,13 +39,13 @@ export default function HiringDrivePageDatils() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2 bg-secondary-container/10 text-secondary px-4 py-2 rounded-full font-semibold text-sm">
+            <div className="flex items-center gap-2 bg-white text-secondary px-4 py-2 rounded-full font-semibold text-sm">
               <span className="material-symbols-outlined text-sm">
                 check_circle
               </span>
               Applied 3 days ago
             </div>
-            <button className="px-8 py-3 rounded-full font-semibold text-white bg-surface-dim cursor-not-allowed">
+            <button className="px-8 py-3 rounded-full font-semibold  bg-surface-dim cursor-not-allowed">
               Apply Now
             </button>
           </div>
@@ -77,7 +77,7 @@ export default function HiringDrivePageDatils() {
                 Requirements
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-surface-container-lowest p-6 rounded-xl shadow-[0_2px_4px_rgba(25,28,30,0.02)] border-none">
+                <div className="bg-white p-6 rounded-xl shadow-[0_2px_4px_rgba(25,28,30,0.02)] border-none">
                   <span className="material-symbols-outlined text-primary mb-3">
                     verified_user
                   </span>
@@ -87,7 +87,7 @@ export default function HiringDrivePageDatils() {
                     portfolio of shipped work.
                   </p>
                 </div>
-                <div className="bg-surface-container-lowest p-6 rounded-xl shadow-[0_2px_4px_rgba(25,28,30,0.02)]">
+                <div className="bg-white p-6 rounded-xl shadow-[0_2px_4px_rgba(25,28,30,0.02)]">
                   <span className="material-symbols-outlined text-primary mb-3">
                     auto_awesome
                   </span>
@@ -97,7 +97,7 @@ export default function HiringDrivePageDatils() {
                     of whitespace.
                   </p>
                 </div>
-                <div className="bg-surface-container-lowest p-6 rounded-xl shadow-[0_2px_4px_rgba(25,28,30,0.02)]">
+                <div className="bg-white p-6 rounded-xl shadow-[0_2px_4px_rgba(25,28,30,0.02)]">
                   <span className="material-symbols-outlined text-primary mb-3">
                     psychology
                   </span>
@@ -107,7 +107,7 @@ export default function HiringDrivePageDatils() {
                     actionable design solutions.
                   </p>
                 </div>
-                <div className="bg-surface-container-lowest p-6 rounded-xl shadow-[0_2px_4px_rgba(25,28,30,0.02)]">
+                <div className="bg-white p-6 rounded-xl shadow-[0_2px_4px_rgba(25,28,30,0.02)]">
                   <span className="material-symbols-outlined text-primary mb-3">
                     code
                   </span>
@@ -162,7 +162,7 @@ export default function HiringDrivePageDatils() {
                 </div>
               </div>
             </section>
-            <section className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm overflow-hidden relative">
+            <section className="bg-white p-8 rounded-2xl shadow-sm overflow-hidden relative">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
               <div className="relative z-10">
                 <h2 className="text-xl font-bold mb-4 text-editorial">
@@ -188,7 +188,7 @@ export default function HiringDrivePageDatils() {
             </section>
           </div>
           <aside className="lg:col-span-4 space-y-6">
-            <div className="bg-surface-container-lowest p-6 rounded-2xl shadow-sm">
+            <div className="bg-white p-6 rounded-2xl shadow-sm">
               <h3 className="text-lg font-bold mb-6 text-editorial">
                 Quick Information
               </h3>
@@ -238,12 +238,12 @@ export default function HiringDrivePageDatils() {
               </div>
             </div>
             <div className="sticky top-24">
-              <div className="bg-surface-container-lowest p-6 rounded-2xl shadow-sm space-y-4">
+              <div className="bg-white p-6 rounded-2xl shadow-sm space-y-4">
                 <p className="text-xs text-on-surface-variant text-center font-medium">
                   You have already applied for this position. Please check your
                   dashboard for updates.
                 </p>
-                <button className="w-full py-4 rounded-xl font-bold bg-surface-dim text-white shadow-sm flex items-center justify-center gap-2 cursor-not-allowed">
+                <button className="w-full py-4 rounded-xl font-bold bg-surface-dim  shadow-sm flex items-center justify-center gap-2 cursor-not-allowed">
                   <span className="material-symbols-outlined text-sm">
                     lock
                   </span>

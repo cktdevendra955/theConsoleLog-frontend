@@ -1,9 +1,9 @@
 export default function Preview() {
   return (
-    <div className="bg-surface text-on-surface overflow-hidden">
+    <div className="overflow-hidden">
       
       <main className="flex h-[calc(100vh-64px)]">
-        <aside className="w-[480px] bg-surface-container-low border-r border-slate-200/20 flex flex-col h-full overflow-hidden">
+        <aside className="w-[480px] bg-white border-r border-slate-200/20 flex flex-col h-full overflow-hidden">
           <div className="p-6 border-b border-slate-200/10">
             <h2 className="text-lg font-bold tracking-tight text-slate-900">
               Resume Content
@@ -13,7 +13,7 @@ export default function Preview() {
             </p>
           </div>
           <div className="flex-1 overflow-y-auto no-scrollbar p-6 space-y-4">
-            <div className="bg-surface-container-lowest rounded-xl shadow-sm p-5 border border-primary/10">
+            <div className="bg-whiteest rounded-xl shadow-sm p-5 border border-primary/10">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary bg-primary/10 p-2 rounded-lg">
@@ -32,7 +32,7 @@ export default function Preview() {
                       First Name
                     </label>
                     <input
-                      className="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/30 rounded-lg text-sm px-4 py-2.5"
+                      className="w-full bg-white border-none focus:ring-2 focus:ring-primary/30 rounded-lg text-sm px-4 py-2.5"
                       type="text"
                       value="Julian"
                     />
@@ -42,7 +42,7 @@ export default function Preview() {
                       Last Name
                     </label>
                     <input
-                      className="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/30 rounded-lg text-sm px-4 py-2.5"
+                      className="w-full bg-white border-none focus:ring-2 focus:ring-primary/30 rounded-lg text-sm px-4 py-2.5"
                       type="text"
                       value="Ames"
                     />
@@ -52,7 +52,7 @@ export default function Preview() {
                   <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest px-1">
                     Professional Summary
                   </label>
-                  <textarea className="w-full bg-surface-container-low border-none focus:ring-2 focus:ring-primary/30 rounded-lg text-sm px-4 py-2.5 leading-relaxed">
+                  <textarea className="w-full bg-white border-none focus:ring-2 focus:ring-primary/30 rounded-lg text-sm px-4 py-2.5 leading-relaxed">
                     Senior Product Designer with 8+ years of experience
                     specializing in high-fidelity digital interfaces and design
                     systems for fintech startups.
@@ -60,7 +60,7 @@ export default function Preview() {
                 </div>
               </div>
             </div>
-            <div className="bg-surface-container-lowest rounded-xl shadow-sm p-5 hover:bg-slate-50 transition-colors cursor-pointer group">
+            <div className="bg-whiteest rounded-xl shadow-sm p-5 hover:bg-slate-50 transition-colors cursor-pointer group">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">
@@ -73,7 +73,7 @@ export default function Preview() {
                 </span>
               </div>
             </div>
-            <div className="bg-surface-container-lowest rounded-xl shadow-sm p-5 hover:bg-slate-50 transition-colors cursor-pointer group">
+            <div className="bg-whiteest rounded-xl shadow-sm p-5 hover:bg-slate-50 transition-colors cursor-pointer group">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">
@@ -86,7 +86,7 @@ export default function Preview() {
                 </span>
               </div>
             </div>
-            <div className="bg-surface-container-lowest rounded-xl shadow-sm p-5 hover:bg-slate-50 transition-colors cursor-pointer group">
+            <div className="bg-whiteest rounded-xl shadow-sm p-5 hover:bg-slate-50 transition-colors cursor-pointer group">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">
@@ -99,7 +99,7 @@ export default function Preview() {
                 </span>
               </div>
             </div>
-            <div className="bg-surface-container-lowest rounded-xl shadow-sm p-5 hover:bg-slate-50 transition-colors cursor-pointer group">
+            <div className="bg-whiteest rounded-xl shadow-sm p-5 hover:bg-slate-50 transition-colors cursor-pointer group">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors">
@@ -114,12 +114,12 @@ export default function Preview() {
             </div>
           </div>
           <div className="p-6 bg-white shadow-[0_-4px_24px_rgba(0,0,0,0.02)]">
-            <button className="w-full py-4 text-sm font-bold text-white bg-gradient-to-r from-primary to-primary-container rounded-2xl shadow-lg active:scale-[0.98] transition-all">
+            <button className="w-full py-4 text-sm font-bold  bg-gradient-to-r from-primary to-primary-container rounded-2xl shadow-lg active:scale-[0.98] transition-all">
               Finalize &amp; Review
             </button>
           </div>
         </aside>
-        <section className="flex-1 bg-surface-container-low overflow-y-auto flex justify-center p-12 no-scrollbar">
+        <section className="flex-1 bg-white overflow-y-auto flex justify-center p-12 no-scrollbar">
           <div className="w-full max-w-[800px] h-fit">
             <div className="flex items-center justify-between mb-6 px-4">
               <div className="flex items-center gap-4">
