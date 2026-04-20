@@ -1,11 +1,12 @@
 import {
   LayoutDashboard,
   Users,
-  CreditCard,
-  TrendingUp,
+  Briefcase,
   Calendar,
   Settings,
   HelpCircle,
+  Folder,
+  FileText,
 } from "lucide-react";
 
 import { ROUTES } from "./routes";
@@ -27,14 +28,13 @@ export const NAV_ITEMS: NavItem[] = [
   {
     label: "Portfolio",
     path: ROUTES.PORTFOLIO,
-    icon: LayoutDashboard,
+    icon: Folder,
     section: "main",
   },
-  
   {
     label: "Resume",
     path: ROUTES.RESUME,
-    icon: LayoutDashboard,
+    icon: FileText,
     section: "main",
   },
   {
@@ -46,7 +46,7 @@ export const NAV_ITEMS: NavItem[] = [
   {
     label: "Jobs",
     path: ROUTES.JOBS,
-    icon: CreditCard,
+    icon: Briefcase,
     section: "main",
   },
   {
@@ -55,7 +55,6 @@ export const NAV_ITEMS: NavItem[] = [
     icon: Calendar,
     section: "main",
   },
-  
   {
     label: "Settings",
     path: ROUTES.SETTINGS.ROOT,

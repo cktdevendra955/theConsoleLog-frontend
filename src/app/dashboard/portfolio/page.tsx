@@ -2,7 +2,7 @@
 
 export default function Portfolio() {
   return (
-    <body className="bg-background text-on-background selection:bg-primary/20">
+    <div className="bg-background text-on-background selection:bg-primary/20">
       
       <div className="flex min-h-screen">
        
@@ -213,6 +213,6 @@ export default function Portfolio() {
         </main>
       </div>
       
-    </body>
+    </div>
   );
 }
