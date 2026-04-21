@@ -1,5 +1,15 @@
 "use client";
 
+import {
+  User,
+  FileText,
+  Briefcase,
+  Plus,
+  Trash2,
+  Brain,
+  X,
+  Rocket,
+} from "lucide-react";
 
 export default function SimpleResume() {
   

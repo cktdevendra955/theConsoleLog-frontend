@@ -25,7 +25,7 @@ export default function Page() {
               MONDAY, OCTOBER 24
             </p>
             <h1 className="text-5xl font-bold text-editorial-tight text-on-surface mb-4">
-              Welcome back, Alex.
+              Welcome back, Devendra.
             </h1>
             <p className="text-body-lg text-on-surface-variant max-w-lg leading-relaxed">
               Your profile strength is{" "}

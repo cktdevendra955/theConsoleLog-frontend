@@ -11,6 +11,23 @@ import {
   ChevronRight,
   MoreVertical,
   User,
+  Camera,
+  Mail,
+  FileText,
+  Globe,
+  Link as LinkIcon,
+  ArrowRight,
+  GraduationCap,
+  Pencil,
+  Boxes,
+  Layers,
+  Sparkles,
+  Code,
+  Wind,
+  Lightbulb,
+  Activity,
+  Users,
+  Plus,
 } from "lucide-react";
 
 export default function Profile() {
@@ -27,50 +44,53 @@ export default function Profile() {
                   <img
                     alt="User Profile"
                     className="w-32 h-32 rounded-3xl object-cover ring-4 ring-white shadow-lg"
-                    data-alt="headshot of a stylish professional woman in her 30s, neutral grey background, high-end editorial lighting"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGa4MHF0T0WOO-obQIlkR9BsGm0Do51e1ofxCjeCLgxojRjaH73SA13ofGW4YWX_Xexc7wnVpmZh2dIwlf6zx0YaE8pbH6-RwyA-2_KJJsSpHjDVW5Fstv-k-eKJar7Fjn6hr6NTd_cPbM7p-2rMIH4IXgk0R3zR-rblnS6ptwZjG0ReIF1qy51FQfKuvrB8MfKaslOZc_pUjEgAiyFJhMMJqKdQ4GCKW63MziOgi_btOT8XkzDzBMzR259KlIZLij--SSQHgewmfw"
                   />
-                  <button className="absolute -bottom-2 -right-2 bg-white p-2 rounded-xl shadow-md border border-surface-container hover:bg-surface-container-low transition-colors">
-                    <span className="material-symbols-outlined text-primary text-xl">
-                      photo_camera
-                    </span>
+                  <button className="absolute -bottom-2 -right-2 bg-white p-2 rounded-xl shadow-md border border-surface-container hover:bg-white transition-colors">
+                    <Camera className="text-primary w-5 h-5" />
                   </button>
                 </div>
+
                 <div className="space-y-1">
                   <h2 className="text-4xl font-bold tracking-tight text-on-surface">
                     Alex Rivera
                   </h2>
                   <p className="text-xl text-outline font-medium">
-                    Senior Product Designer &amp; Systems Architect
+                    Senior Product Designer & Systems Architect
                   </p>
+
                   <div className="flex gap-4 pt-2">
                     <span className="flex items-center gap-1 text-sm text-outline">
-                      <span className="material-symbols-outlined text-base">
-                        location_on
-                      </span>{" "}
+                      <MapPin className="w-4 h-4" />
                       San Francisco, CA
                     </span>
+
                     <span className="flex items-center gap-1 text-sm text-outline">
-                      <span className="material-symbols-outlined text-base">
-                        mail
-                      </span>{" "}
+                      <Mail className="w-4 h-4" />
                       a.rivera@atelier.com
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-            {/* <!-- Profile Completion Widget (Surface Level 1) --> */}
-            <div className="w-full md:w-80 bg-surface-container-low p-6 rounded-2xl space-y-4">
+
+            {/* Profile Completion Widget */}
+            <div className="w-full md:w-80 bg-white p-6 rounded-2xl space-y-4">
               <div className="flex justify-between items-center">
-                <span className="text-xs font-semibold text-on-surface uppercase tracking-widest">
-                  Profile Integrity
-                </span>
+                <div className="flex items-center gap-2">
+                  <Activity className="w-4 h-4 text-primary" />
+                  <span className="text-xs font-semibold text-on-surface uppercase tracking-widest">
+                    Profile Integrity
+                  </span>
+                </div>
+
                 <span className="text-primary font-bold">85%</span>
               </div>
+
               <div className="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
                 <div className="h-full bg-primary-gradient w-[85%] rounded-full"></div>
               </div>
+
               <p className="text-xs text-outline leading-relaxed">
                 Complete your{" "}
                 <span className="font-bold text-on-surface">
@@ -85,18 +105,19 @@ export default function Profile() {
             {/* <!-- Left Column: Primary Details (8 Cols) --> */}
             <div className="col-span-12 lg:col-span-8 space-y-8">
               {/* <!-- Bio/About Card (Surface Level 2) --> */}
-              <div className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm space-y-6">
+
+              <div className="bg-white p-8 rounded-2xl shadow-sm space-y-6">
                 <div className="flex justify-between items-center">
                   <h3 className="text-xl font-bold tracking-tight">
                     Professional Narrative
                   </h3>
+
                   <button className="text-primary hover:opacity-70 flex items-center gap-1 text-sm font-semibold">
-                    <span className="material-symbols-outlined text-lg">
-                      edit
-                    </span>{" "}
+                    <Pencil className="w-4 h-4" />
                     Edit
                   </button>
                 </div>
+
                 <p className="text-on-surface-variant leading-relaxed body-lg">
                   Design leader with 8+ years of experience building scalable
                   design systems and consumer-facing products. I specialize in
@@ -105,24 +126,26 @@ export default function Profile() {
                   interfaces and minimalist architectural web design.
                 </p>
               </div>
-              {/* <!-- Experience (Editorial List) --> */}
-              <div className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm space-y-10">
+
+              {/* Experience (Editorial List) */}
+              <div className="bg-white p-8 rounded-2xl shadow-sm space-y-10">
                 <div className="flex justify-between items-center">
                   <h3 className="text-xl font-bold tracking-tight">
                     Chronological Journey
                   </h3>
-                  <button className="p-2 bg-surface-container-low rounded-xl text-primary hover:bg-surface-container-high transition-colors">
-                    <span className="material-symbols-outlined">add</span>
+
+                  <button className="p-2 bg-white rounded-xl text-primary hover:bg-surface-container-high transition-colors">
+                    <Plus className="w-5 h-5" />
                   </button>
                 </div>
+
                 <div className="space-y-12">
-                  {/* <!-- Job 1 --> */}
+                  {/* Job 1 */}
                   <div className="flex gap-6 group">
                     <div className="w-14 h-14 bg-surface-container rounded-2xl flex items-center justify-center shrink-0">
-                      <span className="material-symbols-outlined text-2xl text-primary">
-                        token
-                      </span>
+                      <Boxes className="w-6 h-6 text-primary" />
                     </div>
+
                     <div className="space-y-2 flex-1">
                       <div className="flex justify-between items-start">
                         <div>
@@ -133,23 +156,25 @@ export default function Profile() {
                             Lumina Tech Group
                           </p>
                         </div>
-                        <span className="text-xs font-semibold text-outline uppercase tracking-wider py-1 px-3 bg-surface-container-low rounded-full">
+
+                        <span className="text-xs font-semibold text-outline uppercase tracking-wider py-1 px-3 bg-white rounded-full">
                           2021 — Present
                         </span>
                       </div>
+
                       <p className="text-on-surface-variant text-sm leading-relaxed">
                         Led a team of 12 designers in standardizing the global
                         UI framework, reducing engineering hand-off time by 40%.
                       </p>
                     </div>
                   </div>
-                  {/* <!-- Job 2 --> */}
+
+                  {/* Job 2 */}
                   <div className="flex gap-6 group">
                     <div className="w-14 h-14 bg-surface-container rounded-2xl flex items-center justify-center shrink-0">
-                      <span className="material-symbols-outlined text-2xl text-primary">
-                        layers
-                      </span>
+                      <Layers className="w-6 h-6 text-primary" />
                     </div>
+
                     <div className="space-y-2 flex-1">
                       <div className="flex justify-between items-start">
                         <div>
@@ -158,10 +183,12 @@ export default function Profile() {
                             Arcade Creative Agency
                           </p>
                         </div>
-                        <span className="text-xs font-semibold text-outline uppercase tracking-wider py-1 px-3 bg-surface-container-low rounded-full">
+
+                        <span className="text-xs font-semibold text-outline uppercase tracking-wider py-1 px-3 bg-white rounded-full">
                           2018 — 2021
                         </span>
                       </div>
+
                       <p className="text-on-surface-variant text-sm leading-relaxed">
                         Conceptualized and shipped 20+ mobile applications for
                         Fortune 500 clients, winning three Red Dot design
@@ -171,109 +198,124 @@ export default function Profile() {
                   </div>
                 </div>
               </div>
-              {/* <!-- Skills (Tag Cloud) --> */}
-              <div className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm space-y-6">
-                <h3 className="text-xl font-bold tracking-tight">
-                  Competencies
-                </h3>
+
+              {/* Skills (Tag Cloud) */}
+              <div className="bg-white p-8 rounded-2xl shadow-sm space-y-6">
+                <div className="flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl font-bold tracking-tight">
+                    Competencies
+                  </h3>
+                </div>
+
                 <div className="flex flex-wrap gap-3">
-                  <span className="px-5 py-2 bg-primary/5 text-primary rounded-xl text-sm font-semibold">
+                  <span className="flex items-center gap-2 px-5 py-2 bg-primary/5 text-primary rounded-xl text-sm font-semibold">
+                    <Sparkles className="w-4 h-4" />
                     Design Systems
                   </span>
-                  <span className="px-5 py-2 bg-primary/5 text-primary rounded-xl text-sm font-semibold">
+
+                  <span className="flex items-center gap-2 px-5 py-2 bg-primary/5 text-primary rounded-xl text-sm font-semibold">
+                    <Code className="w-4 h-4" />
                     React Architecture
                   </span>
-                  <span className="px-5 py-2 bg-primary/5 text-primary rounded-xl text-sm font-semibold">
+
+                  <span className="flex items-center gap-2 px-5 py-2 bg-primary/5 text-primary rounded-xl text-sm font-semibold">
+                    <Wind className="w-4 h-4" />
                     Tailwind CSS
                   </span>
-                  <span className="px-5 py-2 bg-primary/5 text-primary rounded-xl text-sm font-semibold">
+
+                  <span className="flex items-center gap-2 px-5 py-2 bg-primary/5 text-primary rounded-xl text-sm font-semibold">
+                    <Lightbulb className="w-4 h-4" />
                     Product Strategy
                   </span>
-                  <span className="px-5 py-2 bg-primary/5 text-primary rounded-xl text-sm font-semibold">
+
+                  <span className="flex items-center gap-2 px-5 py-2 bg-primary/5 text-primary rounded-xl text-sm font-semibold">
+                    <Activity className="w-4 h-4" />
                     Motion Design
                   </span>
-                  <span className="px-5 py-2 bg-tertiary/10 text-tertiary rounded-xl text-sm font-semibold">
+
+                  <span className="flex items-center gap-2 px-5 py-2 bg-tertiary/10 text-tertiary rounded-xl text-sm font-semibold">
+                    <Users className="w-4 h-4" />
                     User Research
                   </span>
-                  <span className="px-5 py-2 bg-surface-container-high text-outline rounded-xl text-sm font-semibold">
+
+                  <span className="flex items-center gap-2 px-5 py-2 bg-surface-container-high text-outline rounded-xl text-sm font-semibold">
+                    <Plus className="w-4 h-4" />
                     +8 more
                   </span>
                 </div>
               </div>
             </div>
             {/* <!-- Right Column: Metadata & Links (4 Cols) --> */}
+
             <div className="col-span-12 lg:col-span-4 space-y-8">
-              {/* <!-- Resume Upload (Surface Container High for Emphasis) --> */}
+              {/* Resume Upload */}
               <div className="bg-primary/5 p-8 rounded-3xl border-2 border-dashed border-primary/20 space-y-4 text-center">
                 <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto shadow-sm">
-                  <span
-                    className="material-symbols-outlined text-3xl text-primary"
-                    data-weight="fill"
-                  >
-                    description
-                  </span>
+                  <FileText className="w-8 h-8 text-primary" />
                 </div>
+
                 <div className="space-y-1">
                   <h4 className="font-bold">Resume_Alex_2024.pdf</h4>
                   <p className="text-xs text-outline">Uploaded Oct 14, 2023</p>
                 </div>
-                <button className="w-full py-3 bg-white text-primary font-bold rounded-2xl hover:bg-surface-container-low transition-colors shadow-sm">
+
+                <button className="w-full py-3 bg-white text-primary font-bold rounded-2xl hover:bg-white transition-colors shadow-sm">
                   Replace File
                 </button>
               </div>
-              {/* <!-- External Links --> */}
-              <div className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm space-y-6">
+
+              {/* External Links */}
+              <div className="bg-white p-8 rounded-2xl shadow-sm space-y-6">
                 <h3 className="text-xl font-bold tracking-tight">
                   Digital Footprint
                 </h3>
+
                 <div className="space-y-4">
                   <a
-                    className="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-colors group"
+                    className="flex items-center justify-between p-4 bg-white rounded-2xl hover:bg-surface-container-high transition-colors group"
                     href="#"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="material-symbols-outlined text-primary">
-                        public
-                      </span>
+                      <Globe className="w-5 h-5 text-primary" />
                       <span className="font-semibold">Portfolio Site</span>
                     </div>
-                    <span className="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">
-                      arrow_forward
-                    </span>
+                    <ArrowRight className="w-5 h-5 text-outline group-hover:translate-x-1 transition-transform" />
                   </a>
+
                   <a
-                    className="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-colors group"
+                    className="flex items-center justify-between p-4 bg-white rounded-2xl hover:bg-surface-container-high transition-colors group"
                     href="#"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="material-symbols-outlined text-primary">
-                        code
-                      </span>
+                      <Code className="w-5 h-5 text-primary" />
                       <span className="font-semibold">GitHub</span>
                     </div>
-                    <span className="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">
-                      arrow_forward
-                    </span>
+                    <ArrowRight className="w-5 h-5 text-outline group-hover:translate-x-1 transition-transform" />
                   </a>
+
                   <a
-                    className="flex items-center justify-between p-4 bg-surface-container-low rounded-2xl hover:bg-surface-container-high transition-colors group"
+                    className="flex items-center justify-between p-4 bg-white rounded-2xl hover:bg-surface-container-high transition-colors group"
                     href="#"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="material-symbols-outlined text-primary">
-                        link
-                      </span>
+                      <LinkIcon className="w-5 h-5 text-primary" />
                       <span className="font-semibold">LinkedIn</span>
                     </div>
-                    <span className="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">
-                      arrow_forward
-                    </span>
+                    <ArrowRight className="w-5 h-5 text-outline group-hover:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>
-              {/* <!-- Education --> */}
-              <div className="bg-surface-container-lowest p-8 rounded-2xl shadow-sm space-y-6">
-                <h3 className="text-xl font-bold tracking-tight">Education</h3>
+
+              {/* Education */}
+              <div className="bg-white p-8 rounded-2xl shadow-sm space-y-6">
+                <div className="flex items-center gap-2">
+                  <GraduationCap className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl font-bold tracking-tight">
+                    Education
+                  </h3>
+                </div>
+
                 <div className="space-y-4">
                   <div className="space-y-1">
                     <h4 className="font-bold text-sm">
@@ -284,7 +326,9 @@ export default function Profile() {
                     </p>
                     <p className="text-xs text-outline">Class of 2018</p>
                   </div>
-                  <div className="h-[1px] bg-surface-container-low"></div>
+
+                  <div className="h-[1px] bg-white"></div>
+
                   <div className="space-y-1">
                     <h4 className="font-bold text-sm">
                       BFA in Communication Design
@@ -311,7 +355,7 @@ export default function Profile() {
                 Make adjustments to your professional narrative
               </p>
             </div>
-            <button className="w-12 h-12 rounded-full hover:bg-surface-container-low flex items-center justify-center transition-colors">
+            <button className="w-12 h-12 rounded-full hover:bg-white flex items-center justify-center transition-colors">
               <span className="material-symbols-outlined">close</span>
             </button>
           </div>
@@ -321,14 +365,14 @@ export default function Profile() {
                 Professional Headline
               </label>
               <input
-                className="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all font-medium"
+                className="w-full bg-white border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all font-medium"
                 type="text"
                 value="Senior Product Designer &amp; Systems Architect"
               />
             </div>
             <div className="space-y-4">
               <label className="label-md text-outline block">Bio</label>
-              <textarea className="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all leading-relaxed">
+              <textarea className="w-full bg-white border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all leading-relaxed">
                 Design leader with 8+ years of experience building scalable
                 design systems and consumer-facing products...
               </textarea>
@@ -337,7 +381,7 @@ export default function Profile() {
               <div className="space-y-4">
                 <label className="label-md text-outline block">Location</label>
                 <input
-                  className="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all"
+                  className="w-full bg-white border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all"
                   type="text"
                   value="San Francisco, CA"
                 />
@@ -345,14 +389,14 @@ export default function Profile() {
               <div className="space-y-4">
                 <label className="label-md text-outline block">Email</label>
                 <input
-                  className="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all"
+                  className="w-full bg-white border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/20 transition-all"
                   type="email"
                   value="a.rivera@atelier.com"
                 />
               </div>
             </div>
           </div>
-          <div className="px-10 py-8 bg-surface-container-low flex justify-end gap-4">
+          <div className="px-10 py-8 bg-white flex justify-end gap-4">
             <button className="px-8 py-3 font-bold text-on-surface hover:opacity-70 transition-opacity">
               Cancel
             </button>
@@ -362,10 +406,6 @@ export default function Profile() {
           </div>
         </div>
       </div>
-      {/* <!-- Floating Action Button (FAB) - Suppression Logic: Render on Home/Dashboard, hide on Focus/Profile if preferred, but here we add it for "Add New Experience" context --> */}
-      <button className="fixed bottom-10 right-10 w-16 h-16 bg-primary-gradient  rounded-2xl shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50">
-        <span className="material-symbols-outlined text-3xl">add</span>
-      </button>
     </div>
   );
 }
