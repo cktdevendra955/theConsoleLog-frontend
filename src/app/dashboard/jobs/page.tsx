@@ -11,7 +11,7 @@ import {
   Bell,
   Settings,
   Trash2,
-  Sparkles,
+  Sparkles,ArrowRight 
 } from "lucide-react";
 
 export default function Page() {
@@ -102,31 +102,33 @@ export default function Page() {
               </div>
             </div>
             {/* <!-- Match Insight Widget (Asymmetric Element) --> */}
-            <div className="lg:col-span-4 bg-primary p-8 rounded-3xl editorial-shadow overflow-hidden relative">
-              <div className="relative z-10">
-                <span className="material-symbols-outlined text-tertiary-fixed-dim mb-4 text-4xl">
-                  stars
-                </span>
-                <h4 className="text-xl font-bold tracking-tight mb-3 leading-snug">
-                  Designer-Role Alignment
-                </h4>
-                <p className=" text-sm mb-6 leading-relaxed">
-                  Your profile matches 98% of the requirements for the Senior
-                  Product Designer role at Linear. Your systems thinking and
-                  portfolio were flagged as strong matches.
-                </p>
-                <a
-                  className="inline-flex items-center gap-2 text-sm font-bold border-b border-white/30 pb-1 hover:border-white transition-all"
-                  href="#"
-                >
-                  View skill gap analysis
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              </div>
-              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
-            </div>
+
+<div className="lg:col-span-4 bg-primary p-8 rounded-3xl editorial-shadow overflow-hidden relative">
+  <div className="relative z-10">
+    
+    <Sparkles className="text-tertiary-fixed-dim mb-4 w-10 h-10" />
+
+    <h4 className="text-xl font-bold tracking-tight mb-3 leading-snug">
+      Designer-Role Alignment
+    </h4>
+
+    <p className="text-sm mb-6 leading-relaxed">
+      Your profile matches 98% of the requirements for the Senior
+      Product Designer role at Linear. Your systems thinking and
+      portfolio were flagged as strong matches.
+    </p>
+
+    <a
+      className="inline-flex items-center gap-2 text-sm font-bold border-b border-white/30 pb-1 hover:border-white transition-all"
+      href="#"
+    >
+      View skill gap analysis
+      <ArrowRight className="w-4 h-4" />
+    </a>
+  </div>
+
+  <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+</div>
             {/* <!-- Job Card 2 --> */}
             <div className="lg:col-span-4 bg-white p-6 rounded-3xl editorial-shadow transition-all hover:-translate-y-1 duration-300">
               <div className="flex justify-between items-start mb-6">
@@ -247,34 +249,9 @@ export default function Page() {
               </button>
             </div>
           </div>
-          {/* <!-- Footer Stats --> */}
-          <footer className="mt-16 flex justify-between items-center text-xs font-semibold text-outline tracking-wider uppercase">
-            <div className="flex gap-8">
-              <span>Total Saved: 14</span>
-              <span>Average Match: 88%</span>
-            </div>
-            <div className="flex gap-6">
-              <a className="hover:text-primary transition-colors" href="#">
-                Privacy
-              </a>
-              <a className="hover:text-primary transition-colors" href="#">
-                Terms
-              </a>
-              <a className="hover:text-primary transition-colors" href="#">
-                Support
-              </a>
-            </div>
-          </footer>
         </div>
       </main>
-      {/* <!-- Contextual FAB (Only for Home/Job Browsing, kept simple here) --> */}
-      <div className="fixed bottom-8 right-8 z-50">
-        <button className="w-14 h-14 rounded-full bg-primary  editorial-shadow flex items-center justify-center hover:scale-110 active:scale-90 transition-all duration-200">
-          <span className="material-symbols-outlined text-2xl">
-            magic_button
-          </span>
-        </button>
-      </div>
+      
     </div>
   );
 }
