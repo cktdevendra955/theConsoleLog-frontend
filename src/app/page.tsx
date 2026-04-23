@@ -1,150 +1,207 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Link from "next/link";
-import { ArrowRight, Briefcase, FileText, User } from "lucide-react";
-
-const container = {
-  hidden: { opacity: 0, y: 20 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { staggerChildren: 0.12, delayChildren: 0.2 },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
+import {
+  ArrowRight,
+  Bolt,
+  Verified,
+  TrendingUp,
+  Brain,
+  Dna,
+  CheckCircle,
+  Shield,
+  Lock,
+} from "lucide-react";
 
 export default function Page() {
   return (
-    <div className="relative min-h-screen bg-gray-100 text-black overflow-hidden">
+    <div className="bg-background text-on-background font-sans">
       
-      {/* 🌫️ Subtle Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-100 to-gray-200" />
-      <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-gray-300/30 rounded-full blur-3xl" />
-      <div className="absolute bottom-[-120px] right-[-100px] w-[400px] h-[400px] bg-gray-400/20 rounded-full blur-3xl" />
 
-      {/* MAIN */}
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6"
-      >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl w-full">
-
-          {/* LEFT CONTENT */}
-          <motion.div
-            variants={item}
-            className="space-y-7 text-center md:text-left"
-          >
-            <motion.h1
-              variants={item}
-              className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight"
-            >
-              Land Your Dream Job
-              <span className="block text-gray-500 font-medium">
-                Faster & Smarter
+      {/* HERO */}
+      <main className="pt-32 pb-24">
+        <section className="max-w-[1280px] mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+          
+          {/* LEFT */}
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 border">
+              <span className="w-2 h-2 bg-blue-600 rounded-full" />
+              <span className="text-xs uppercase tracking-widest text-slate-500">
+                Quantum Matchmaking v2.0
               </span>
-            </motion.h1>
+            </div>
 
-            <motion.p
-              variants={item}
-              className="text-gray-600 text-base sm:text-lg max-w-lg mx-auto md:mx-0 leading-relaxed"
-            >
-              Build ATS-friendly resumes, create stunning portfolios, and apply
-              to top hiring drives — all in one powerful platform.
-            </motion.p>
+            <h1 className="text-5xl font-bold leading-tight">
+              Experience <span className="text-blue-600">HighSignal</span>{" "}
+              Recruitment.
+            </h1>
 
-            {/* CTA */}
-            <motion.div
-              variants={item}
-              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
-            >
-              <Link href="/dashboard">
-                <motion.div
-                  whileHover={{ scale: 1.06 }}
-                  whileTap={{ scale: 0.96 }}
-                  className="group inline-flex items-center justify-center gap-2 rounded-xl bg-black text-white px-7 py-3 font-medium shadow-lg hover:shadow-xl transition cursor-pointer"
-                >
-                  Enter Dashboard
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition" />
-                </motion.div>
-              </Link>
+            <p className="text-slate-500 text-lg max-w-md">
+              Where technical precision meets human potential. Connect top
+              engineers with elite teams.
+            </p>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                className="rounded-xl border border-gray-300 px-6 py-3 text-gray-700 hover:bg-gray-200 transition"
-              >
-                Explore Features
-              </motion.button>
-            </motion.div>
+            <div className="flex gap-6">
+              <button className="bg-primary text-white px-8 py-4 rounded-xl flex items-center gap-2">
+                Find Jobs <ArrowRight size={18} />
+              </button>
 
-            {/* FEATURES */}
-            <motion.div
-              variants={item}
-              className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4"
-            >
-              {[
-                { icon: FileText, label: "Resume Builder" },
-                { icon: User, label: "Portfolio Creator" },
-                { icon: Briefcase, label: "Job & Drives" },
-              ].map((f, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-2 text-sm text-gray-600 bg-white px-3 py-2 rounded-lg border border-gray-200 shadow-sm"
-                >
-                  <f.icon size={16} />
-                  {f.label}
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
+              <button className="border px-8 py-4 rounded-xl">
+                Hire Talent
+              </button>
+            </div>
+          </div>
 
-          {/* RIGHT SIDE – PREMIUM CARD */}
-          <motion.div variants={item} className="flex justify-center">
-            <div className="relative w-full max-w-md">
+          {/* RIGHT CARD */}
+          <div className="relative">
+            <div className="bg-white p-8 rounded-2xl shadow-xl border">
               
-              {/* Glow */}
-              <div className="absolute inset-0 bg-gray-300/40 blur-2xl rounded-3xl" />
+              {/* HEADER */}
+              <div className="flex justify-between mb-6">
+                <div className="flex gap-3 items-center">
+                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                    <Bolt className="text-blue-600" size={18} />
+                  </div>
+                  <div>
+                    <p className="font-semibold">Matching Engine</p>
+                    <p className="text-xs text-slate-400">STATUS: OPTIMAL</p>
+                  </div>
+                </div>
 
-              {/* Card */}
-              <div className="relative rounded-2xl border border-gray-200 bg-white p-6 shadow-xl">
+                <span className="text-green-600 text-xs bg-green-100 px-3 py-1 rounded-full">
+                  98% Signal
+                </span>
+              </div>
+
+              {/* LIST */}
+              <div className="space-y-4">
                 
-                <div className="space-y-5">
-                  
-                  {/* Header */}
-                  <div className="h-4 w-32 bg-gray-200 rounded" />
-
-                  {/* Chart */}
-                  <div className="h-24 bg-gray-100 rounded-xl border border-gray-200 flex items-end gap-1 p-3">
-                    {[40, 60, 30, 80, 55, 70].map((h, i) => (
-                      <div
-                        key={i}
-                        className="w-2 bg-black rounded"
-                        style={{ height: `${h}%` }}
-                      />
-                    ))}
+                <div className="flex justify-between items-center bg-slate-50 p-4 rounded-xl">
+                  <div>
+                    <p className="text-sm font-semibold">
+                      Lead Systems Architect
+                    </p>
+                    <p className="text-xs text-slate-400">Rust • K8s</p>
                   </div>
+                  <Verified className="text-blue-600" size={18} />
+                </div>
 
-                  {/* Stats */}
-                  <div className="grid grid-cols-2 gap-3">
-                    <div className="h-16 bg-gray-100 rounded-lg border border-gray-200" />
-                    <div className="h-16 bg-gray-100 rounded-lg border border-gray-200" />
+                <div className="flex justify-between items-center bg-white p-4 rounded-xl border">
+                  <div>
+                    <p className="text-sm font-semibold">
+                      Product Designer
+                    </p>
+                    <p className="text-xs text-slate-400">
+                      FinTech • Ex-Stripe
+                    </p>
                   </div>
+                  <Verified className="text-blue-600" size={18} />
+                </div>
 
-                  {/* Button */}
-                  <div className="h-10 bg-black rounded-lg" />
+              </div>
+            </div>
+
+            {/* FLOAT CARD */}
+            <div className="absolute -bottom-6 -left-6 bg-white shadow-lg p-4 rounded-xl flex items-center gap-2">
+              <TrendingUp size={18} className="text-blue-600" />
+              <span className="text-sm font-medium">
+                Hiring velocity +40%
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* FEATURES */}
+        <section className="max-w-[1280px] mx-auto px-8 mt-32">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold">Engineered for Clarity</h2>
+            <p className="text-slate-500 mt-2">
+              Focus on high-signal hiring.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            
+            {/* CARD 1 */}
+            <div className="col-span-2 p-8 rounded-3xl border bg-white">
+              <Brain className="text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">
+                Cognitive Verification
+              </h3>
+              <p className="text-slate-500">
+                Verify skills before interviews.
+              </p>
+            </div>
+
+            {/* CARD 2 */}
+            <div className="p-8 rounded-3xl border bg-white">
+              <Dna className="text-purple-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">
+                Culture DNA
+              </h3>
+
+              <div className="space-y-2 text-sm text-slate-500">
+                <div className="flex gap-2">
+                  <CheckCircle size={16} /> Async-first teams
+                </div>
+                <div className="flex gap-2">
+                  <CheckCircle size={16} /> Product engineers
+                </div>
+                <div className="flex gap-2">
+                  <CheckCircle size={16} /> No micromanagement
                 </div>
               </div>
             </div>
-          </motion.div>
 
-        </div>
-      </motion.div>
+            {/* CARD 3 */}
+            <div className="p-8 rounded-3xl border bg-white">
+              <Shield className="text-green-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">
+                Private Mode
+              </h3>
+              <p className="text-slate-500">
+                Anonymous job exploration.
+              </p>
+            </div>
+
+            {/* CARD 4 */}
+            <div className="col-span-2 p-8 rounded-3xl border bg-white flex items-center justify-between">
+              <div>
+                <Shield className="mb-4 text-blue-600" />
+                <h3 className="text-xl font-semibold">
+                  Stealth Hiring
+                </h3>
+                <p className="text-slate-500">
+                  Reveal identity only after approval.
+                </p>
+              </div>
+
+              <Lock className="text-slate-300" size={48} />
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="max-w-[1280px] mx-auto px-8 mt-32">
+          <div className="bg-black text-white rounded-3xl p-16 text-center">
+            <h2 className="text-4xl font-bold mb-4">
+              Ready for the Quantum Leap?
+            </h2>
+            <p className="text-slate-400 mb-8">
+              Join top engineering teams.
+            </p>
+
+            <div className="flex justify-center gap-6">
+              <button className="bg-white text-black px-8 py-4 rounded-xl">
+                Apply
+              </button>
+              <button className="border px-8 py-4 rounded-xl">
+                View Roles
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+
     </div>
   );
 }
