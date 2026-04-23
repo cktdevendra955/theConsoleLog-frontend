@@ -16,7 +16,8 @@ export default function Page() {
   return (
     <div className="bg-background text-on-background font-sans">
       
-
+      {/* NAVBAR */}
+      
       {/* HERO */}
       <main className="pt-32 pb-24">
         <section className="max-w-[1280px] mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
@@ -202,6 +203,7 @@ export default function Page() {
         </section>
       </main>
 
+      
     </div>
   );
 }
