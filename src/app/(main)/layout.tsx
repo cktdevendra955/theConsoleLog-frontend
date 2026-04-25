@@ -6,9 +6,10 @@ import Footer from "./components/layout/Footer";
 export default function DashboardLayout({children,}: {children: React.ReactNode;}) {
   return (
     <div className="min-h-full flex flex-col bg-background text-on-background">
-      <Header />
+      {/* <Header /> */}
         <main className="flex-1 pt-24">{children}</main>
-      <Footer />
+      {/* <Footer /> */}
+      
     </div>
   );
 }
