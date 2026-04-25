@@ -15,17 +15,17 @@ export default function Header({
       <div className="flex items-center gap-3">
         {/* Mobile */}
         <button onClick={openMobile} className="md:hidden">
-          <Menu className="h-5 w-5" />
+          <Menu className="h-5 w-5" /> PROJECT - 43
         </button>
 
         {/* Desktop */}
         <button onClick={toggleSidebar} className="hidden md:block">
-          <Menu className="h-5 w-5" />
+          <Menu className="h-5 w-5" /> PROJECT - 43
         </button>
       </div>
 
       <div className="flex items-center gap-4">
-        <Bell className="h-5 w-5" />
+        <Bell className="h-5 w-5" /> 
       </div>
     </header>
   );
