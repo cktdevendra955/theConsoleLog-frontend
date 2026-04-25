@@ -15,18 +15,7 @@ export default function Sidebar({
 }) {
   const pathname = usePathname();
 
-  // ✅ FIXED ACTIVE ROUTE LOGIC
-  const isActiveRoute = (path: string) => {
-    if (!pathname) return false;
-
-    // Special case: Dashboard should only match exactly
-    if (path === "/dashboard") {
-      return pathname === path;
-    }
-
-    // Exact match OR nested route match
-    return pathname === path || pathname.startsWith(path + "/");
-  };
+  const isActiveRoute = (path: string) => pathname.startsWith(path);
 
   const mainItems = NAV_ITEMS.filter((i) => i.section === "main");
   const secondaryItems = NAV_ITEMS.filter((i) => i.section === "secondary");
@@ -38,20 +27,15 @@ export default function Sidebar({
       <Link key={item.label} href={item.path}>
         <motion.div
           whileHover={{ scale: 1.02 }}
-          className={`relative flex items-center gap-3 h-11 px-4 rounded-xl text-sm transition-all
+          className={`flex items-center gap-3 h-11 px-4 rounded-xl text-sm transition-all
             ${
               isActive
-                  ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-md"
+                ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-md"
                 : "text-gray-500 hover:bg-white/70"
             }
             ${!isOpen && !isMobile && "justify-center px-0"}
           `}
         >
-          {/* 🔥 Active indicator */}
-          {isActive && (
-            <div className="absolute left-0 top-2 bottom-2 w-1 rounded-r-full bg-white/80" />
-          )}
-
           <item.icon className="h-5 w-5 shrink-0" />
           {(isOpen || isMobile) && <span>{item.label}</span>}
         </motion.div>
