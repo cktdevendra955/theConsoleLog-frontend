@@ -48,9 +48,9 @@ export default function Sidebar({
           `}
         >
           {/* 🔥 Active indicator */}
-          {isActive && (
+          {/* {isActive && (
             <div className="absolute left-0 top-2 bottom-2 w-1 rounded-r-full bg-white/80" />
-          )}
+          )} */}
 
           <item.icon className="h-5 w-5 shrink-0" />
           {(isOpen || isMobile) && <span>{item.label}</span>}
