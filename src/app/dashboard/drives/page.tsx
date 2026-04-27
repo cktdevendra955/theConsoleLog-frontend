@@ -11,7 +11,7 @@ import {
 export default function HiringDrivePage() {
   return (
     <div className="bg-surface text-on-surface">
-      <main className="pt-14 md:pt-16 min-h-screen">
+      <main className=" min-h-screen">
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 md:py-10">
 

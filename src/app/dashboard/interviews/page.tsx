@@ -1,352 +1,226 @@
 "use client";
 
-import Image from "next/image";
-import { motion } from "framer-motion";
-
 import {
   Calendar,
   Clock,
   Video,
   MapPin,
-  ChevronLeft,
-  ChevronRight,
-  MoreVertical,
-  User,
+  MoreHorizontal,
   List,
   CalendarDays,
   Check,
   Lightbulb,
-  MoreHorizontal,
-  Map,
 } from "lucide-react";
 
 export default function Interviews() {
   return (
     <div className="bg-surface text-on-surface antialiased">
-      {/* <!-- Main Content --> */}
-      <main className=" mt-16 p-10 bg-surface min-h-screen">
+      <main className=" px-4 sm:px-6 lg:px-8 py-6 sm:py-8 min-h-screen">
         <div className="max-w-6xl mx-auto">
-          {/* <!-- Header Section --> */}
 
-          <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
+          {/* HEADER */}
+          <div className="flex flex-col gap-6 mb-8">
             <div>
-              <h2 className="text-[3.5rem] font-bold tracking-[-0.04em] leading-[1.1] text-on-surface">
+              <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight tracking-tight">
                 Interviews
               </h2>
-              <p className="text-body-lg text-on-surface-variant mt-4 max-w-lg">
-                Manage your upcoming meetings and technical rounds. Your next
-                opportunity is just a click away.
+              <p className="text-sm sm:text-base text-on-surface-variant mt-2 max-w-md">
+                Manage your upcoming meetings and technical rounds.
               </p>
             </div>
-            <div className="flex p-1 bg-surface-container-low rounded-xl">
-              <button className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white shadow-sm text-primary font-semibold text-sm transition-all">
-                <List size={18} />
-                List View
+
+            {/* VIEW TOGGLE */}
+            <div className="flex w-full sm:w-fit p-1 bg-surface-container-low rounded-xl">
+              <button className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-white shadow-sm text-primary font-semibold text-xs sm:text-sm">
+                <List size={16} />
+                List
               </button>
-              <button className="flex items-center gap-2 px-4 py-2 rounded-lg text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all">
-                <CalendarDays size={18} />
+              <button className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-on-surface-variant text-xs sm:text-sm">
+                <CalendarDays size={16} />
                 Calendar
               </button>
             </div>
           </div>
-          {/* <!-- Bento Layout Content --> */}
-          <div className="grid grid-cols-12 gap-6">
-            {/* <!-- Main Interview List (Column 1-8) --> */}
-            <div className="col-span-12 lg:col-span-8 space-y-6">
-              {/* <!-- Section Title --> */}
-              <div className="flex items-center justify-between px-2">
-                <h3 className="text-[0.75rem] font-bold tracking-[0.05em] text-on-surface-variant uppercase">
+
+          {/* GRID */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+            {/* LEFT CONTENT */}
+            <div className="lg:col-span-8 space-y-5">
+
+              {/* TITLE */}
+              <div className="flex items-center justify-between">
+                <h3 className="text-xs font-bold uppercase tracking-wide text-on-surface-variant">
                   Upcoming Rounds (3)
                 </h3>
-                <a
-                  className="text-sm font-semibold text-primary hover:underline"
-                  href="#"
-                >
+                <a className="text-xs sm:text-sm font-semibold text-primary cursor-pointer">
                   View History
                 </a>
               </div>
-              {/* <!-- Interview Card 1: Featured/Next --> */}
 
-              <div className="bg-white rounded-xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02),0_12px_24px_rgba(25,28,30,0.04)] relative overflow-hidden group">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-8 -mt-8 transition-all group-hover:bg-primary/10"></div>
-                <div className="flex items-start justify-between relative z-10">
-                  <div className="flex gap-5">
-                    <div className="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center p-3">
-                      <img
-                        alt="Linear Technology"
-                        className="w-full h-full object-contain"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd18O1AnOSix461h7rMn3xSNNydZUqcb4uvRpMDna0IoEdyPCwXaTVO0XoogRuiISYuxj_qA-PZoX0V4aHE3LUDdpQZPnchK0xDb-m-3vig-whMeSdBpCMr3HCviEDnAgmOWp25kweuO1R3aB-75R3g_bNJ6hcSQUlJqZLaZ0cIFPebGweA0WERBlKblVA6yZe3wqYSuHN2GRhbBbNaav7zwzUq7v_qE8nmWr_8_xPEj3WBAmDDKGES4oX2S4eluc1Xta18Q8BzmEF"
-                      />
+              {/* CARD 1 */}
+              <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm">
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-4">
+
+                  <div className="flex gap-4">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-surface-container-low rounded-xl flex items-center justify-center p-2">
+                      <img src="https://via.placeholder.com/40" />
                     </div>
+
                     <div>
-                      <h4 className="text-title-lg font-semibold text-on-surface">
+                      <h4 className="text-sm sm:text-lg font-semibold">
                         Senior Product Designer
                       </h4>
-                      <p className="text-body-lg text-on-surface-variant">
-                        Linear Technology • Technical Round
+                      <p className="text-xs sm:text-sm text-on-surface-variant">
+                        Linear • Technical Round
                       </p>
 
-                      <div className="flex items-center gap-4 mt-4 text-sm font-medium text-on-surface-variant">
-                        <div className="flex items-center gap-1.5">
-                          <Calendar className="w-[18px] h-[18px] text-primary" />
-                          Tomorrow, Oct 24
-                        </div>
-
-                        <div className="flex items-center gap-1.5">
-                          <Clock className="w-[18px] h-[18px] text-primary" />
-                          10:00 AM - 11:30 AM
-                        </div>
+                      <div className="flex flex-col sm:flex-row sm:gap-4 mt-2 text-xs sm:text-sm">
+                        <span className="flex items-center gap-1">
+                          <Calendar size={14} /> Tomorrow
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock size={14} /> 10:00 AM
+                        </span>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-primary/10 text-primary px-3 py-1 rounded-full text-[11px] font-bold tracking-wider uppercase">
-                    High Priority
-                  </div>
+                  <span className="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded-full font-bold self-start">
+                    Priority
+                  </span>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-surface-container-low flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-[#EA4335]/10 flex items-center justify-center text-[#EA4335]">
-                      <Video className="w-[16px] h-[16px]" />
-                    </span>
+                <div className="mt-4 flex flex-col sm:flex-row gap-3 sm:justify-between sm:items-center">
+                  <span className="text-xs sm:text-sm text-on-surface-variant flex items-center gap-2">
+                    <Video size={14} /> Google Meet
+                  </span>
 
-                    <span className="text-sm font-medium text-on-surface-variant">
-                      Google Meet • 45 min
-                    </span>
-                  </div>
-
-                  <button className="bg-primary-gradient px-6 py-2.5 rounded-full font-semibold text-sm shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all hover:-translate-y-0.5 active:translate-y-0">
+                  <button className="w-full sm:w-auto bg-primary-gradient px-4 py-2 rounded-full text-sm font-semibold">
                     Join Interview
                   </button>
                 </div>
               </div>
-              {/* <!-- Interview Card 2 --> */}
 
-              <div className="bg-white rounded-xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02)] border border-transparent hover:border-outline-variant/30 transition-all">
-                <div className="flex items-start justify-between">
-                  <div className="flex gap-5">
-                    <div className="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center p-3">
-                      <img
-                        alt="Flow Systems"
-                        className="w-full h-full object-contain"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8YJfqDogJQvh4wOsKFS8aUsXA08t9x3MSdjmctBwg_ea9GzVZF-n_r5T2KBgt-kDlcx4PjDdJ3_eOvBXFcQC96pGunxQAA2nTD2mjaAJvAIDci6NIycEYPSDU-fF2O4omA8MEm-YfsGexhgLRvZq4rV1e0O7euhFBySkWWvCvpjMiKmV5buac3vkd-D6WGoGffWziKQXe9M9aofZ18Kw4Hk2i0JhdZcbVahgBVGWP9MZL2enuv-pVkmqMTmnqdcJGPaOKPDTBFfaf"
-                      />
-                    </div>
+              {/* CARD 2 */}
+              <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm">
+                <div className="flex flex-col gap-4">
 
-                    <div>
-                      <h4 className="text-title-lg font-semibold text-on-surface">
-                        Design Systems Lead
-                      </h4>
-                      <p className="text-body-lg text-on-surface-variant">
-                        Flow Systems • Culture Fit
-                      </p>
+                  <div className="flex justify-between">
+                    <div className="flex gap-4">
+                      <div className="w-12 h-12 bg-surface-container-low rounded-xl"></div>
 
-                      <div className="flex items-center gap-4 mt-4 text-sm font-medium text-on-surface-variant">
-                        <div className="flex items-center gap-1.5">
-                          <Calendar className="w-[18px] h-[18px]" />
-                          Oct 26, 2023
-                        </div>
-
-                        <div className="flex items-center gap-1.5">
-                          <Clock className="w-[18px] h-[18px]" />
-                          2:00 PM - 2:45 PM
-                        </div>
+                      <div>
+                        <h4 className="text-sm sm:text-lg font-semibold">
+                          Design Systems Lead
+                        </h4>
+                        <p className="text-xs sm:text-sm text-on-surface-variant">
+                          Flow Systems
+                        </p>
                       </div>
                     </div>
+
+                    <MoreHorizontal size={18} />
                   </div>
 
-                  <button className="p-2 text-outline hover:text-on-surface transition-colors">
-                    <MoreHorizontal className="w-[18px] h-[18px]" />
-                  </button>
-                </div>
+                  <div className="flex flex-col sm:flex-row sm:justify-between gap-3 bg-surface-container-low/50 p-3 rounded-xl">
 
-                <div className="mt-6 flex items-center justify-between bg-surface-container-low/50 p-4 rounded-xl">
-                  <div className="flex items-center gap-3">
-                    <img
-                      alt="Interviewer"
-                      className="w-8 h-8 rounded-full object-cover"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGyutfnqxDqgPyJAvPWC3xijMopfPfqAaRONHOCvZvbPnvzWRs9VS-zbFsHKWNv55NMeUy4ozs6LQahBkVlq5gd-vRx2BNNozIbudjuWyidO6oIFmpHfq8xPbR1T-XyzpKlDhf93AjqxylQVEzjjEooEIfu463fuuAKCMJxsgGd8Hngkh3eVFt0wIXvIW84BndfarkvI0amn6dtjwjeK6G2wXIXbwPh0uMOQvdd8jq1fHtvYZ8Hi0npHwx_arDYMmJfw1D-qH-eDR_"
-                    />
-                    <div className="text-xs">
-                      <p className="font-bold text-on-surface">Sarah Jenkins</p>
-                      <p className="text-on-surface-variant">
-                        Head of Experience
-                      </p>
+                    <div className="flex items-center gap-2">
+                      <img className="w-7 h-7 rounded-full" src="https://via.placeholder.com/30" />
+                      <span className="text-xs">Sarah Jenkins</span>
                     </div>
-                  </div>
 
-                  <div className="flex items-center gap-3">
-                    <button className="text-sm font-semibold text-primary px-4 py-2 hover:bg-white rounded-lg transition-all">
-                      Details
-                    </button>
-                    <button className="bg-surface-container-highest text-on-surface-variant px-6 py-2.5 rounded-full font-semibold text-sm opacity-60 cursor-not-allowed">
-                      Link Pending
-                    </button>
+                    <div className="flex gap-2">
+                      <button className="text-xs px-3 py-1 text-primary">
+                        Details
+                      </button>
+                      <button className="text-xs px-3 py-1 bg-surface-container-highest rounded-full opacity-60">
+                        Pending
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-              {/* <!-- Interview Card 3 --> */}
 
-              <div className="bg-white rounded-xl p-6 shadow-[0_2px_4px_rgba(25,28,30,0.02)]">
-                <div className="flex items-start justify-between">
-                  <div className="flex gap-5">
-                    <div className="w-16 h-16 bg-surface-container-low rounded-2xl flex items-center justify-center p-3">
-                      <img
-                        alt="Neura"
-                        className="w-full h-full object-contain"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDs8AN4lMhOMM2G7N3xvW2Sk_TK3q0pP6x-wlnDu8-JWJpqioyVwd6NwNGGmlmDL2c6X4eazky_7gAEWAxuOO3HnT7WfaH6NpIyujGC8Q0MRCmY8AUkGjfGa9w9yAGVNu0Yf5Gfls05_5kPLBPR19tv1jgNPhuW8EQBSByMfxz_LAi19zGtmbQ8SPtkLIkSw0WKo4Dj3NyS0ZHEFR8qoTvGqxTHzNNhB1wOQDahkryMlXbjWRGewWo5XwhN65I9tncY0iLWCSGQ6UJ2"
-                      />
-                    </div>
+              {/* CARD 3 */}
+              <div className="bg-white rounded-xl p-4 sm:p-6 shadow-sm">
+                <div className="flex flex-col gap-4">
+
+                  <div className="flex gap-4">
+                    <div className="w-12 h-12 bg-surface-container-low rounded-xl"></div>
 
                     <div>
-                      <h4 className="text-title-lg font-semibold text-on-surface">
+                      <h4 className="text-sm sm:text-lg font-semibold">
                         UI/UX Architect
                       </h4>
-                      <p className="text-body-lg text-on-surface-variant">
-                        Neura AI • Portfolio Review
+                      <p className="text-xs sm:text-sm text-on-surface-variant">
+                        Neura AI
                       </p>
-
-                      <div className="flex items-center gap-4 mt-4 text-sm font-medium text-on-surface-variant">
-                        <div className="flex items-center gap-1.5">
-                          <Calendar className="w-[18px] h-[18px]" />
-                          Oct 30, 2023
-                        </div>
-
-                        <div className="flex items-center gap-1.5">
-                          <Clock className="w-[18px] h-[18px]" />
-                          4:00 PM - 5:30 PM
-                        </div>
-                      </div>
                     </div>
                   </div>
-                </div>
 
-                <div className="mt-6 flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <span className="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center">
-                      <MapPin className="w-[16px] h-[16px]" />
+                  <div className="flex flex-col sm:flex-row sm:justify-between gap-3">
+
+                    <span className="text-xs sm:text-sm flex items-center gap-2 text-on-surface-variant">
+                      <MapPin size={14} /> In-person
                     </span>
 
-                    <span className="text-sm font-medium text-on-surface-variant">
-                      San Francisco Office • In-Person
-                    </span>
-                  </div>
-
-                  <div className="flex gap-2">
-                    <button className="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-all">
-                      <Map className="w-[18px] h-[18px]" />
-                    </button>
-
-                    <button className="secondary bg-surface-container-high text-primary px-6 py-2.5 rounded-full font-semibold text-sm hover:opacity-80 transition-all">
+                    <button className="w-full sm:w-auto px-4 py-2 bg-surface-container-high rounded-full text-sm">
                       Add to Calendar
                     </button>
                   </div>
                 </div>
               </div>
-            </div>
-            {/* <!-- Sidebar Widgets (Column 9-12) --> */}
-            <div className="col-span-12 lg:col-span-4 space-y-6">
-              {/* <!-- Prep Checklist Card --> */}
 
-              <div className="bg-surface-container-low rounded-xl p-8 relative overflow-hidden">
-                <h3 className="text-title-lg font-semibold text-on-surface mb-2">
+            </div>
+
+            {/* RIGHT SIDEBAR */}
+            <div className="lg:col-span-4 space-y-5">
+
+              {/* PREP */}
+              <div className="bg-surface-container-low rounded-xl p-5">
+                <h3 className="text-sm font-semibold mb-2">
                   Preparation Guide
                 </h3>
-                <p className="text-sm text-on-surface-variant mb-6 leading-relaxed">
-                  Boost your success rate by following these curated steps for
-                  your upcoming rounds.
-                </p>
 
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-white">
-                      <Check className="w-[12px] h-[12px] text-primary" />
-                    </div>
-                    <span className="text-sm text-on-surface font-medium">
-                      Research company values
-                    </span>
+                <div className="space-y-3 mt-4">
+                  <div className="flex gap-2 text-xs">
+                    <Check size={14} /> Research company
                   </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full border-2 border-primary flex items-center justify-center bg-white">
-                      <Check className="w-[12px] h-[12px] text-primary" />
-                    </div>
-                    <span className="text-sm text-on-surface font-medium">
-                      Review your case studies
-                    </span>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center"></div>
-                    <span className="text-sm text-on-surface-variant">
-                      Prepare 3-5 key questions
-                    </span>
-                  </div>
-
-                  <div className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full border-2 border-outline-variant flex items-center justify-center"></div>
-                    <span className="text-sm text-on-surface-variant">
-                      Check technical environment
-                    </span>
+                  <div className="flex gap-2 text-xs">
+                    <Check size={14} /> Review case studies
                   </div>
                 </div>
 
-                <button className="w-full mt-8 py-3 rounded-xl bg-white text-primary font-bold text-sm shadow-sm hover:shadow-md transition-all">
-                  View Full Checklist
+                <button className="w-full mt-4 py-2 text-sm bg-white rounded-lg">
+                  View Checklist
                 </button>
               </div>
-              {/* <!-- Quick Stats Bento Item --> */}
-              <div className="bg-white rounded-xl p-8 shadow-sm">
-                <span className="text-[0.65rem] font-bold tracking-[0.1em] text-on-surface-variant uppercase">
-                  Your Activity
-                </span>
-                <div className="grid grid-cols-2 gap-4 mt-6">
-                  <div className="flex flex-col">
-                    <span className="text-3xl font-bold text-on-surface">
-                      12
-                    </span>
-                    <span className="text-xs text-on-surface-variant mt-1">
-                      Interviews completed
-                    </span>
+
+              {/* STATS */}
+              <div className="bg-white rounded-xl p-5 shadow-sm">
+                <div className="grid grid-cols-2 gap-4 text-center">
+                  <div>
+                    <p className="text-xl font-bold">12</p>
+                    <p className="text-xs">Completed</p>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-3xl font-bold text-primary">85%</span>
-                    <span className="text-xs text-on-surface-variant mt-1">
-                      Acceptance rate
-                    </span>
-                  </div>
-                </div>
-                <div className="mt-8">
-                  <div className="flex justify-between items-end mb-2">
-                    <span className="text-xs font-semibold text-on-surface">
-                      Preparation Score
-                    </span>
-                    <span className="text-xs font-bold text-primary">High</span>
-                  </div>
-                  <div className="w-full h-2 bg-surface-container-low rounded-full overflow-hidden">
-                    <div className="h-full bg-primary-gradient w-[78%]"></div>
+                  <div>
+                    <p className="text-xl font-bold text-primary">85%</p>
+                    <p className="text-xs">Success</p>
                   </div>
                 </div>
               </div>
-              {/* <!-- Tips Widget --> */}
 
-              <div className="p-6 bg-tertiary-fixed rounded-xl flex items-start gap-4">
-                <div className="p-2 bg-white/40 rounded-lg">
-                  <Lightbulb className="w-[20px] h-[20px] text-on-tertiary-fixed" />
-                </div>
-
-                <div>
-                  <h4 className="text-sm font-bold text-on-tertiary-fixed">
-                    Pro Tip
-                  </h4>
-                  <p className="text-xs text-on-tertiary-fixed-variant mt-1 leading-relaxed">
-                    Candidates who send a thank-you note within 24 hours are 40%
-                    more likely to move to the final stage.
-                  </p>
-                </div>
+              {/* TIP */}
+              <div className="p-4 bg-tertiary-fixed rounded-xl flex gap-3">
+                <Lightbulb size={18} />
+                <p className="text-xs">
+                  Send a thank-you note within 24 hours.
+                </p>
               </div>
+
             </div>
+
           </div>
         </div>
       </main>
