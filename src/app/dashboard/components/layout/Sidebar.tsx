@@ -41,13 +41,13 @@ export default function Sidebar({
           className={`relative flex items-center gap-3 h-11 px-4 rounded-xl text-sm transition-all
             ${
               isActive
-                  ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-md"
+                  ? "bg-gradient-to-r from-cyan-400 to-blue-500 text-white shadow-md"                  
                 : "text-gray-500 hover:bg-white/70"
             }
             ${!isOpen && !isMobile && "justify-center px-0"}
           `}
         >
-          {/* 🔥 Active indicator */}
+          
           {/* {isActive && (
             <div className="absolute left-0 top-2 bottom-2 w-1 rounded-r-full bg-white/80" />
           )} */}
@@ -73,7 +73,7 @@ export default function Sidebar({
         {/* Logo */}
         <div className="p-5 flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 text-white flex items-center justify-center font-semibold shadow">
-            Z
+            C
           </div>
           {(isOpen || isMobile) && (
             <span className="text-lg font-semibold">Console</span>
