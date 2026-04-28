@@ -1,20 +1,17 @@
 export default function Footer() {
   return (
-    <footer className="border-t bg-white mt-16">
-      <div className="max-w-[1280px] mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
+    <footer className="border-t mt-10">
+      <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between gap-4 text-sm text-gray-500">
+        
+        {/* Left */}
+        <p>© {new Date().getFullYear()} Mark-43. All rights reserved.</p>
 
-        <div className="text-center md:text-left">
-          <p className="font-bold text-slate-900">Signal</p>
-          <p>© 2026 Signal Recruitment</p>
+        {/* Right */}
+        <div className="flex gap-4">
+          <span className="hover:text-black cursor-pointer">Privacy</span>
+          <span className="hover:text-black cursor-pointer">Terms</span>
+          <span className="hover:text-black cursor-pointer">Contact</span>
         </div>
-
-        <div className="flex gap-6">
-          <a className="hover:text-blue-600">Privacy</a>
-          <a className="hover:text-blue-600">Terms</a>
-          <a className="hover:text-blue-600">API</a>
-          <a className="hover:text-blue-600">Status</a>
-        </div>
-
       </div>
     </footer>
   );

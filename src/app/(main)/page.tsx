@@ -1,110 +1,191 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import {
+  Briefcase,
+  FileText,
+  User,
   ArrowRight,
-  Bolt,
-  Verified,
-  TrendingUp,
-  Brain,
 } from "lucide-react";
-import { ROUTES } from "./route/routes";
 
-export default function Page() {
+export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans">
-      
-      {/* NAVBAR */}
-      <header className="fixed top-0 w-full bg-white/70 backdrop-blur-md border-b border-gray-200 z-50">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-xl font-bold tracking-tight">
-            DevPlatform
+    <div className="bg-white text-black min-h-screen">
+
+      {/* 🔹 Header */}
+      <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 h-16">
+          <h1 className="text-lg font-semibold tracking-tight">
+            Mark-43
           </h1>
 
+          <nav className="hidden md:flex items-center gap-8 text-sm text-gray-600">
+            <a href="#features">Features</a>
+            <a href="#how">How it works</a>
+            <a href="#about">About</a>
+          </nav>
+
           <Link
-            href={ROUTES.DASHBOARD}
-            className="flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-black"
+            href="/jobs"
+            className="text-sm bg-black text-white px-4 py-2 rounded-xl hover:opacity-90 transition"
           >
-            Dashboard <ArrowRight size={16} />
+            Get Started
           </Link>
         </div>
       </header>
 
-      {/* HERO */}
-      <main className="pt-32 pb-20">
-        <section className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          
-          {/* LEFT CONTENT */}
-          <div className="space-y-6">
-            <span className="inline-flex items-center gap-2 px-3 py-1 text-xs bg-gray-100 rounded-full">
-              <Bolt size={14} /> Fast & Scalable Platform
-            </span>
+      {/* 🔹 Hero Section */}
+      <section className="max-w-7xl mx-auto px-6 py-20 md:py-28 text-center">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-6xl font-bold tracking-tight leading-tight"
+        >
+          Build your career. <br /> All in one place.
+        </motion.h1>
 
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-              Build Your Future With <br />
-              <span className="text-gray-500">
-                Smart Tech Platform
-              </span>
-            </h1>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="mt-6 text-gray-500 max-w-2xl mx-auto"
+        >
+          Discover jobs, apply to hiring drives, build your portfolio, and generate
+          professional resumes — everything you need to grow your career faster.
+        </motion.p>
 
-            <p className="text-gray-600 text-lg max-w-lg">
-              A modern platform for developers, startups, and job seekers to
-              connect, grow, and scale faster.
-            </p>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="mt-8 flex justify-center gap-4"
+        >
+          <Link
+            href="/jobs"
+            className="bg-black text-white px-6 py-3 rounded-xl text-sm flex items-center gap-2 hover:opacity-90"
+          >
+            Explore Jobs <ArrowRight size={16} />
+          </Link>
 
-            <div className="flex gap-4">
-              <Link
-                href={ROUTES.DASHBOARD}
-                className="px-6 py-3 bg-black text-white rounded-xl flex items-center gap-2 hover:bg-gray-800 transition"
-              >
-                Go to Dashboard <ArrowRight size={16} />
-              </Link>
+          <Link
+            href="/resume"
+            className="border px-6 py-3 rounded-xl text-sm hover:bg-gray-100"
+          >
+            Build Resume
+          </Link>
+        </motion.div>
+      </section>
 
-              <button className="px-6 py-3 border border-gray-300 rounded-xl hover:bg-gray-100 transition">
-                Learn More
-              </button>
-            </div>
+      {/* 🔹 Features */}
+      <section id="features" className="max-w-7xl mx-auto px-6 py-16">
+        <div className="grid md:grid-cols-3 gap-6">
+
+          <FeatureCard
+            icon={<Briefcase />}
+            title="Job Search & Apply"
+            desc="Find the best opportunities and apply instantly with a seamless experience."
+          />
+
+          <FeatureCard
+            icon={<FileText />}
+            title="Resume Builder"
+            desc="Create professional resumes with structured, modern templates."
+          />
+
+          <FeatureCard
+            icon={<User />}
+            title="Portfolio Generator"
+            desc="Build and share your personal portfolio with a clean, modern design."
+          />
+
+        </div>
+      </section>
+
+      {/* 🔹 How it Works */}
+      <section id="how" className="bg-gray-50 py-16 px-6">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl font-semibold">
+            How Mark-43 helps you grow
+          </h2>
+
+          <div className="mt-10 grid md:grid-cols-3 gap-6 text-sm text-gray-600">
+
+            <Step
+              step="01"
+              title="Create Profile"
+              desc="Add your details once and reuse them everywhere."
+            />
+
+            <Step
+              step="02"
+              title="Apply Smartly"
+              desc="Apply to jobs and hiring drives with ease."
+            />
+
+            <Step
+              step="03"
+              title="Showcase Yourself"
+              desc="Share your portfolio and resume with confidence."
+            />
+
           </div>
+        </div>
+      </section>
 
-          {/* RIGHT CONTENT (FEATURE CARDS) */}
-          <div className="grid grid-cols-2 gap-4">
-            
-            <div className="p-5 rounded-2xl border border-gray-200 shadow-sm">
-              <TrendingUp className="mb-3 text-gray-700" />
-              <h3 className="font-semibold">Growth</h3>
-              <p className="text-sm text-gray-500">
-                Scale your startup faster
-              </p>
-            </div>
+      {/* 🔹 CTA Banner */}
+      <section className="max-w-6xl mx-auto px-6 py-20">
+        <div className="bg-black text-white rounded-2xl p-10 text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold">
+            Ready to take the next step?
+          </h2>
+          <p className="text-gray-300 mt-3">
+            Start building your career with Mark-43 today.
+          </p>
 
-            <div className="p-5 rounded-2xl border border-gray-200 shadow-sm">
-              <Verified className="mb-3 text-gray-700" />
-              <h3 className="font-semibold">Trusted</h3>
-              <p className="text-sm text-gray-500">
-                Verified companies & users
-              </p>
-            </div>
+          <Link
+            href="/jobs"
+            className="inline-block mt-6 bg-white text-black px-6 py-3 rounded-xl text-sm"
+          >
+            Get Started
+          </Link>
+        </div>
+      </section>
 
-            <div className="p-5 rounded-2xl border border-gray-200 shadow-sm">
-              <Brain className="mb-3 text-gray-700" />
-              <h3 className="font-semibold">AI Powered</h3>
-              <p className="text-sm text-gray-500">
-                Smart recommendations
-              </p>
-            </div>
-
-            <div className="p-5 rounded-2xl border border-gray-200 shadow-sm">
-              <Bolt className="mb-3 text-gray-700" />
-              <h3 className="font-semibold">Fast</h3>
-              <p className="text-sm text-gray-500">
-                Lightning performance
-              </p>
-            </div>
-
+      {/* 🔹 Footer */}
+      <footer className="border-t py-8 px-6 text-sm text-gray-500">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-4">
+          <p>© {new Date().getFullYear()} Mark-43. All rights reserved.</p>
+          <div className="flex gap-4">
+            <span>Privacy</span>
+            <span>Terms</span>
+            <span>Contact</span>
           </div>
-        </section>
-      </main>
+        </div>
+      </footer>
+    </div>
+  );
+}
 
+/* 🔹 Components */
+
+function FeatureCard({ icon, title, desc }: any) {
+  return (
+    <div className="border rounded-2xl p-6 hover:shadow-md transition">
+      <div className="mb-4 text-gray-700">{icon}</div>
+      <h3 className="font-medium text-lg">{title}</h3>
+      <p className="text-sm text-gray-500 mt-2">{desc}</p>
+    </div>
+  );
+}
+
+function Step({ step, title, desc }: any) {
+  return (
+    <div className="bg-white border rounded-xl p-6">
+      <p className="text-gray-400 text-xs">{step}</p>
+      <h4 className="font-medium mt-2">{title}</h4>
+      <p className="mt-2">{desc}</p>
     </div>
   );
 }
