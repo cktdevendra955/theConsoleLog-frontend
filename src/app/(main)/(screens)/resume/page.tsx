@@ -1,198 +1,189 @@
 "use client";
 
-import { useState } from "react";
 import {
-  User,
-  GraduationCap,
-  Briefcase,
-  Code,
-  Folder,
-  Plus,
-  Trash2,
+  FileText,
+  Sparkles,
+  Download,
+  ArrowRight,
+  CheckCircle,
 } from "lucide-react";
+
+const templates = [
+  {
+    name: "Modern Minimal",
+    type: "ATS Friendly",
+  },
+  {
+    name: "Professional Clean",
+    type: "ATS Friendly",
+  },
+  {
+    name: "Developer Focus",
+    type: "Tech Optimized",
+  },
+];
 
 export default function ResumePage() {
   return (
-    <div className="min-h-screen bg-white text-black">
+    <main className="bg-white text-gray-900 min-h-screen">
 
-      {/* 🔹 Header */}
-      <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <h1 className="text-lg font-semibold">Mark-43</h1>
-          <div className="text-sm text-gray-500">Resume Builder</div>
-        </div>
-      </header>
+      {/* HERO */}
+      <section className="pt-24 pb-16 px-6 md:px-12 text-center border-b">
+        <div className="max-w-4xl mx-auto">
 
-      <div className="max-w-6xl mx-auto px-6 py-10 space-y-6">
+          <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
+            Build a Resume That <br />
+            <span className="text-gray-400">Actually Gets You Hired</span>
+          </h1>
 
-        <PersonalCard />
-        <EducationCard />
-        <ExperienceCard />
-        <SkillsCard />
-        <ProjectsCard />
+          <p className="mt-6 text-gray-500 max-w-2xl mx-auto">
+            Create ATS-friendly resumes, powered by AI, and download instantly — no cost, no limits.
+          </p>
 
-        <button className="w-full bg-black text-white py-3 rounded-xl text-sm hover:opacity-90">
-          Generate Resume
-        </button>
-      </div>
-    </div>
-  );
-}
+          {/* CTA */}
+          <button className="mt-8 px-6 py-3 bg-black text-white rounded-xl flex items-center gap-2 mx-auto">
+            Start Building <ArrowRight size={18} />
+          </button>
 
-/* 🔹 Card Wrapper */
-function Card({ title, icon, children }: any) {
-  return (
-    <div className="border rounded-2xl p-6">
-      <h2 className="text-lg font-medium flex items-center gap-2 mb-4">
-        {icon} {title}
-      </h2>
-      {children}
-    </div>
-  );
-}
-
-/* 🔹 Personal */
-function PersonalCard() {
-  return (
-    <Card title="Personal Information" icon={<User size={18} />}>
-      <div className="grid md:grid-cols-2 gap-4">
-        <Input placeholder="Full Name" />
-        <Input placeholder="Email" />
-        <Input placeholder="Phone" />
-        <Input placeholder="LinkedIn / Portfolio" />
-        <Input className="md:col-span-2" placeholder="Designation" />
-        <textarea className="input md:col-span-2 h-24" placeholder="Summary" />
-      </div>
-    </Card>
-  );
-}
-
-/* 🔹 Education */
-function EducationCard() {
-  const [list, setList] = useState([{ id: 1 }]);
-
-  return (
-    <Card title="Education" icon={<GraduationCap size={18} />}>
-      {list.map((item) => (
-        <div key={item.id} className="grid md:grid-cols-3 gap-4 mb-3">
-          <Input placeholder="School" />
-          <Input placeholder="Degree" />
-          <div className="flex gap-2">
-            <Input placeholder="Year" />
-            <RemoveBtn onClick={() => setList(list.filter(i => i.id !== item.id))} />
+          {/* TRUST */}
+          <div className="mt-10 flex justify-center gap-6 text-sm text-gray-500 flex-wrap">
+            <span>✔ 100% Free</span>
+            <span>✔ Unlimited Downloads</span>
+            <span>✔ ATS Optimized</span>
           </div>
+
         </div>
-      ))}
-      <AddBtn onClick={() => setList([...list, { id: Date.now() }])} />
-    </Card>
-  );
-}
+      </section>
 
-/* 🔹 Experience */
-function ExperienceCard() {
-  const [list, setList] = useState([{ id: 1 }]);
+      {/* FEATURES */}
+      <section className="py-20 px-6 md:px-12">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
 
-  return (
-    <Card title="Experience" icon={<Briefcase size={18} />}>
-      {list.map((item) => (
-        <div key={item.id} className="grid md:grid-cols-3 gap-4 mb-3">
-          <Input placeholder="Company" />
-          <Input placeholder="Role" />
-          <div className="flex gap-2">
-            <Input placeholder="Duration" />
-            <RemoveBtn onClick={() => setList(list.filter(i => i.id !== item.id))} />
+          <div className="border rounded-2xl p-6">
+            <Sparkles className="mb-4" />
+            <h3 className="font-semibold text-lg">
+              AI Resume Builder
+            </h3>
+            <p className="text-gray-500 mt-2 text-sm">
+              Generate bullet points, summaries, and skills automatically.
+            </p>
           </div>
-        </div>
-      ))}
-      <AddBtn onClick={() => setList([...list, { id: Date.now() }])} />
-    </Card>
-  );
-}
 
-/* 🔹 Skills */
-function SkillsCard() {
-  const [skills, setSkills] = useState([""]);
-
-  return (
-    <Card title="Skills" icon={<Code size={18} />}>
-      {skills.map((_, i) => (
-        <div key={i} className="flex gap-2 mb-3">
-          <Input placeholder="Skill" />
-          <RemoveBtn onClick={() => setSkills(skills.filter((_, idx) => idx !== i))} />
-        </div>
-      ))}
-      <AddBtn onClick={() => setSkills([...skills, ""])} />
-    </Card>
-  );
-}
-
-/* 🔹 Projects */
-function ProjectsCard() {
-  const [list, setList] = useState([{ id: 1 }]);
-
-  return (
-    <Card title="Projects" icon={<Folder size={18} />}>
-      {list.map((item) => (
-        <div key={item.id} className="border p-4 rounded-xl mb-3">
-          <div className="grid md:grid-cols-2 gap-4 mb-2">
-            <Input placeholder="Project Title" />
-            <Input placeholder="Tech Stack" />
+          <div className="border rounded-2xl p-6">
+            <FileText className="mb-4" />
+            <h3 className="font-semibold text-lg">
+              ATS-Friendly Templates
+            </h3>
+            <p className="text-gray-500 mt-2 text-sm">
+              Designed to pass recruiter filters and get shortlisted.
+            </p>
           </div>
-          <textarea className="input w-full h-20" placeholder="Description" />
-          <div className="flex justify-end mt-2">
-            <RemoveBtn onClick={() => setList(list.filter(i => i.id !== item.id))} />
+
+          <div className="border rounded-2xl p-6">
+            <Download className="mb-4" />
+            <h3 className="font-semibold text-lg">
+              Instant PDF Download
+            </h3>
+            <p className="text-gray-500 mt-2 text-sm">
+              Export your resume instantly with no watermark.
+            </p>
           </div>
+
         </div>
-      ))}
-      <AddBtn onClick={() => setList([...list, { id: Date.now() }])} />
-    </Card>
+      </section>
+
+      {/* TEMPLATES */}
+      <section className="py-20 px-6 md:px-12 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+
+          <h2 className="text-3xl font-semibold text-center">
+            Choose Your Template
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
+
+            {templates.map((template, i) => (
+              <div
+                key={i}
+                className="border bg-white rounded-2xl p-6 flex flex-col justify-between"
+              >
+
+                {/* PREVIEW MOCK */}
+                <div className="h-40 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 text-sm">
+                  Preview
+                </div>
+
+                <div className="mt-4">
+                  <h3 className="font-medium">
+                    {template.name}
+                  </h3>
+
+                  <p className="text-xs text-gray-500 mt-1">
+                    {template.type}
+                  </p>
+                </div>
+
+                <button className="mt-4 px-4 py-2 bg-black text-white rounded-lg text-sm">
+                  Use Template
+                </button>
+
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="py-20 px-6 md:px-12">
+        <div className="max-w-5xl mx-auto text-center">
+
+          <h2 className="text-3xl font-semibold">
+            Build Your Resume in 3 Steps
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+
+            {[
+              "Choose Template",
+              "Fill Details / Use AI",
+              "Download PDF",
+            ].map((step, i) => (
+              <div key={i}>
+                <div className="text-4xl text-gray-300 font-bold">
+                  {i + 1}
+                </div>
+                <p className="mt-4 font-medium">
+                  {step}
+                </p>
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="py-24 px-6 md:px-12 text-center">
+        <div className="max-w-4xl mx-auto bg-black text-white rounded-2xl p-12">
+
+          <h2 className="text-3xl font-semibold">
+            Stop Using Weak Resumes
+          </h2>
+
+          <p className="mt-4 text-gray-300">
+            Build a strong, AI-powered resume that actually gets responses.
+          </p>
+
+          <button className="mt-6 px-6 py-3 bg-white text-black rounded-xl">
+            Create Resume Now
+          </button>
+
+        </div>
+      </section>
+
+    </main>
   );
-}
-
-/* 🔹 Reusable Components */
-
-function Input({ className = "", ...props }: any) {
-  return (
-    <input
-      {...props}
-      className={`input ${className}`}
-    />
-  );
-}
-
-function AddBtn({ onClick }: any) {
-  return (
-    <button
-      onClick={onClick}
-      className="flex items-center gap-2 text-sm mt-2"
-    >
-      <Plus size={16} /> Add
-    </button>
-  );
-}
-
-function RemoveBtn({ onClick }: any) {
-  return (
-    <button
-      onClick={onClick}
-      className="p-2 border rounded-lg hover:bg-gray-100"
-    >
-      <Trash2 size={16} />
-    </button>
-  );
-}
-
-/* 🔹 Styles */
-<style jsx global>{`
-  .input {
-    width: 100%;
-    border-radius: 0.75rem;
-    border: 1px solid #e5e7eb;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
-    outline: none;
-  }
-  .input:focus {
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
-  }
-`}</style>
+} 

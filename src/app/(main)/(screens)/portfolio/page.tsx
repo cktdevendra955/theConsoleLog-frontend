@@ -3,8 +3,9 @@
 import {
   Search,
   MapPin,
-   ExternalLink,
-  Mail,
+  ExternalLink,
+  Share2,
+  BadgeCheck,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -15,7 +16,11 @@ const users = [
     email: "devendra@gmail.com",
     location: "Noida",
     role: "Frontend Developer",
+    experience: "Fresher",
+    available: true,
+    match: 92,
     skills: ["React", "Next.js", "Tailwind"],
+    projects: ["E-commerce App", "Portfolio Website"],
   },
   {
     name: "Aman Sharma",
@@ -23,7 +28,11 @@ const users = [
     email: "aman@gmail.com",
     location: "Delhi",
     role: "Backend Developer",
+    experience: "2 Years",
+    available: false,
+    match: 78,
     skills: ["Java", "Spring Boot", "MySQL"],
+    projects: ["Payment API", "Auth System"],
   },
   {
     name: "Priya Singh",
@@ -31,7 +40,11 @@ const users = [
     email: "priya@gmail.com",
     location: "Remote",
     role: "Full Stack Developer",
+    experience: "1 Year",
+    available: true,
+    match: 88,
     skills: ["React", "Node.js", "MongoDB"],
+    projects: ["Job Portal", "Chat App"],
   },
 ];
 
@@ -56,10 +69,9 @@ export default function PortfolioPage() {
           </h1>
 
           <p className="mt-4 text-gray-500">
-            Search portfolios by name, username, or email.
+            Search developers by name, username, or email.
           </p>
 
-          {/* SEARCH */}
           <div className="mt-6 flex items-center gap-3 border rounded-xl px-4 py-3">
             <Search size={18} className="text-gray-400" />
             <input
@@ -80,38 +92,70 @@ export default function PortfolioPage() {
           {filteredUsers.map((user, i) => (
             <div
               key={i}
-              className="border rounded-2xl p-6 flex flex-col justify-between"
+              className="border rounded-2xl p-6 flex flex-col justify-between bg-white"
             >
 
               {/* TOP */}
-              <div className="flex items-start gap-4">
+              <div className="flex items-start justify-between">
 
-                {/* Avatar */}
-                <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-sm font-medium">
-                  {user.name[0]}
+                <div className="flex gap-4">
+
+                  {/* Avatar */}
+                  <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-sm font-medium">
+                    {user.name[0]}
+                  </div>
+
+                  <div>
+                    <h2 className="text-lg font-semibold flex items-center gap-1">
+                      {user.name}
+                      <BadgeCheck size={14} className="text-green-500" />
+                    </h2>
+
+                    <p className="text-sm text-gray-500">
+                      @{user.username}
+                    </p>
+
+                    <p className="text-xs text-gray-400 flex items-center gap-1 mt-1">
+                      <MapPin size={12} />
+                      {user.location}
+                    </p>
+                  </div>
+
                 </div>
 
-                <div>
-                  <h2 className="text-lg font-semibold">
-                    {user.name}
-                  </h2>
-
-                  <p className="text-sm text-gray-500">
-                    @{user.username}
-                  </p>
-
-                  <p className="text-xs text-gray-400 flex items-center gap-1 mt-1">
-                    <MapPin size={12} />
-                    {user.location}
+                {/* AI MATCH */}
+                <div className="text-right">
+                  <p className="text-xs text-gray-400">Match</p>
+                  <p className="text-sm font-semibold">
+                    {user.match}%
                   </p>
                 </div>
 
               </div>
 
-              {/* ROLE */}
-              <p className="mt-4 text-sm font-medium">
-                {user.role}
-              </p>
+              {/* AVAILABILITY */}
+              <div className="mt-3">
+                <span
+                  className={`text-xs px-2 py-1 rounded-full ${
+                    user.available
+                      ? "bg-green-100 text-green-600"
+                      : "bg-gray-100 text-gray-500"
+                  }`}
+                >
+                  {user.available ? "Open to Work" : "Not Available"}
+                </span>
+              </div>
+
+              {/* ROLE + EXPERIENCE */}
+              <div className="mt-4">
+                <p className="text-sm font-medium">
+                  {user.role}
+                </p>
+
+                <p className="text-xs text-gray-500 mt-1">
+                  {user.experience}
+                </p>
+              </div>
 
               {/* SKILLS */}
               <div className="flex flex-wrap gap-2 mt-4">
@@ -125,16 +169,35 @@ export default function PortfolioPage() {
                 ))}
               </div>
 
+              {/* PROJECT PREVIEW */}
+              <div className="mt-5">
+                <p className="text-xs text-gray-400 mb-2">
+                  Projects
+                </p>
+
+                <div className="space-y-1">
+                  {user.projects.map((project, idx) => (
+                    <p
+                      key={idx}
+                      className="text-xs text-gray-700 truncate"
+                    >
+                      • {project}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
               {/* ACTION */}
               <div className="mt-6 flex items-center justify-between">
 
-                <div className="flex gap-3 text-gray-500">
-                  <span >G</span>
-                  <Mail size={16} />
-                </div>
+                {/* ONLY SHARE */}
+                <button className="text-gray-500 hover:text-black transition">
+                  <Share2 size={16} />
+                </button>
 
-                <button className="text-sm flex items-center gap-1">
-                  View <ExternalLink size={14} />
+                {/* CTA */}
+                <button className="px-4 py-2 bg-black text-white rounded-lg text-sm flex items-center gap-1">
+                  View Profile <ExternalLink size={14} />
                 </button>
 
               </div>
@@ -142,7 +205,7 @@ export default function PortfolioPage() {
             </div>
           ))}
 
-          {/* EMPTY STATE */}
+          {/* EMPTY */}
           {filteredUsers.length === 0 && (
             <div className="col-span-full text-center text-gray-400 py-20">
               No developers found.
