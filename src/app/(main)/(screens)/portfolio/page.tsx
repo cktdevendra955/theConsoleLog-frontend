@@ -1,167 +1,157 @@
 "use client";
 
+import {
+  Search,
+  MapPin,
+   ExternalLink,
+  Mail,
+} from "lucide-react";
 import { useState } from "react";
-import { motion } from "framer-motion";
+
+const users = [
+  {
+    name: "Devendra Gupta",
+    username: "devendra09",
+    email: "devendra@gmail.com",
+    location: "Noida",
+    role: "Frontend Developer",
+    skills: ["React", "Next.js", "Tailwind"],
+  },
+  {
+    name: "Aman Sharma",
+    username: "aman_dev",
+    email: "aman@gmail.com",
+    location: "Delhi",
+    role: "Backend Developer",
+    skills: ["Java", "Spring Boot", "MySQL"],
+  },
+  {
+    name: "Priya Singh",
+    username: "priya_codes",
+    email: "priya@gmail.com",
+    location: "Remote",
+    role: "Full Stack Developer",
+    skills: ["React", "Node.js", "MongoDB"],
+  },
+];
 
 export default function PortfolioPage() {
-  const [data, setData] = useState({
-    name: "",
-    role: "",
-    bio: "",
-    skills: "",
-    project: "",
-  });
+  const [query, setQuery] = useState("");
 
-  const handleChange = (key: string, value: string) => {
-    setData((prev) => ({ ...prev, [key]: value }));
-  };
+  const filteredUsers = users.filter((user) =>
+    `${user.name} ${user.username} ${user.email}`
+      .toLowerCase()
+      .includes(query.toLowerCase())
+  );
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <main className="bg-white text-gray-900 min-h-screen">
 
-      {/* 🔹 Header */}
-      <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <h1 className="text-lg font-semibold">Mark-43</h1>
-          <div className="text-sm text-gray-500">Portfolio Generator</div>
+      {/* HERO */}
+      <section className="pt-24 pb-12 px-6 md:px-12 text-center border-b">
+        <div className="max-w-3xl mx-auto">
+
+          <h1 className="text-3xl md:text-5xl font-semibold">
+            Discover Developers
+          </h1>
+
+          <p className="mt-4 text-gray-500">
+            Search portfolios by name, username, or email.
+          </p>
+
+          {/* SEARCH */}
+          <div className="mt-6 flex items-center gap-3 border rounded-xl px-4 py-3">
+            <Search size={18} className="text-gray-400" />
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search developers..."
+              className="w-full outline-none"
+            />
+          </div>
+
         </div>
-      </header>
+      </section>
 
-      {/* 🔹 Layout */}
-      <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-8">
+      {/* RESULTS */}
+      <section className="px-6 md:px-12 py-10">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        {/* 🔹 Form */}
-        <div className="space-y-6">
+          {filteredUsers.map((user, i) => (
+            <div
+              key={i}
+              className="border rounded-2xl p-6 flex flex-col justify-between"
+            >
 
-          <h2 className="text-xl font-semibold">Enter Your Details</h2>
+              {/* TOP */}
+              <div className="flex items-start gap-4">
 
-          <Input
-            label="Full Name"
-            value={data.name}
-            onChange={(v: string) => handleChange("name", v)}
-          />
+                {/* Avatar */}
+                <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-sm font-medium">
+                  {user.name[0]}
+                </div>
 
-          <Input
-            label="Role / Title"
-            value={data.role}
-            onChange={(v: string) => handleChange("role", v)}
-          />
+                <div>
+                  <h2 className="text-lg font-semibold">
+                    {user.name}
+                  </h2>
 
-          <Textarea
-            label="Short Bio"
-            value={data.bio}
-            onChange={(v: string) => handleChange("bio", v)}
-          />
+                  <p className="text-sm text-gray-500">
+                    @{user.username}
+                  </p>
 
-          <Input
-            label="Skills (comma separated)"
-            value={data.skills}
-            onChange={(v: string) => handleChange("skills", v)}
-          />
+                  <p className="text-xs text-gray-400 flex items-center gap-1 mt-1">
+                    <MapPin size={12} />
+                    {user.location}
+                  </p>
+                </div>
 
-          <Textarea
-            label="Project Description"
-            value={data.project}
-            onChange={(v: string) => handleChange("project", v)}
-          />
+              </div>
 
-          <button className="w-full bg-black text-white py-3 rounded-xl text-sm hover:opacity-90">
-            Generate Portfolio
-          </button>
-        </div>
+              {/* ROLE */}
+              <p className="mt-4 text-sm font-medium">
+                {user.role}
+              </p>
 
-        {/* 🔥 Live Preview */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          className="border rounded-2xl p-6 bg-gray-50"
-        >
-          <h2 className="text-lg font-semibold mb-4">Live Preview</h2>
-
-          <div className="bg-white rounded-xl p-6 shadow-sm">
-
-            <h3 className="text-xl font-bold">
-              {data.name || "Your Name"}
-            </h3>
-
-            <p className="text-gray-500 text-sm">
-              {data.role || "Your Role"}
-            </p>
-
-            <p className="mt-4 text-sm text-gray-600">
-              {data.bio || "Your short bio will appear here."}
-            </p>
-
-            {/* Skills */}
-            <div className="mt-4 flex flex-wrap gap-2">
-              {(data.skills || "Skill1, Skill2")
-                .split(",")
-                .map((s, i) => (
+              {/* SKILLS */}
+              <div className="flex flex-wrap gap-2 mt-4">
+                {user.skills.map((skill, idx) => (
                   <span
-                    key={i}
-                    className="text-xs border px-2 py-1 rounded-lg"
+                    key={idx}
+                    className="text-xs px-2 py-1 bg-gray-100 rounded-md"
                   >
-                    {s.trim()}
+                    {skill}
                   </span>
                 ))}
+              </div>
+
+              {/* ACTION */}
+              <div className="mt-6 flex items-center justify-between">
+
+                <div className="flex gap-3 text-gray-500">
+                  <span >G</span>
+                  <Mail size={16} />
+                </div>
+
+                <button className="text-sm flex items-center gap-1">
+                  View <ExternalLink size={14} />
+                </button>
+
+              </div>
+
             </div>
+          ))}
 
-            {/* Project */}
-            <div className="mt-6">
-              <h4 className="font-medium">Projects</h4>
-              <p className="text-sm text-gray-600 mt-2">
-                {data.project || "Your project details will appear here."}
-              </p>
+          {/* EMPTY STATE */}
+          {filteredUsers.length === 0 && (
+            <div className="col-span-full text-center text-gray-400 py-20">
+              No developers found.
             </div>
+          )}
 
-          </div>
-        </motion.div>
+        </div>
+      </section>
 
-      </div>
-    </div>
-  );
-}
-
-/* 🔹 Reusable Inputs */
-
-function Input({
-  label,
-  value,
-  onChange,
-}: {
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-}) {
-  return (
-    <div>
-      <label className="text-sm text-gray-600">{label}</label>
-      <input
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="w-full mt-1 border rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black/10"
-      />
-    </div>
-  );
-}
-
-function Textarea({
-  label,
-  value,
-  onChange,
-}: {
-  label: string;
-  value: string;
-  onChange: (v: string) => void;
-}) {
-  return (
-    <div>
-      <label className="text-sm text-gray-600">{label}</label>
-      <textarea
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        className="w-full mt-1 border rounded-xl px-4 py-2 text-sm h-24 focus:outline-none focus:ring-2 focus:ring-black/10"
-      />
-    </div>
+    </main>
   );
 }

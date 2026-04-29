@@ -1,159 +1,192 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
 import {
   Search,
   MapPin,
-  Bookmark,
   Briefcase,
-  Filter,
+  Bookmark,
+  ArrowRight,
 } from "lucide-react";
+import { useState } from "react";
 
-type Job = {
-  id: number;
-  title: string;
-  company: string;
-  location: string;
-  type: string;
-  saved: boolean;
-};
+const jobs = [
+  {
+    title: "Frontend Developer",
+    company: "StartupX",
+    location: "Remote",
+    type: "Full-time",
+    skills: ["React", "Next.js", "Tailwind"],
+  },
+  {
+    title: "Backend Developer",
+    company: "TechFlow",
+    location: "Bangalore",
+    type: "Full-time",
+    skills: ["Java", "Spring Boot", "MySQL"],
+  },
+  {
+    title: "Full Stack Developer",
+    company: "CodeBase",
+    location: "Remote",
+    type: "Internship",
+    skills: ["React", "Node.js", "MongoDB"],
+  },
+];
 
-export default function JobsPage() {
-  const [jobs, setJobs] = useState<Job[]>([
-    {
-      id: 1,
-      title: "Frontend Developer",
-      company: "TechNova",
-      location: "Remote",
-      type: "Full-time",
-      saved: false,
-    },
-    {
-      id: 2,
-      title: "Backend Engineer",
-      company: "CodeCraft",
-      location: "Bangalore",
-      type: "Full-time",
-      saved: false,
-    },
-    {
-      id: 3,
-      title: "React Intern",
-      company: "StartupX",
-      location: "Delhi",
-      type: "Internship",
-      saved: false,
-    },
-  ]);
+export default function JobSearchPage() {
+  const [activeFilter, setActiveFilter] = useState("All");
 
-  const toggleSave = (id: number) => {
-    setJobs((prev) =>
-      prev.map((job) =>
-        job.id === id ? { ...job, saved: !job.saved } : job
-      )
-    );
-  };
+  const filters = ["All", "Remote", "Full-time", "Internship"];
+
+  const filteredJobs =
+    activeFilter === "All"
+      ? jobs
+      : jobs.filter(
+          (job) =>
+            job.location === activeFilter || job.type === activeFilter
+        );
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <main className="bg-white text-gray-900 min-h-screen">
 
-      {/* 🔹 Header */}
-      <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <h1 className="text-lg font-semibold">Mark-43</h1>
-          <div className="text-sm text-gray-500">Jobs</div>
-        </div>
-      </header>
+      {/* HERO */}
+      <section className="pb-10 px-6 md:px-12 text-center border-b">
+        <div className="max-w-3xl mx-auto">
 
-      {/* 🔹 Search + Filters */}
-      <section className="max-w-7xl mx-auto px-6 py-8">
-        <div className="flex flex-col md:flex-row gap-4">
+          <h1 className="text-3xl md:text-5xl font-semibold">
+            Find Jobs That Match <br />
+            <span className="text-gray-400">Your Skills</span>
+          </h1>
 
-          {/* Search */}
-          <div className="flex items-center border rounded-xl px-4 w-full">
-            <Search size={16} className="text-gray-400 mr-2" />
+          {/* SEARCH */}
+          <div className="mt-6 flex items-center gap-3 border rounded-xl px-4 py-3">
+            <Search size={18} className="text-gray-400" />
             <input
-              placeholder="Search job title or company..."
-              className="w-full py-2 text-sm focus:outline-none"
+              placeholder="Search roles, skills, companies..."
+              className="w-full outline-none"
             />
           </div>
-
-          {/* Location */}
-          <div className="flex items-center border rounded-xl px-4 w-full md:w-64">
-            <MapPin size={16} className="text-gray-400 mr-2" />
-            <input
-              placeholder="Location"
-              className="w-full py-2 text-sm focus:outline-none"
-            />
-          </div>
-
-          {/* Filter Button */}
-          <button className="flex items-center gap-2 border px-4 py-2 rounded-xl text-sm hover:bg-gray-100">
-            <Filter size={16} /> Filters
-          </button>
 
         </div>
       </section>
 
-      {/* 🔹 Job List */}
-      <section className="max-w-7xl mx-auto px-6 pb-16 grid md:grid-cols-2 gap-6">
+      {/* FILTER BAR */}
+      <section className="px-6 md:px-12 py-6 border-b">
+        <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-4">
 
-        {jobs.map((job) => (
-          <motion.div
-            key={job.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="border rounded-2xl p-6 hover:shadow-md transition"
-          >
-            {/* Top */}
-            <div className="flex justify-between items-start">
+          {/* FILTER CHIPS */}
+          <div className="flex flex-wrap gap-3">
+            {filters.map((filter, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveFilter(filter)}
+                className={`px-4 py-2 rounded-full text-sm border ${
+                  activeFilter === filter
+                    ? "bg-black text-white"
+                    : "bg-white text-gray-600"
+                }`}
+              >
+                {filter}
+              </button>
+            ))}
+          </div>
+
+          {/* DROPDOWNS */}
+          <div className="flex gap-3 flex-wrap">
+
+            <select className="border rounded-lg px-3 py-2 text-sm">
+              <option>Location</option>
+              <option>Remote</option>
+              <option>Delhi</option>
+              <option>Bangalore</option>
+            </select>
+
+            <select className="border rounded-lg px-3 py-2 text-sm">
+              <option>Experience</option>
+              <option>0–1 Years</option>
+              <option>1–3 Years</option>
+            </select>
+
+            <select className="border rounded-lg px-3 py-2 text-sm">
+              <option>Sort</option>
+              <option>Newest</option>
+              <option>Best Match</option>
+            </select>
+
+          </div>
+
+        </div>
+      </section>
+
+      {/* JOB GRID */}
+      <section className="px-6 md:px-12 py-10">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          {filteredJobs.map((job, i) => (
+            <div
+              key={i}
+              className="border rounded-2xl p-5 flex flex-col justify-between"
+            >
+
+              {/* TOP */}
               <div>
-                <h2 className="text-lg font-medium">{job.title}</h2>
-                <p className="text-sm text-gray-500">{job.company}</p>
+                <div className="flex justify-between items-start">
+
+                  <div>
+                    <h2 className="text-lg font-semibold">
+                      {job.title}
+                    </h2>
+                    <p className="text-gray-500 text-sm">
+                      {job.company}
+                    </p>
+                  </div>
+
+                  <button className="p-2 border rounded-lg">
+                    <Bookmark size={14} />
+                  </button>
+
+                </div>
+
+                {/* INFO */}
+                <div className="flex flex-wrap gap-3 text-xs text-gray-600 mt-4">
+                  <span className="flex items-center gap-1">
+                    <MapPin size={12} /> {job.location}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Briefcase size={12} /> {job.type}
+                  </span>
+                </div>
+
+                {/* SKILLS */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {job.skills.map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="text-xs px-2 py-1 bg-gray-100 rounded-md"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              <button onClick={() => toggleSave(job.id)}>
-                <Bookmark
-                  className={`h-5 w-5 ${
-                    job.saved ? "text-black" : "text-gray-400"
-                  }`}
-                  fill={job.saved ? "black" : "none"}
-                />
-              </button>
+              {/* FOOTER */}
+              <div className="mt-6 flex items-center justify-between">
+                <p className="text-xs text-gray-400">
+                  Skill matched
+                </p>
+
+                <button className="px-4 py-2 bg-black text-white rounded-lg text-sm flex items-center gap-1">
+                  Apply <ArrowRight size={14} />
+                </button>
+              </div>
+
             </div>
+          ))}
 
-            {/* Info */}
-            <div className="flex items-center gap-4 text-sm text-gray-500 mt-4">
-              <span className="flex items-center gap-1">
-                <MapPin size={14} /> {job.location}
-              </span>
-              <span className="flex items-center gap-1">
-                <Briefcase size={14} /> {job.type}
-              </span>
-            </div>
-
-            {/* Actions */}
-            <div className="flex justify-between items-center mt-6">
-              <span className="text-xs text-gray-400">
-                Posted recently
-              </span>
-
-              <button className="bg-black text-white px-4 py-2 rounded-xl text-sm hover:opacity-90">
-                Apply
-              </button>
-            </div>
-          </motion.div>
-        ))}
-
+        </div>
       </section>
 
-      {/* 🔹 Empty State (optional if no jobs) */}
-      {jobs.length === 0 && (
-        <div className="text-center text-gray-500 py-20">
-          No jobs found. Try adjusting your filters.
-        </div>
-      )}
-    </div>
+    </main>
   );
-}   
+}

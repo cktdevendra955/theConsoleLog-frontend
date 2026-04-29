@@ -1,146 +1,220 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
 import {
-  Calendar,
+  Search,
   MapPin,
-  Users,
-  Bookmark,
+  ExternalLink,
+  Share2,
+  BadgeCheck,
 } from "lucide-react";
+import { useState } from "react";
 
-type Drive = {
-  id: number;
-  company: string;
-  role: string;
-  date: string;
-  location: string;
-  eligibility: string;
-  saved: boolean;
-};
+const users = [
+  {
+    name: "Devendra Gupta",
+    username: "devendra09",
+    email: "devendra@gmail.com",
+    location: "Noida",
+    role: "Frontend Developer",
+    experience: "Fresher",
+    available: true,
+    match: 92,
+    skills: ["React", "Next.js", "Tailwind"],
+    projects: ["E-commerce App", "Portfolio Website"],
+  },
+  {
+    name: "Aman Sharma",
+    username: "aman_dev",
+    email: "aman@gmail.com",
+    location: "Delhi",
+    role: "Backend Developer",
+    experience: "2 Years",
+    available: false,
+    match: 78,
+    skills: ["Java", "Spring Boot", "MySQL"],
+    projects: ["Payment API", "Auth System"],
+  },
+  {
+    name: "Priya Singh",
+    username: "priya_codes",
+    email: "priya@gmail.com",
+    location: "Remote",
+    role: "Full Stack Developer",
+    experience: "1 Year",
+    available: true,
+    match: 88,
+    skills: ["React", "Node.js", "MongoDB"],
+    projects: ["Job Portal", "Chat App"],
+  },
+];
 
-export default function DrivesPage() {
-  const [drives, setDrives] = useState<Drive[]>([
-    {
-      id: 1,
-      company: "TechNova",
-      role: "Software Engineer",
-      date: "25 July 2026",
-      location: "Online",
-      eligibility: "B.Tech / MCA 2024-2026",
-      saved: false,
-    },
-    {
-      id: 2,
-      company: "CodeCraft",
-      role: "Backend Developer",
-      date: "30 July 2026",
-      location: "Bangalore",
-      eligibility: "Any Graduate",
-      saved: false,
-    },
-    {
-      id: 3,
-      company: "StartupX",
-      role: "Frontend Intern",
-      date: "5 Aug 2026",
-      location: "Delhi",
-      eligibility: "Final Year Students",
-      saved: false,
-    },
-  ]);
+export default function PortfolioPage() {
+  const [query, setQuery] = useState("");
 
-  const toggleSave = (id: number) => {
-    setDrives((prev) =>
-      prev.map((d) =>
-        d.id === id ? { ...d, saved: !d.saved } : d
-      )
-    );
-  };
+  const filteredUsers = users.filter((user) =>
+    `${user.name} ${user.username} ${user.email}`
+      .toLowerCase()
+      .includes(query.toLowerCase())
+  );
 
   return (
-    <div className="min-h-screen bg-white text-black">
+    <main className="bg-white text-gray-900 min-h-screen">
 
-      {/* 🔹 Header */}
-      <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          <h1 className="text-lg font-semibold">Mark-43</h1>
-          <div className="text-sm text-gray-500">Hiring Drives</div>
+      {/* HERO */}
+      <section className="pt-24 pb-12 px-6 md:px-12 text-center border-b">
+        <div className="max-w-3xl mx-auto">
+
+          <h1 className="text-3xl md:text-5xl font-semibold">
+            Discover Developers
+          </h1>
+
+          <p className="mt-4 text-gray-500">
+            Search developers by name, username, or email.
+          </p>
+
+          <div className="mt-6 flex items-center gap-3 border rounded-xl px-4 py-3">
+            <Search size={18} className="text-gray-400" />
+            <input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search developers..."
+              className="w-full outline-none"
+            />
+          </div>
+
         </div>
-      </header>
-
-      {/* 🔹 Page Intro */}
-      <section className="max-w-7xl mx-auto px-6 py-10">
-        <h2 className="text-2xl font-semibold tracking-tight">
-          Explore Hiring Drives
-        </h2>
-        <p className="text-gray-500 mt-2 text-sm">
-          Apply to upcoming hiring drives and accelerate your career growth.
-        </p>
       </section>
 
-      {/* 🔹 Drives Grid */}
-      <section className="max-w-7xl mx-auto px-6 pb-16 grid md:grid-cols-2 gap-6">
+      {/* RESULTS */}
+      <section className="px-6 md:px-12 py-10">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        {drives.map((drive) => (
-          <motion.div
-            key={drive.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="border rounded-2xl p-6 hover:shadow-md transition"
-          >
+          {filteredUsers.map((user, i) => (
+            <div
+              key={i}
+              className="border rounded-2xl p-6 flex flex-col justify-between bg-white"
+            >
 
-            {/* Top */}
-            <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-lg font-medium">{drive.role}</h3>
-                <p className="text-sm text-gray-500">{drive.company}</p>
+              {/* TOP */}
+              <div className="flex items-start justify-between">
+
+                <div className="flex gap-4">
+
+                  {/* Avatar */}
+                  <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-sm font-medium">
+                    {user.name[0]}
+                  </div>
+
+                  <div>
+                    <h2 className="text-lg font-semibold flex items-center gap-1">
+                      {user.name}
+                      <BadgeCheck size={14} className="text-green-500" />
+                    </h2>
+
+                    <p className="text-sm text-gray-500">
+                      @{user.username}
+                    </p>
+
+                    <p className="text-xs text-gray-400 flex items-center gap-1 mt-1">
+                      <MapPin size={12} />
+                      {user.location}
+                    </p>
+                  </div>
+
+                </div>
+
+                {/* AI MATCH */}
+                <div className="text-right">
+                  <p className="text-xs text-gray-400">Match</p>
+                  <p className="text-sm font-semibold">
+                    {user.match}%
+                  </p>
+                </div>
+
               </div>
 
-              <button onClick={() => toggleSave(drive.id)}>
-                <Bookmark
-                  className={`h-5 w-5 ${
-                    drive.saved ? "text-black" : "text-gray-400"
+              {/* AVAILABILITY */}
+              <div className="mt-3">
+                <span
+                  className={`text-xs px-2 py-1 rounded-full ${
+                    user.available
+                      ? "bg-green-100 text-green-600"
+                      : "bg-gray-100 text-gray-500"
                   }`}
-                  fill={drive.saved ? "black" : "none"}
-                />
-              </button>
-            </div>
-
-            {/* Info */}
-            <div className="mt-4 space-y-2 text-sm text-gray-500">
-              <div className="flex items-center gap-2">
-                <Calendar size={14} /> {drive.date}
+                >
+                  {user.available ? "Open to Work" : "Not Available"}
+                </span>
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin size={14} /> {drive.location}
+
+              {/* ROLE + EXPERIENCE */}
+              <div className="mt-4">
+                <p className="text-sm font-medium">
+                  {user.role}
+                </p>
+
+                <p className="text-xs text-gray-500 mt-1">
+                  {user.experience}
+                </p>
               </div>
-              <div className="flex items-center gap-2">
-                <Users size={14} /> {drive.eligibility}
+
+              {/* SKILLS */}
+              <div className="flex flex-wrap gap-2 mt-4">
+                {user.skills.map((skill, idx) => (
+                  <span
+                    key={idx}
+                    className="text-xs px-2 py-1 bg-gray-100 rounded-md"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
+
+              {/* PROJECT PREVIEW */}
+              <div className="mt-5">
+                <p className="text-xs text-gray-400 mb-2">
+                  Projects
+                </p>
+
+                <div className="space-y-1">
+                  {user.projects.map((project, idx) => (
+                    <p
+                      key={idx}
+                      className="text-xs text-gray-700 truncate"
+                    >
+                      • {project}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              {/* ACTION */}
+              <div className="mt-6 flex items-center justify-between">
+
+                {/* ONLY SHARE */}
+                <button className="text-gray-500 hover:text-black transition">
+                  <Share2 size={16} />
+                </button>
+
+                {/* CTA */}
+                <button className="px-4 py-2 bg-black text-white rounded-lg text-sm flex items-center gap-1">
+                  View Profile <ExternalLink size={14} />
+                </button>
+
+              </div>
+
             </div>
+          ))}
 
-            {/* Actions */}
-            <div className="flex justify-between items-center mt-6">
-              <span className="text-xs text-gray-400">
-                Limited slots available
-              </span>
-
-              <button className="bg-black text-white px-4 py-2 rounded-xl text-sm hover:opacity-90">
-                Apply Now
-              </button>
+          {/* EMPTY */}
+          {filteredUsers.length === 0 && (
+            <div className="col-span-full text-center text-gray-400 py-20">
+              No developers found.
             </div>
-          </motion.div>
-        ))}
+          )}
 
+        </div>
       </section>
 
-      {/* 🔹 Empty State */}
-      {drives.length === 0 && (
-        <div className="text-center text-gray-500 py-20">
-          No hiring drives available at the moment.
-        </div>
-      )}
-    </div>
+    </main>
   );
 }
