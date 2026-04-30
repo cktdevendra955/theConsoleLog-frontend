@@ -1,65 +1,71 @@
+
 "use client";
 
 import {
   ShieldCheck,
   Medal,
   Briefcase,
+  UserSearch,
+  Building2,
+  ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
-export default function SignupPage() {
+export default function Page() {
+  const [role, setRole] = useState<"developer" | "recruiter">("developer");
+
   return (
-    <div className="bg-surface text-on-surface min-h-screen">
-      <main className="min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
-        
-        {/* Background Blur */}
-        <div className="absolute top-[-10%] left-[-5%] w-[40%] h-[60%] rounded-full bg-primary/5 blur-[120px]"></div>
-        <div className="absolute bottom-[-10%] right-[-5%] w-[40%] h-[60%] rounded-full bg-tertiary/5 blur-[120px]"></div>
+    <div className="bg-white text-gray-900 min-h-screen">
+      <main className="relative overflow-hidden px-4 md:px-6 pt-20 pb-12">
 
-        <div className="w-full max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* BACKGROUND */}
+        <div className="absolute top-[-10%] left-[-5%] w-[50%] h-[60%] rounded-full bg-gray-100 blur-[120px]"></div>
+        <div className="absolute bottom-[-10%] right-[-5%] w-[50%] h-[60%] rounded-full bg-gray-200 blur-[120px]"></div>
 
-          {/* LEFT SAME */}
-          <div className="hidden lg:flex flex-col space-y-8 pr-12">
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl font-bold tracking-tighter">
-                ReferEdge
-              </span>
-            </div>
+        <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
-            <h1 className="text-display-lg font-bold leading-none">
-              Join the <br />
-              <span className="text-primary">Referral Network</span>
+          {/* LEFT */}
+          <div className="flex flex-col space-y-6 md:space-y-8">
+
+            <h1 className="text-3xl md:text-5xl font-semibold leading-tight">
+              Build Your Profile. <br />
+               <span className="text-gray-400">
+                 Get Hired Faster.
+               </span>
             </h1>
 
-            <p className="text-body-lg text-on-surface-variant max-w-md">
-              Create your account and unlock access to curated opportunities.
+            <p className="text-sm md:text-base text-gray-500 max-w-md">
+                Join a platform where developers are hired based on skills,
+               projects, and real work — not just resumes.
             </p>
 
-            <div className="space-y-6 pt-8">
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center">
-                  <ShieldCheck className="text-primary" />
+            <div className="space-y-4 md:space-y-6 pt-2 md:pt-6">
+
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gray-100 flex items-center justify-center">
+                  <ShieldCheck size={18} />
                 </div>
                 <div>
-                  <p className="text-label-md font-bold uppercase tracking-widest">
-                    Verified Identity
+                  <p className="text-xs md:text-sm font-semibold uppercase tracking-widest">
+                    Verified Jobs Only
                   </p>
-                  <p className="text-body-md text-on-surface-variant">
-                    Secure onboarding process.
+                  <p className="text-xs md:text-sm text-gray-500">
+                    No fake listings. Real companies only.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center">
-                  <Medal className="text-tertiary" />
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gray-100 flex items-center justify-center">
+                  <Medal size={18} />
                 </div>
                 <div>
-                  <p className="text-label-md font-bold uppercase tracking-widest">
-                    Premium Access
+                  <p className="text-xs md:text-sm font-semibold uppercase tracking-widest">
+                    Skill-Based Hiring
                   </p>
-                  <p className="text-body-md text-on-surface-variant">
-                    Get access to exclusive opportunities.
+                  <p className="text-xs md:text-sm text-gray-500">
+                    Projects matter more than resumes.
                   </p>
                 </div>
               </div>
@@ -67,93 +73,112 @@ export default function SignupPage() {
             </div>
           </div>
 
-          {/* RIGHT FORM */}
+          {/* RIGHT */}
           <div className="flex justify-center lg:justify-start">
-            <div className="w-full max-w-md bg-surface-container-lowest rounded-[2rem] p-10 shadow-[0px_12px_32px_rgba(25,28,30,0.04)] border border-outline-variant/15 relative overflow-hidden">
+            <div className="w-full max-w-md border rounded-2xl p-6 md:p-8 shadow-sm bg-white relative">
 
-              <div className="absolute top-0 left-0 w-full h-1 bg-surface-container">
-                <div className="h-full bg-primary w-2/3 transition-all duration-500"></div>
-              </div>
-
-              <div className="mb-8">
-                <h2 className="text-headline-lg font-bold mb-2">
-                  Create Account
+              {/* HEADER */}
+              <div className="mb-6">
+                <h2 className="text-xl md:text-2xl font-semibold">
+                  Welcome Back
                 </h2>
-                <p className="text-body-md text-on-surface-variant">
-                  Start your journey with ReferEdge.
+                <p className="text-sm text-gray-500 mt-1">
+                  Sign in to continue
                 </p>
               </div>
 
-              {/* Social */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
-                
-                <button className="flex items-center justify-center space-x-2 py-3 px-4 rounded-xl border border-outline-variant/30 hover:bg-surface-container-low transition-colors">
-                  <img
-                    className="w-5 h-5"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuASc4Mhioa7KdYuWnoCGvskGvo372yDCGRqQYvMhImUzA1bmdsSr5tvgP9F4MFZyPWnaNnTgyNb2b0k8aFu-TVLizBM4YWC1ZokXJM1iVUb2HrS9-bg1LcccMiLWHOWkU-r58oMMLYkq--1pIxNZI_O4AU2t-6FiY7yEx0PBGdz7dD1IoJ8DckkdqhLnM333P5lR0dvBNt8kFRGvJvHZRE3OysOenOkXJSfEUCFwPQ6V3o4sdbEUvUyzXIEVC-oCw65jqkzdCIQr0jz"
-                  />
-                  <span className="font-semibold">Google</span>
+              {/* ROLE SWITCH */}
+              <div className="grid grid-cols-2 gap-2 mb-6">
+
+                <button
+                  onClick={() => setRole("developer")}
+                  className={`flex items-center justify-center gap-2 py-2 rounded-xl text-sm border ${
+                    role === "developer"
+                      ? "bg-black text-white"
+                      : "bg-white"
+                  }`}
+                >
+                  <UserSearch size={16} />
+                  Developer
                 </button>
 
-                <button className="flex items-center justify-center space-x-2 py-3 px-4 rounded-xl border border-outline-variant/30 hover:bg-surface-container-low transition-colors">
-                  <Briefcase />
-                  <span className="font-semibold">LinkedIn</span>
+                <button
+                  onClick={() => setRole("recruiter")}
+                  className={`flex items-center justify-center gap-2 py-2 rounded-xl text-sm border ${
+                    role === "recruiter"
+                      ? "bg-black text-white"
+                      : "bg-white"
+                  }`}
+                >
+                  <Building2 size={16} />
+                  Recruiter
                 </button>
 
               </div>
 
-              <div className="relative flex items-center mb-8">
-                <div className="flex-grow border-t border-outline-variant/20"></div>
-                <span className="mx-4 text-label-md text-outline uppercase">
-                  Or Continue With
-                </span>
-                <div className="flex-grow border-t border-outline-variant/20"></div>
+              {/* SOCIAL */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+
+                <button className="flex items-center justify-center gap-2 py-3 rounded-xl border text-sm hover:bg-gray-50">
+                  <img
+                    className="w-4 h-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuASc4Mhioa7KdYuWnoCGvskGvo372yDCGRqQYvMhImUzA1bmdsSr5tvgP9F4MFZyPWnaNnTgyNb2b0k8aFu-TVLizBM4YWC1ZokXJM1iVUb2HrS9-bg1LcccMiLWHOWkU-r58oMMLYkq--1pIxNZI_O4AU2t-6FiY7yEx0PBGdz7dD1IoJ8DckkdqhLnM333P5lR0dvBNt8kFRGvJvHZRE3OysOenOkXJSfEUCFwPQ6V3o4sdbEUvUyzXIEVC-oCw65jqkzdCIQr0jz"
+                  />
+                  Google
+                </button>
+
+                <button className="flex items-center justify-center gap-2 py-3 rounded-xl border text-sm hover:bg-gray-50">
+                  <Briefcase size={16} />
+                  LinkedIn
+                </button>
+
+              </div>
+
+              {/* DIVIDER */}
+              <div className="flex items-center gap-3 mb-6">
+                <div className="flex-1 h-px bg-gray-200"></div>
+                <span className="text-xs text-gray-400">OR</span>
+                <div className="flex-1 h-px bg-gray-200"></div>
               </div>
 
               {/* FORM */}
-              <form className="space-y-5">
-                
+              <form className="space-y-4">
+
+
+
                 <input
-                  className="w-full px-5 py-4 rounded-xl bg-surface-container-low outline-none"
                   placeholder="Full Name"
-                  type="text"
+                  className="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-black"
+                />
+
+
+                <input
+                  placeholder="Email"
+                  className="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-black"
                 />
 
                 <input
-                  className="w-full px-5 py-4 rounded-xl bg-surface-container-low outline-none"
-                  placeholder="Work Email"
-                  type="email"
-                />
-
-                <input
-                  className="w-full px-5 py-4 rounded-xl bg-surface-container-low outline-none"
                   placeholder="Password"
                   type="password"
+                  className="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-black"
                 />
 
-                <input
-                  className="w-full px-5 py-4 rounded-xl bg-surface-container-low outline-none"
-                  placeholder="Confirm Password"
-                  type="password"
-                />
-
-                <button className="w-full py-4 rounded-xl bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold">
-                  Create Account
+                <button className="w-full py-3 rounded-xl bg-black text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition">
+                  Sign In <ArrowRight size={16} />
                 </button>
+
               </form>
 
-              <div className="mt-8 pt-6 border-t text-center">
-                <p className="text-body-md text-on-surface-variant">
-                  Already have an account?
-                  <button className="text-primary font-bold ml-1">
-                    Sign In
-                  </button>
-                </p>
-              </div>
+              {/* FOOTER */}
+              <p className="text-xs text-gray-500 text-center mt-6">
+                Don’t have an account?
+                <Link href="\login" className="text-black font-medium ml-1 cursor-pointer">
+                  Login
+                </Link>
+              </p>
 
             </div>
           </div>
-
         </div>
       </main>
     </div>
