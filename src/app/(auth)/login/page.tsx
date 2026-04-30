@@ -155,9 +155,9 @@ export default function Page() {
                   className="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-black"
                 />
 
-                <button className="w-full py-3 rounded-xl bg-black text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition">
+                <Link href="\dashboard" className="w-full py-3 rounded-xl bg-black text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition">
                   Sign In <ArrowRight size={16} />
-                </button>
+                </Link>
 
               </form>
 

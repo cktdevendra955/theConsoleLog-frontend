@@ -355,37 +355,7 @@ export default function SettingsPage() {
           </div>
         </div>
       </main>
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white shadow-[0_-4px_16px_rgba(0,0,0,0.05)] flex items-center justify-around px-4 z-50">
-        <span
-          className="material-symbols-outlined text-on-surface-variant"
-          data-icon="dashboard"
-        >
-          dashboard
-        </span>
-        <span
-          className="material-symbols-outlined text-on-surface-variant"
-          data-icon="work"
-        >
-          work
-        </span>
-        <div className="bg-primary p-3 rounded-full -mt-10 shadow-lg shadow-primary/40">
-          <span className="material-symbols-outlined " data-icon="search">
-            search
-          </span>
-        </div>
-        <span
-          className="material-symbols-outlined text-on-surface-variant"
-          data-icon="chat"
-        >
-          chat
-        </span>
-        <span
-          className="material-symbols-outlined text-primary"
-          data-icon="settings"
-        >
-          settings
-        </span>
-      </nav>
+      
     </div>
   );
 }

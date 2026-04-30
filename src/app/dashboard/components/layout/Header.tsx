@@ -3,6 +3,7 @@
 import { Menu, Bell } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function Header({
   toggleSidebar,
@@ -46,9 +47,9 @@ export default function Header({
         </button>
 
         <div>
-          <h1 className="text-2xl font-semibold tracking-tight">
+          <Link href="\" className="text-2xl font-semibold tracking-tight">
             Dev
-          </h1>
+          </Link>
         </div>
       </div>
 
