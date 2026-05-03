@@ -50,25 +50,48 @@ export default function JobSearchPage() {
     <main className="bg-white text-gray-900 min-h-screen">
 
       {/* HERO */}
-      <section className="pb-10 px-6 md:px-12 text-center border-b">
-        <div className="max-w-3xl mx-auto">
+     <section className="relative pb-16 px-6 md:px-12 text-center overflow-hidden">
 
-          <h1 className="text-3xl md:text-5xl font-semibold">
-            Find Jobs That Match <br />
-            <span className="text-gray-400">Your Skills</span>
-          </h1>
+  {/* Gradient Background */}
+  <div className="absolute inset-0 bg-gradient-to-b from-blue-50 via-white to-purple-50"></div>
 
-          {/* SEARCH */}
-          <div className="mt-6 flex items-center gap-3 border rounded-xl px-4 py-3">
-            <Search size={18} className="text-gray-400" />
-            <input
-              placeholder="Search roles, skills, companies..."
-              className="w-full outline-none"
-            />
-          </div>
+  {/* Glow Effects */}
+  <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-300 opacity-20 blur-[120px] rounded-full"></div>
+  <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-300 opacity-20 blur-[120px] rounded-full"></div>
 
-        </div>
-      </section>
+  <div className="relative z-10 max-w-3xl mx-auto">
+
+    {/* Heading */}
+    <h1 className="text-3xl md:text-5xl font-semibold leading-tight">
+      Find Jobs That Match <br />
+      <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        Your Skills
+      </span>
+    </h1>
+
+    {/* Subtext */}
+    <p className="mt-4 text-gray-600">
+      Discover opportunities tailored to your skills, not just your resume.
+    </p>
+
+    {/* Search Box */}
+    <div className="mt-8 flex items-center gap-3 bg-white/80 backdrop-blur-md border border-blue-100 shadow-lg rounded-xl px-4 py-3">
+
+      <Search size={18} className="text-blue-500" />
+
+      <input
+        placeholder="Search roles, skills, companies..."
+        className="w-full outline-none bg-transparent text-gray-700 placeholder:text-gray-400"
+      />
+
+      <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg text-sm hover:opacity-90 transition">
+        Search
+      </button>
+
+    </div>
+
+  </div>
+</section>
 
       {/* FILTER BAR */}
       <section className="px-6 md:px-12 py-6 border-b">
