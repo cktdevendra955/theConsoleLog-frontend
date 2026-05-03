@@ -14,7 +14,7 @@ export default function DashboardLayout({
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   return (
-    <div className="flex h-screen w-full bg-[#f5f7fb] overflow-hidden">
+    <div className="flex h-screen w-full bg-[#f5f7fb] overflow-hidden ">
 
       {/* Desktop Sidebar */}
       <Sidebar isOpen={isSidebarOpen} />
@@ -50,7 +50,7 @@ export default function DashboardLayout({
           openMobile={() => setIsMobileOpen(true)}
         />
 
-        <div className="flex-1 overflow-auto px-4 md:px-6 py-6 text-gray-900">
+        <div className="flex-1 overflow-auto px-4 md:px-6 py-6 text-gray-900  ">
           {children}
         </div>
       </main>

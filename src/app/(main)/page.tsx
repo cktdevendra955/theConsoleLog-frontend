@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <main className="bg-white text-gray-900">
       {/* HERO */}
-      <section className=" pb-10 px-6 md:px-12 text-center relative overflow-hidden">
+      <section className=" pb-10 px-6 md:px-12 text-center relative overflow-hidden pt-20" >
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight tracking-tight">
             Stop Sending Resumes. <br />
