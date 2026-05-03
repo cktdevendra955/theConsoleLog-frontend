@@ -61,7 +61,7 @@ export default function PortfolioPage() {
     <main className="bg-white text-gray-900 min-h-screen">
 
       {/* HERO */}
-      <section className="pt-24 pb-12 px-6 md:px-12 text-center border-b">
+      <section className="pt-20 pb-12 px-6 md:px-12 text-center border-b">
         <div className="max-w-3xl mx-auto">
 
           <h1 className="text-3xl md:text-5xl font-semibold">

@@ -8,6 +8,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 import { useState } from "react";
+import HiringDriveCard from "../../components/hiringdrives/HiringDriveCard";
 
 const users = [
   {
@@ -61,7 +62,7 @@ export default function PortfolioPage() {
     <main className="bg-white text-gray-900 min-h-screen">
 
       {/* HERO */}
-      <section className="pt-24 pb-12 px-6 md:px-12 text-center border-b">
+      <section className="pt-2 pb-12 px-6 md:px-12 text-center border-b">
         <div className="max-w-3xl mx-auto">
 
           <h1 className="text-3xl md:text-5xl font-semibold">
@@ -89,122 +90,7 @@ export default function PortfolioPage() {
       <section className="px-6 md:px-12 py-10">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          {filteredUsers.map((user, i) => (
-            <div
-              key={i}
-              className="border rounded-2xl p-6 flex flex-col justify-between bg-white"
-            >
-
-              {/* TOP */}
-              <div className="flex items-start justify-between">
-
-                <div className="flex gap-4">
-
-                  {/* Avatar */}
-                  <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-sm font-medium">
-                    {user.name[0]}
-                  </div>
-
-                  <div>
-                    <h2 className="text-lg font-semibold flex items-center gap-1">
-                      {user.name}
-                      <BadgeCheck size={14} className="text-green-500" />
-                    </h2>
-
-                    <p className="text-sm text-gray-500">
-                      @{user.username}
-                    </p>
-
-                    <p className="text-xs text-gray-400 flex items-center gap-1 mt-1">
-                      <MapPin size={12} />
-                      {user.location}
-                    </p>
-                  </div>
-
-                </div>
-
-                {/* AI MATCH */}
-                <div className="text-right">
-                  <p className="text-xs text-gray-400">Match</p>
-                  <p className="text-sm font-semibold">
-                    {user.match}%
-                  </p>
-                </div>
-
-              </div>
-
-              {/* AVAILABILITY */}
-              <div className="mt-3">
-                <span
-                  className={`text-xs px-2 py-1 rounded-full ${
-                    user.available
-                      ? "bg-green-100 text-green-600"
-                      : "bg-gray-100 text-gray-500"
-                  }`}
-                >
-                  {user.available ? "Open to Work" : "Not Available"}
-                </span>
-              </div>
-
-              {/* ROLE + EXPERIENCE */}
-              <div className="mt-4">
-                <p className="text-sm font-medium">
-                  {user.role}
-                </p>
-
-                <p className="text-xs text-gray-500 mt-1">
-                  {user.experience}
-                </p>
-              </div>
-
-              {/* SKILLS */}
-              <div className="flex flex-wrap gap-2 mt-4">
-                {user.skills.map((skill, idx) => (
-                  <span
-                    key={idx}
-                    className="text-xs px-2 py-1 bg-gray-100 rounded-md"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-
-              {/* PROJECT PREVIEW */}
-              <div className="mt-5">
-                <p className="text-xs text-gray-400 mb-2">
-                  Projects
-                </p>
-
-                <div className="space-y-1">
-                  {user.projects.map((project, idx) => (
-                    <p
-                      key={idx}
-                      className="text-xs text-gray-700 truncate"
-                    >
-                      • {project}
-                    </p>
-                  ))}
-                </div>
-              </div>
-
-              {/* ACTION */}
-              <div className="mt-6 flex items-center justify-between">
-
-                {/* ONLY SHARE */}
-                <button className="text-gray-500 hover:text-black transition">
-                  <Share2 size={16} />
-                </button>
-
-                {/* CTA */}
-                <button className="px-4 py-2 bg-black text-white rounded-lg text-sm flex items-center gap-1">
-                  View Profile <ExternalLink size={14} />
-                </button>
-
-              </div>
-
-            </div>
-          ))}
-
+          <HiringDriveCard />
           {/* EMPTY */}
           {filteredUsers.length === 0 && (
             <div className="col-span-full text-center text-gray-400 py-20">

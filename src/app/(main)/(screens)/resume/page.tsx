@@ -28,7 +28,7 @@ export default function ResumePage() {
     <main className="bg-white text-gray-900 min-h-screen">
 
       {/* HERO */}
-      <section className="pt-24 pb-16 px-6 md:px-12 text-center border-b">
+      <section className="pt-20 pb-16 px-6 md:px-12 text-center border-b">
         <div className="max-w-4xl mx-auto">
 
           <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
