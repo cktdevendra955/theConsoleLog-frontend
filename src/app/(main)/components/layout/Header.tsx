@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
@@ -15,27 +15,23 @@ const navLinks = [
 
 export default function Header() {
   const pathname = usePathname();
-
   const [open, setOpen] = useState(false);
-
-  // ✅ Fix hydration mismatch
   const [mounted, setMounted] = useState(false);
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+
+  useEffect(() => setMounted(true), []);
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
-      
-      <div className="max-w-7xl mx-auto h-20 px-6 flex items-center justify-between">
-        
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
+
+      <div className="max-w-7xl mx-auto h-16 px-6 flex items-center justify-between">
+
         {/* Brand */}
-        <Link href="/" className="text-lg font-semibold tracking-tight">
+        <Link href="/" className="text-base font-semibold text-gray-900 tracking-tight">
           Mark-43
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => {
             const isActive = mounted && pathname === link.href;
 
@@ -43,96 +39,100 @@ export default function Header() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`transition ${
-                  isActive
-                    ? "text-black font-medium"
-                    : "text-gray-500 hover:text-black"
+                className={`text-sm transition relative
+                  ${isActive ? "text-gray-900" : "text-gray-500 hover:text-gray-900"}
+                `}
+              >
+                {link.name}
+
+                {/* subtle underline */}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-gray-900 transition-all
+                    ${isActive ? "w-full" : "w-0"}
+                  `}
+                />
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Auth */}
+        <div className="hidden md:flex items-center gap-6">
+          <Link href="/login" className="text-sm text-gray-500 hover:text-gray-900">
+            Login
+          </Link>
+
+          <Link
+            href="/register"
+            className="text-sm text-gray-900 font-medium hover:underline"
+          >
+            Get Started
+          </Link>
+        </div>
+
+        {/* Mobile Button */}
+        <button
+          onClick={() => setOpen(true)}
+          className="md:hidden p-2"
+        >
+          <Menu size={20} />
+        </button>
+      </div>
+
+      {/* Mobile Overlay */}
+      <div
+        className={`fixed inset-0 bg-black/40 transition-opacity ${
+          open ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+        onClick={() => setOpen(false)}
+      />
+
+      {/* Mobile Drawer */}
+      <div
+        className={`fixed top-0 right-0 w-72 h-full bg-white z-50 transform transition-transform ${
+          open ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="h-16 px-6 flex items-center justify-between border-b">
+          <span className="font-semibold text-gray-900">Menu</span>
+          <button onClick={() => setOpen(false)}>
+            <X size={20} />
+          </button>
+        </div>
+
+        <div className="p-6 flex flex-col gap-5">
+
+          {navLinks.map((link) => {
+            const isActive = mounted && pathname === link.href;
+
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className={`text-sm ${
+                  isActive ? "text-gray-900 font-medium" : "text-gray-500"
                 }`}
               >
                 {link.name}
               </Link>
             );
           })}
-        </nav>
 
-        {/* Desktop Auth */}
-        <div className="hidden md:flex items-center gap-3">
-          <Link
-            href="/login"
-            className="text-sm text-gray-600 hover:text-black"
-          >
-            Login
-          </Link>
-
-          <Link
-            href="/register"
-            className="text-sm bg-black text-white px-4 py-2 rounded-xl hover:opacity-90"
-          >
-            Get Started
-          </Link>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden p-2 rounded-lg border"
-        >
-          {open ? <X size={18} /> : <Menu size={18} />}
-        </button>
-      </div>
-
-      {/* Collapsible Mobile Menu */}
-      <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ${
-          open ? "max-h-[500px] border-t" : "max-h-0"
-        }`}
-      >
-        <div className="px-6 pb-6 bg-white">
-          
-          {/* Links */}
-          <nav className="flex flex-col gap-4 mt-4 text-sm">
-            {navLinks.map((link) => {
-              const isActive = mounted && pathname === link.href;
-
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className={`${
-                    isActive
-                      ? "text-black font-medium"
-                      : "text-gray-500"
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Auth */}
-          <div className="flex flex-col gap-3 mt-6">
-            <Link
-              href="/login"
-              onClick={() => setOpen(false)}
-              className="text-sm text-gray-600"
-            >
+          <div className="mt-6 pt-6 border-t flex flex-col gap-3">
+            <Link href="/login" className="text-sm text-gray-500">
               Login
             </Link>
 
             <Link
               href="/register"
-              onClick={() => setOpen(false)}
-              className="text-sm bg-black text-white px-4 py-2 rounded-xl text-center"
+              className="text-sm font-medium text-gray-900"
             >
               Get Started
             </Link>
           </div>
-
         </div>
       </div>
-
     </header>
   );
 }
