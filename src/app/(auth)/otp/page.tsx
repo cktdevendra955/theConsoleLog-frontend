@@ -47,7 +47,7 @@ export default function OTPPage() {
           {otp.map((digit, index) => (
             <input
               key={index}
-              ref={(el) => (inputs.current[index] = el)}
+              
               value={digit}
               onChange={(e) =>
                 handleChange(e.target.value, index)
