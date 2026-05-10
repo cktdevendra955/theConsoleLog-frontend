@@ -41,7 +41,7 @@ export default function ResumePage() {
           </p>
 
           {/* CTA */}
-          <button className="mt-8 px-6 py-3 bg-black text-white rounded-xl flex items-center gap-2 mx-auto">
+          <button className="mt-8 px-6 py-3 primary-gradient-bg rounded-xl flex items-center gap-2 mx-auto">
             Start Building <ArrowRight size={18} />
           </button>
 
@@ -123,7 +123,7 @@ export default function ResumePage() {
                   </p>
                 </div>
 
-                <button className="mt-4 px-4 py-2 bg-black text-white rounded-lg text-sm">
+                <button className="mt-4 px-4 py-2 primary-gradient-bg rounded-lg text-sm">
                   Use Template
                 </button>
 
@@ -167,7 +167,7 @@ export default function ResumePage() {
 
       {/* FINAL CTA */}
       <section className="py-24 px-6 md:px-12 text-center">
-        <div className="max-w-4xl mx-auto bg-black text-white rounded-2xl p-12">
+        <div className="max-w-4xl mx-auto primary-gradient-bg rounded-2xl p-12">
 
           <h2 className="text-3xl font-semibold">
             Stop Using Weak Resumes

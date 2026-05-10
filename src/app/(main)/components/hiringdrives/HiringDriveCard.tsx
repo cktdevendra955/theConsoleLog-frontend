@@ -59,7 +59,7 @@ export default function HiringDriveCard() {
           ₹6–12 LPA
         </span>
 
-        <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium bg-black text-white hover:bg-gray-900 active:scale-[0.97] transition-all">
+        <button className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium primary-gradient-bg hover:bg-gray-900 active:scale-[0.97] transition-all">
           Apply
           <ArrowUpRight className="w-4 h-4" />
         </button>

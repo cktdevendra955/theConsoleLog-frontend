@@ -94,7 +94,7 @@ export default function Page() {
                   onClick={() => setRole("developer")}
                   className={`flex items-center justify-center gap-2 py-2 rounded-xl text-sm border ${
                     role === "developer"
-                      ? "bg-black text-white"
+                      ? "primary-gradient-bg text-white"
                       : "bg-white"
                   }`}
                 >
@@ -106,7 +106,7 @@ export default function Page() {
                   onClick={() => setRole("recruiter")}
                   className={`flex items-center justify-center gap-2 py-2 rounded-xl text-sm border ${
                     role === "recruiter"
-                      ? "bg-black text-white"
+                      ? "primary-gradient-bg text-white"
                       : "bg-white"
                   }`}
                 >
@@ -155,7 +155,7 @@ export default function Page() {
                   className="w-full px-4 py-3 rounded-xl border text-sm focus:outline-none focus:ring-2 focus:ring-black"
                 />
 
-                <Link href="\dashboard" className="w-full py-3 rounded-xl bg-black text-white text-sm font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition">
+                <Link href="\dashboard" className="w-full py-3 rounded-xl primary-gradient-bg text-sm font-medium flex items-center justify-center gap-2 hover:bg-gray-800 transition">
                   Sign In <ArrowRight size={16} />
                 </Link>
 

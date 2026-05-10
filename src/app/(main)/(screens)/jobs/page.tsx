@@ -116,7 +116,7 @@ export default function JobPage() {
                   </p>
                 </div>
 
-                <button className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium bg-black text-white hover:bg-gray-900 active:scale-[0.97] transition-all">
+                <button className="w-full md:w-auto flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium bg-black text-white hover:bg-gray-900 active:scale-[0.97] transition-all primary-gradient-bg">
                   Apply
                   <ArrowUpRight className="w-4 h-4" />
                 </button>

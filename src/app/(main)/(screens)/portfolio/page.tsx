@@ -145,7 +145,7 @@ export default function PortfolioPage() {
               </div>
             </div>
 
-            <button className="w-full bg-black text-white py-2.5 rounded-xl text-sm font-medium">
+            <button className="w-full primary-gradient-bg py-2.5 rounded-xl text-sm font-medium">
               Apply Filters
             </button>
           </div>
@@ -204,7 +204,7 @@ export default function PortfolioPage() {
                     View Profile
                   </button>
 
-                  <button className="flex-1 bg-black text-white rounded-xl py-2 text-sm font-medium flex items-center justify-center gap-1 hover:bg-gray-900">
+                  <button className="flex-1 primary-gradient-bg rounded-xl py-2 text-sm font-medium flex items-center justify-center gap-1 hover:bg-gray-900">
                     Hire
                     <ArrowUpRight className="w-4 h-4" />
                   </button>
