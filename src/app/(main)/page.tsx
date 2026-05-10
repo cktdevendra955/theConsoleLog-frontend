@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <main className="bg-white text-gray-900">
       {/* HERO */}
-      <section className=" pb-10 px-6 md:px-12 text-center relative overflow-hidden pt-20" >
+      <section className=" pb-10 px-6 md:px-12 text-center relative overflow-hidden pt-20">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight tracking-tight">
             Stop Sending Resumes. <br />
@@ -25,14 +25,13 @@ export default function Page() {
             Build your portfolio, get AI-matched with real startups, and get
             hired based on your skills — not just your resume.
           </p>
-
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
-            <button className="px-6 py-3 bg-black text-white rounded-xl flex items-center gap-2 hover:bg-gray-800 transition">
-              Build Portfolio <ArrowRight size={18} />
+            <button className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 text-white rounded-xl flex items-center gap-2 hover:opacity-90 shadow-lg transition-all duration-200">
+              Find Jobs <ArrowRight size={18} />
             </button>
 
-            <button className="px-6 py-3 border rounded-xl hover:bg-gray-100 transition">
-              Explore Jobs
+            <button className="px-6 py-3 border border-emerald-500 text-emerald-600 rounded-xl hover:bg-emerald-50 transition-all duration-200">
+              Post a Job
             </button>
           </div>
 
@@ -145,7 +144,7 @@ export default function Page() {
 
           {/* Step 1 */}
           <div className="relative flex md:items-center mb-12">
-            <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm font-medium">
+            <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-white flex items-center justify-center text-sm font-medium">
               1
             </div>
 
@@ -160,7 +159,7 @@ export default function Page() {
 
           {/* Step 2 */}
           <div className="relative flex md:items-center mb-12">
-            <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm font-medium">
+            <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-black bg-gradient-to-r from-emerald-500 to-teal-600 text-white flex items-center justify-center text-sm font-medium">
               2
             </div>
 
@@ -175,7 +174,7 @@ export default function Page() {
 
           {/* Step 3 */}
           <div className="relative flex md:items-center">
-            <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center text-sm font-medium">
+            <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-white flex items-center justify-center text-sm font-medium">
               3
             </div>
 
@@ -241,11 +240,9 @@ export default function Page() {
         </div>
       </section>
 
-      
-
       {/* FINAL CTA */}
       <section className="py-24 px-6 md:px-12 text-center">
-        <div className="max-w-4xl mx-auto bg-black text-white rounded-2xl p-12">
+        <div className="max-w-4xl mx-auto bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-white rounded-2xl p-12">
           <h2 className="text-3xl font-semibold">
             Your Skills Deserve Better Opportunities
           </h2>

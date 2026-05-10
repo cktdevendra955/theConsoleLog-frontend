@@ -34,7 +34,7 @@ export default function Header({
   }, []);
 
   return (
-    <header className="h-16 flex items-center justify-between px-4 md:px-6">
+    <header className="h-16 flex items-center justify-between px-4 md:px-6  shadow-sm" >
 
       {/* LEFT */}
       <div className="flex items-center gap-4">
