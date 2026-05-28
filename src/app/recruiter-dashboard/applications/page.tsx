@@ -27,6 +27,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { HiSparkles } from "react-icons/hi";
+import { MdTrendingFlat } from "react-icons/md";
 
 const page = () => {
   return (
@@ -385,7 +386,7 @@ const page = () => {
             </span>
 
             <span className="mb-1 flex items-center gap-1 text-xs font-bold text-slate-400">
-              <TrendingFlat size={14} />
+              <MdTrendingFlat size={14} />
               0%
             </span>
           </div>

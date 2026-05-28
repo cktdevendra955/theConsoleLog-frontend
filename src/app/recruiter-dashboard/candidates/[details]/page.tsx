@@ -1,4 +1,15 @@
 import React from "react";
+import {
+  BriefcaseBusiness,
+  FileText,
+  TrendingUp,
+  BadgeCheck,
+  Stars,
+  Send,
+  Download,
+  Share2,
+  CalendarDays,
+} from "lucide-react";
 
 const page = () => {
   return (
@@ -118,29 +129,37 @@ const page = () => {
           </div>
         </header>
         <main className="mt-16 flex-1 overflow-hidden flex flex-row">
-          <section className="w-7/12 h-full overflow-y-auto bg-surface-container-low p-8 border-r border-slate-200/40">
-            <div className="max-w-3xl mx-auto space-y-8">
-              <div className="bg-surface-container-lowest p-10 rounded-xl shadow-sm space-y-6">
-                <div className="flex justify-between items-start">
+          <section className="h-full w-full overflow-y-auto border-r border-slate-200/40 bg-surface-container-low p-4 sm:p-6 lg:w-7/12 lg:p-8">
+            <div className="mx-auto max-w-3xl space-y-6 lg:space-y-8">
+              {/* Profile Card */}
+              <div className="space-y-6 rounded-xl bg-surface-container-lowest p-5 shadow-sm sm:p-8 lg:p-10">
+                {/* Top */}
+                <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
                   <div className="space-y-1">
-                    <h2 className="text-3xl font-bold tracking-tight text-on-surface">
+                    <h2 className="text-2xl font-bold tracking-tight text-on-surface sm:text-3xl">
                       Julian S. Reed
                     </h2>
-                    <p className="text-indigo-600 font-medium">
+
+                    <p className="font-medium text-indigo-600">
                       Senior Editorial Strategy Director
                     </p>
                   </div>
+
                   <img
-                    className="w-24 h-24 rounded-xl object-cover shadow-sm grayscale hover:grayscale-0 transition-all duration-500"
+                    className="h-24 w-24 rounded-xl object-cover shadow-sm grayscale transition-all duration-500 hover:grayscale-0"
                     data-alt="portrait of a mature professional male in a navy blazer against a neutral studio background"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_IerzKx9MbEZ-yba8bDjuDJCAX8WpU69XAtKQ5NyoDtYuCWcMGD9Tiy8Yoocb1ry3488NQ4aJ3l_o7sANDeuA4I0LcuUm6uOG_H8zSiDg0SAEJrrH7TDiX-Ggw3FjL7QYD-3KbEoi_QJw02qOWJDIRNoKlh4T-GJBuEpxw54cOtd2WFjioOTYnUUFgRDTMvswAV0OYdLKmQbTrsFGh-bgogIn3du1GZVnjgk-ATyFM0328cQ9cyUXy1BDSmkbBISxhLb2AE65jKQm"
                   />
                 </div>
+
+                {/* Summary */}
                 <div className="space-y-4">
-                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100 pb-2">
+                  <h3 className="flex items-center gap-2 border-b border-slate-100 pb-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                    <FileText size={14} />
                     Professional Summary
                   </h3>
-                  <p className="text-body-md leading-relaxed text-slate-600">
+
+                  <p className="leading-relaxed text-slate-600">
                     Award-winning editorial leader with 12+ years of experience
                     steering high-impact content strategies for global media
                     houses. Proven track record in digital transformation,
@@ -148,25 +167,34 @@ const page = () => {
                     mentoring cross-functional creative teams.
                   </p>
                 </div>
+
+                {/* Experience */}
                 <div className="space-y-6">
-                  <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400 border-b border-slate-100 pb-2">
+                  <h3 className="flex items-center gap-2 border-b border-slate-100 pb-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                    <BriefcaseBusiness size={14} />
                     Experience
                   </h3>
+
                   <div className="space-y-6">
+                    {/* Experience 1 */}
                     <div className="flex gap-4">
-                      <div className="w-1 bg-indigo-500/20 rounded-full"></div>
+                      <div className="w-1 rounded-full bg-indigo-500/20"></div>
+
                       <div>
                         <h4 className="font-bold text-on-surface">
                           Global Managing Editor
                         </h4>
+
                         <p className="text-sm text-indigo-600">
                           The Atlantic • 2019 — Present
                         </p>
-                        <ul className="mt-2 text-sm text-slate-600 list-disc list-inside space-y-1">
+
+                        <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-slate-600">
                           <li>
                             Orchestrated 40% growth in digital subscriptions via
                             content-first roadmap.
                           </li>
+
                           <li>
                             Managed an annual editorial budget of $5.2M across 4
                             global bureaus.
@@ -174,15 +202,20 @@ const page = () => {
                         </ul>
                       </div>
                     </div>
+
+                    {/* Experience 2 */}
                     <div className="flex gap-4">
-                      <div className="w-1 bg-slate-200 rounded-full"></div>
+                      <div className="w-1 rounded-full bg-slate-200"></div>
+
                       <div>
                         <h4 className="font-bold text-on-surface">
                           Lead Features Strategist
                         </h4>
+
                         <p className="text-sm text-indigo-600">
                           Condé Nast • 2014 — 2019
                         </p>
+
                         <p className="mt-2 text-sm text-slate-600">
                           Led the digital pivot for flagship titles,
                           implementing SEO-driven long-form content models.
@@ -192,11 +225,12 @@ const page = () => {
                   </div>
                 </div>
               </div>
-              <div className="bg-surface-container-lowest p-10 rounded-xl shadow-sm min-h-[400px] flex items-center justify-center border-2 border-dashed border-slate-100">
-                <div className="text-center space-y-3">
-                  <span className="material-symbols-outlined text-4xl text-slate-200">
-                    description
-                  </span>
+
+              {/* Attachment Box */}
+              <div className="flex min-h-[300px] items-center justify-center rounded-xl border-2 border-dashed border-slate-100 bg-surface-container-lowest p-6 shadow-sm sm:min-h-[400px]">
+                <div className="space-y-3 text-center">
+                  <FileText size={42} className="mx-auto text-slate-200" />
+
                   <p className="text-sm text-slate-400">
                     Scroll for Portfolio Attachments
                   </p>
@@ -204,152 +238,188 @@ const page = () => {
               </div>
             </div>
           </section>
-          <section className="w-5/12 h-full overflow-y-auto bg-surface p-8 space-y-8 pb-32">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="col-span-2 p-6 bg-indigo-600 rounded-xl text-white relative overflow-hidden">
-                <div className="relative z-10">
-                  <p className="text-xs uppercase tracking-widest opacity-80 mb-1">
-                    ATS Match Score
+          <section className="h-full w-full overflow-y-auto bg-surface p-4 pb-32 sm:p-6 lg:w-5/12 lg:p-8">
+            <div className="space-y-8">
+              {/* Top Cards */}
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {/* ATS Score */}
+                <div className="relative col-span-1 overflow-hidden rounded-xl bg-indigo-600 p-6 text-white sm:col-span-2">
+                  <div className="relative z-10">
+                    <p className="mb-1 text-xs uppercase tracking-widest opacity-80">
+                      ATS Match Score
+                    </p>
+
+                    <h3 className="text-4xl font-extrabold tracking-tighter">
+                      94%
+                    </h3>
+
+                    <div className="mt-4 flex items-center gap-2">
+                      <span className="rounded bg-white/20 px-2 py-1 text-[10px] font-bold">
+                        EXCEPTIONAL MATCH
+                      </span>
+
+                      <TrendingUp size={16} />
+                    </div>
+                  </div>
+
+                  <BadgeCheck
+                    size={120}
+                    className="absolute -bottom-5 -right-5 opacity-10"
+                  />
+                </div>
+
+                {/* Skill Radar */}
+                <div className="rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
+                  <p className="mb-3 text-xs font-medium text-slate-400">
+                    Skill Radar
                   </p>
-                  <h3 className="text-4xl font-extrabold tracking-tighter">
-                    94%
-                  </h3>
-                  <div className="mt-4 flex items-center gap-2">
-                    <span className="px-2 py-1 bg-white/20 rounded text-[10px] font-bold">
-                      EXCEPTIONAL MATCH
-                    </span>
-                    <span className="material-symbols-outlined text-sm">
-                      trending_up
-                    </span>
+
+                  <div className="flex items-center justify-center py-4">
+                    <svg className="h-24 w-24">
+                      <polygon fill="none"></polygon>
+
+                      <polygon
+                        fill="#3525cd"
+                        fillOpacity="0.15"
+                        points="50,20 80,45 70,80 30,80 20,45"
+                        stroke="#3525cd"
+                        strokeWidth="2"
+                      ></polygon>
+                    </svg>
+                  </div>
+
+                  <div className="flex justify-between text-[10px] font-bold uppercase text-indigo-600">
+                    <span>Strategy</span>
+                    <span>9.2</span>
                   </div>
                 </div>
-                <span className="material-symbols-outlined absolute right-[-20px] bottom-[-20px] text-9xl opacity-10">
-                  verified
-                </span>
-              </div>
-              <div className="p-5 bg-white rounded-xl border border-slate-100 shadow-sm">
-                <p className="text-xs text-slate-400 font-medium mb-3">
-                  Skill Radar
-                </p>
-                <div className="flex items-center justify-center py-4">
-                  <svg className="w-24 h-24">
-                    <polygon fill="none"></polygon>
-                    <polygon
-                      fill="#3525cd"
-                      fill-opacity="0.15"
-                      points="50,20 80,45 70,80 30,80 20,45"
-                      stroke="#3525cd"
-                      stroke-width="2"
-                    ></polygon>
-                  </svg>
-                </div>
-                <div className="flex justify-between text-[10px] uppercase font-bold text-indigo-600">
-                  <span>Strategy</span>
-                  <span>9.2</span>
-                </div>
-              </div>
-              <div className="p-5 bg-white rounded-xl border border-slate-100 shadow-sm flex flex-col justify-between">
-                <p className="text-xs text-slate-400 font-medium">
-                  Interview Availability
-                </p>
-                <div className="space-y-1">
-                  <p className="text-sm font-bold">Within 48h</p>
-                  <p className="text-[10px] text-emerald-600">
-                    Immediate Openness
+
+                {/* Availability */}
+                <div className="flex flex-col justify-between rounded-xl border border-slate-100 bg-white p-5 shadow-sm">
+                  <p className="text-xs font-medium text-slate-400">
+                    Interview Availability
                   </p>
+
+                  <div className="space-y-1">
+                    <p className="text-sm font-bold">Within 48h</p>
+
+                    <p className="text-[10px] text-emerald-600">
+                      Immediate Openness
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="p-6 bg-tertiary-container/10 border border-tertiary-container/30 rounded-xl space-y-3">
-              <div className="flex items-center gap-2 text-tertiary">
-                <span className="material-symbols-outlined text-lg">stars</span>
-                <h4 className="text-sm font-bold tracking-tight">
-                  Executive Match Analysis
-                </h4>
+
+              {/* Analysis */}
+              <div className="space-y-3 rounded-xl border border-tertiary-container/30 bg-tertiary-container/10 p-6">
+                <div className="flex items-center gap-2 text-tertiary">
+                  <Stars size={18} />
+
+                  <h4 className="text-sm font-bold tracking-tight">
+                    Executive Match Analysis
+                  </h4>
+                </div>
+
+                <p className="leading-relaxed text-on-tertiary-container">
+                  Julian’s background at{" "}
+                  <span className="font-bold">The Atlantic</span> aligns
+                  perfectly with the Editorial Executive requirement for digital
+                  transformation. His portfolio showcases a sophisticated grasp
+                  of "Elite Curatorial" content models which our client seeks.
+                </p>
               </div>
-              <p className="text-body-md text-on-tertiary-container leading-relaxed">
-                Julian’s background at{" "}
-                <span className="font-bold">The Atlantic</span> aligns perfectly
-                with the Editorial Executive requirement for digital
-                transformation. His portfolio showcases a sophisticated grasp of
-                "Elite Curatorial" content models which our client seeks.
-              </p>
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-center justify-between">
-                <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
-                  Recruiter Notes
-                </h4>
-                <span className="text-[10px] text-indigo-600 font-bold bg-indigo-50 px-2 py-1 rounded">
-                  3 PREVIOUS LOGS
-                </span>
-              </div>
-              <div className="relative">
-                <textarea
-                  className="w-full min-h-[100px] p-4 bg-white border border-slate-200 rounded-xl text-sm focus:ring-4 focus:ring-indigo-500/5 focus:border-indigo-500 outline-none transition-all placeholder:text-slate-300"
-                  placeholder="Add private recruiter note..."
-                ></textarea>
-                <button className="absolute bottom-3 right-3 text-indigo-600 hover:bg-indigo-50 p-2 rounded-lg transition-colors">
-                  <span className="material-symbols-outlined text-lg">
-                    send
+
+              {/* Notes */}
+              <div className="space-y-6">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-400">
+                    Recruiter Notes
+                  </h4>
+
+                  <span className="w-fit rounded bg-indigo-50 px-2 py-1 text-[10px] font-bold text-indigo-600">
+                    3 PREVIOUS LOGS
                   </span>
-                </button>
-              </div>
-              <div className="space-y-6 relative before:absolute before:left-3 before:top-4 before:bottom-4 before:w-px before:bg-slate-100">
-                <div className="relative pl-8">
-                  <div className="absolute left-1 top-1 w-4 h-4 rounded-full bg-indigo-100 border-2 border-white"></div>
-                  <div className="space-y-1">
-                    <p className="text-[10px] font-bold text-slate-400">
-                      TODAY • 10:45 AM
-                    </p>
-                    <p className="text-sm text-on-surface">
-                      Screening call completed. Excellent culture fit, but
-                      Salary expectation is at the top of range (+$15k).
-                    </p>
-                    <p className="text-[10px] text-indigo-600 font-medium">
-                      — Elena Vance
-                    </p>
-                  </div>
                 </div>
-                <div className="relative pl-8">
-                  <div className="absolute left-1 top-1 w-4 h-4 rounded-full bg-slate-100 border-2 border-white"></div>
-                  <div className="space-y-1">
-                    <p className="text-[10px] font-bold text-slate-400">
-                      OCT 12, 2024
-                    </p>
-                    <p className="text-sm text-on-surface italic">
-                      Application received via executive referral program.
-                    </p>
+
+                {/* Textarea */}
+                <div className="relative">
+                  <textarea
+                    className="min-h-[100px] w-full rounded-xl border border-slate-200 bg-white p-4 text-sm outline-none transition-all placeholder:text-slate-300 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/5"
+                    placeholder="Add private recruiter note..."
+                  ></textarea>
+
+                  <button className="absolute bottom-3 right-3 rounded-lg p-2 text-indigo-600 transition-colors hover:bg-indigo-50">
+                    <Send size={18} />
+                  </button>
+                </div>
+
+                {/* Timeline */}
+                <div className="relative space-y-6 before:absolute before:bottom-4 before:left-3 before:top-4 before:w-px before:bg-slate-100">
+                  {/* Log 1 */}
+                  <div className="relative pl-8">
+                    <div className="absolute left-1 top-1 h-4 w-4 rounded-full border-2 border-white bg-indigo-100"></div>
+
+                    <div className="space-y-1">
+                      <p className="text-[10px] font-bold text-slate-400">
+                        TODAY • 10:45 AM
+                      </p>
+
+                      <p className="text-sm text-on-surface">
+                        Screening call completed. Excellent culture fit, but
+                        Salary expectation is at the top of range (+$15k).
+                      </p>
+
+                      <p className="text-[10px] font-medium text-indigo-600">
+                        — Elena Vance
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Log 2 */}
+                  <div className="relative pl-8">
+                    <div className="absolute left-1 top-1 h-4 w-4 rounded-full border-2 border-white bg-slate-100"></div>
+
+                    <div className="space-y-1">
+                      <p className="text-[10px] font-bold text-slate-400">
+                        OCT 12, 2024
+                      </p>
+
+                      <p className="text-sm italic text-on-surface">
+                        Application received via executive referral program.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
         </main>
-        <footer className="fixed bottom-0 right-0 w-[calc(100%-16rem)] h-20 bg-white/90 backdrop-blur-md border-t border-slate-100 z-40 flex items-center justify-between px-8">
-          <div className="flex items-center gap-4">
-            <button className="flex items-center gap-2 text-slate-500 hover:text-slate-900 font-medium text-sm transition-colors">
-              <span className="material-symbols-outlined text-lg">
-                download
-              </span>
+        <footer className="fixed bottom-0 right-0 z-40 flex min-h-[80px] w-full flex-col gap-4 border-t border-slate-100 bg-white/90 px-4 py-4 backdrop-blur-md sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:w-[calc(100%-16rem)] lg:px-8">
+          {/* Left Actions */}
+          <div className="flex flex-wrap items-center gap-4">
+            <button className="flex items-center gap-2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-900">
+              <Download size={18} />
               PDF Resume
             </button>
-            <button className="flex items-center gap-2 text-slate-500 hover:text-slate-900 font-medium text-sm transition-colors">
-              <span className="material-symbols-outlined text-lg">share</span>
+
+            <button className="flex items-center gap-2 text-sm font-medium text-slate-500 transition-colors hover:text-slate-900">
+              <Share2 size={18} />
               Share with Client
             </button>
           </div>
-          <div className="flex items-center gap-3">
-            <button className="px-6 py-2.5 rounded-xl border border-error/20 text-error hover:bg-error-container/20 font-bold text-sm transition-all active:scale-95">
+
+          {/* Right Actions */}
+          <div className="flex flex-wrap items-center gap-3">
+            <button className="rounded-xl border border-error/20 px-5 py-2.5 text-sm font-bold text-error transition-all active:scale-95 hover:bg-error-container/20 sm:px-6">
               Reject
             </button>
-            <button className="px-6 py-2.5 rounded-xl border border-slate-200 text-on-surface hover:bg-slate-50 font-bold text-sm transition-all active:scale-95">
+
+            <button className="rounded-xl border border-slate-200 px-5 py-2.5 text-sm font-bold text-on-surface transition-all active:scale-95 hover:bg-slate-50 sm:px-6">
               Shortlist
             </button>
-            <button className="px-8 py-2.5 bg-indigo-600 text-white rounded-xl font-bold text-sm shadow-lg shadow-indigo-200 hover:bg-indigo-700 transition-all active:scale-95 flex items-center gap-2">
-              <span className="material-symbols-outlined text-lg">
-                calendar_today
-              </span>
+
+            <button className="flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-indigo-200 transition-all active:scale-95 hover:bg-indigo-700 sm:px-8">
+              <CalendarDays size={18} />
               Schedule Interview
             </button>
           </div>

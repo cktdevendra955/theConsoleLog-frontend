@@ -1,4 +1,20 @@
 import React from "react";
+import {
+  Briefcase,
+  Download,
+  FileText,
+  TrendingUp,
+  Users,
+  CalendarDays,
+  ChevronLeft,
+  BarChart3,
+  PieChart, ArrowDown,
+  ArrowUp,
+  Code2,
+  Palette,
+  BriefcaseBusiness,
+  ChevronRight,
+} from "lucide-react";
 
 const page = () => {
   return (
@@ -133,364 +149,499 @@ const page = () => {
           </div>
         </header>
         <section className="mt-16 p-8 flex-1">
-          <div className="flex items-end justify-between mb-10">
-            <div>
-              <span className="text-[10px] font-bold tracking-[0.2em] text-tertiary uppercase mb-2 block">
-                Enterprise Intelligence
-              </span>
-              <h2 className="text-4xl font-bold text-on-surface tracking-tight leading-none">
-                Hiring Analytics
-              </h2>
-              <p className="text-slate-500 mt-3 max-w-lg text-sm font-body leading-relaxed">
-                Precision tracking of your recruitment ecosystem. Leverage
-                data-driven insights to optimize department performance and
-                talent acquisition velocity.
-              </p>
-            </div>
-            <div className="flex gap-3">
-              <button className="px-5 py-2.5 rounded-lg border border-outline-variant/30 text-xs font-semibold text-on-surface hover:bg-surface-container-low transition-colors flex items-center gap-2">
-                <span className="material-symbols-outlined text-[18px]">
-                  download
-                </span>
-                Export CSV
-              </button>
-              <button className="px-5 py-2.5 rounded-lg bg-indigo-600 text-white text-xs font-semibold shadow-sm hover:shadow-indigo-500/20 transition-all flex items-center gap-2">
-                <span className="material-symbols-outlined text-[18px]">
-                  picture_as_pdf
-                </span>
-                Report PDF
-              </button>
-            </div>
-          </div>
-          <div className="grid grid-cols-12 gap-6 mb-12">
-            <div className="col-span-8 bg-surface-container-lowest rounded-xl p-6 border border-slate-100/50 shadow-sm">
-              <div className="flex justify-between items-center mb-8">
-                <div>
-                  <h3 className="text-lg font-semibold tracking-tight text-on-surface">
-                    Hiring Success Rate
-                  </h3>
-                  <p className="text-xs text-slate-400">
-                    Quarterly retention vs. performance metrics
-                  </p>
-                </div>
-                <select className="text-xs font-medium border-none bg-slate-50 rounded-lg py-1 px-3 focus:ring-0">
-                  <option>Last 12 Months</option>
-                  <option>Q3 2024</option>
-                </select>
-              </div>
-              <div className="h-64 relative flex items-end justify-between px-2 gap-4">
-                <div className="absolute inset-0 flex flex-col justify-between">
-                  <div className="w-full border-t border-slate-50 h-px"></div>
-                  <div className="w-full border-t border-slate-50 h-px"></div>
-                  <div className="w-full border-t border-slate-50 h-px"></div>
-                  <div className="w-full border-t border-slate-50 h-px"></div>
-                  <div className="w-full border-t border-slate-50 h-px"></div>
-                </div>
-                {/* <svg className="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 100 40">
-<path d="M0,35 Q10,32 20,25 T40,28 T60,15 T80,10 T100,5" fill="none" stroke="#3525cd" stroke-width="2" vector-effect="non-scaling-stroke"></path>
-<path d="M0,35 Q10,32 20,25 T40,28 T60,15 T80,10 T100,5 L100,40 L0,40 Z" fill="url(#grad1)" opacity="0.1"></path>
-<defs>
-<lineargradient id="grad1" x1="0%" x2="0%" y1="0%" y2="100%">
-<stop offset="0%" style="stop-color:#3525cd;stop-opacity:1"></stop>
-<stop offset="100%" style="stop-color:#3525cd;stop-opacity:0"></stop>
-</lineargradient>
-</defs>
-</svg> */}
+          <div className="mb-10 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+  
+  {/* Left Content */}
+  <div>
+    
+    <span className="mb-2 block text-[10px] font-bold uppercase tracking-[0.2em] text-tertiary">
+      Enterprise Intelligence
+    </span>
 
-                <div className="z-10 flex w-full justify-between mt-auto pt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                  <span>Jan</span>
-                  <span>Mar</span>
-                  <span>May</span>
-                  <span>Jul</span>
-                  <span>Sep</span>
-                  <span>Nov</span>
-                </div>
-              </div>
-            </div>
-            <div className="col-span-4 bg-surface-container-lowest rounded-xl p-6 border border-slate-100/50 shadow-sm flex flex-col">
-              <h3 className="text-lg font-semibold tracking-tight text-on-surface mb-6">
-                Conversion Funnel
-              </h3>
-              <div className="flex-1 flex flex-col gap-2 justify-center">
-                <div className="group relative">
-                  <div className="bg-indigo-600 h-10 w-full rounded-lg opacity-100 flex items-center justify-between px-4 transition-all hover:scale-[1.02]">
-                    <span className="text-[10px] font-bold text-white uppercase tracking-widest">
-                      Applications
-                    </span>
-                    <span className="text-white font-bold text-sm">2,482</span>
-                  </div>
-                </div>
-                <div className="group relative px-4">
-                  <div className="bg-indigo-500 h-10 w-full rounded-lg opacity-85 flex items-center justify-between px-4 transition-all hover:scale-[1.02]">
-                    <span className="text-[10px] font-bold text-white uppercase tracking-widest">
-                      Screening
-                    </span>
-                    <span className="text-white font-bold text-sm">840</span>
-                  </div>
-                </div>
-                <div className="group relative px-8">
-                  <div className="bg-indigo-400 h-10 w-full rounded-lg opacity-70 flex items-center justify-between px-4 transition-all hover:scale-[1.02]">
-                    <span className="text-[10px] font-bold text-white uppercase tracking-widest">
-                      Interview
-                    </span>
-                    <span className="text-white font-bold text-sm">112</span>
-                  </div>
-                </div>
-                <div className="group relative px-12">
-                  <div className="bg-tertiary-container h-10 w-full rounded-lg flex items-center justify-between px-4 transition-all hover:scale-[1.02]">
-                    <span className="text-[10px] font-bold text-on-tertiary-container uppercase tracking-widest">
-                      Offers
-                    </span>
-                    <span className="text-on-tertiary-container font-bold text-sm">
-                      48
-                    </span>
-                  </div>
-                </div>
-                <div className="group relative px-16">
-                  <div className="bg-tertiary h-10 w-full rounded-lg flex items-center justify-between px-4 transition-all hover:scale-[1.02]">
-                    <span className="text-[10px] font-bold text-white uppercase tracking-widest">
-                      Hired
-                    </span>
-                    <span className="text-white font-bold text-sm">42</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-span-6 bg-surface-container-lowest rounded-xl p-6 border border-slate-100/50 shadow-sm">
-              <h3 className="text-lg font-semibold tracking-tight text-on-surface mb-6">
-                Application Volume
-              </h3>
-              <div className="flex items-end justify-between h-48 gap-3 px-2">
-                <div className="flex-1 bg-slate-100 rounded-t-lg relative group transition-all hover:bg-indigo-100">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                    120
-                  </div>
-                </div>
-                <div className="flex-1 bg-slate-100 rounded-t-lg relative group transition-all hover:bg-indigo-100">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                    190
-                  </div>
-                </div>
-                <div className="flex-1 bg-indigo-600 rounded-t-lg relative group transition-all hover:opacity-90">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                    280
-                  </div>
-                </div>
-                <div className="flex-1 bg-slate-100 rounded-t-lg relative group transition-all hover:bg-indigo-100">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                    160
-                  </div>
-                </div>
-                <div className="flex-1 bg-slate-100 rounded-t-lg relative group transition-all hover:bg-indigo-100">
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                    220
-                  </div>
-                </div>
-                <div className="flex-1 bg-slate-100 rounded-t-lg relative group transition-all hover:bg-indigo-100"></div>
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 group-hover:opacity-100 transition-opacity">
-                  130
-                </div>
-              </div>
-            </div>
-            <div className="flex justify-between mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-tighter">
-              <span>Mon</span>
-              <span>Tue</span>
-              <span>Wed</span>
-              <span>Thu</span>
-              <span>Fri</span>
-              <span>Sat</span>
-            </div>
+    <h2 className="text-3xl font-bold leading-none tracking-tight text-on-surface sm:text-4xl">
+      Hiring Analytics
+    </h2>
+
+    <p className="mt-3 max-w-lg text-sm leading-relaxed text-slate-500 font-body">
+      Precision tracking of your recruitment ecosystem. Leverage
+      data-driven insights to optimize department performance and
+      talent acquisition velocity.
+    </p>
+  </div>
+
+  {/* Right Buttons */}
+  <div className="flex flex-wrap gap-3">
+    
+    <button className="flex items-center gap-2 rounded-lg border border-outline-variant/30 px-5 py-2.5 text-xs font-semibold text-on-surface transition-colors hover:bg-surface-container-low">
+      
+      <Download size={18} />
+
+      Export CSV
+    </button>
+
+    <button className="flex items-center gap-2 rounded-lg bg-indigo-600 px-5 py-2.5 text-xs font-semibold text-white shadow-sm transition-all hover:shadow-indigo-500/20">
+      
+      <FileText size={18} />
+
+      Report PDF
+    </button>
+  </div>
+</div>
+          <div className="mb-12 grid grid-cols-1 gap-6 xl:grid-cols-12">
+  
+  {/* Hiring Success Rate */}
+  <div className="rounded-xl border border-slate-100/50 bg-surface-container-lowest p-4 shadow-sm sm:p-6 xl:col-span-8">
+    
+    <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      
+      <div>
+        <h3 className="text-lg font-semibold tracking-tight text-on-surface">
+          Hiring Success Rate
+        </h3>
+
+        <p className="text-xs text-slate-400">
+          Quarterly retention vs. performance metrics
+        </p>
+      </div>
+
+      <select className="rounded-lg border-none bg-slate-50 px-3 py-1 text-xs font-medium focus:ring-0">
+        <option>Last 12 Months</option>
+        <option>Q3 2024</option>
+      </select>
+    </div>
+
+    <div className="relative flex h-64 items-end justify-between gap-4 px-2">
+      
+      {/* Grid Lines */}
+      <div className="absolute inset-0 flex flex-col justify-between">
+        <div className="h-px w-full border-t border-slate-50"></div>
+        <div className="h-px w-full border-t border-slate-50"></div>
+        <div className="h-px w-full border-t border-slate-50"></div>
+        <div className="h-px w-full border-t border-slate-50"></div>
+        <div className="h-px w-full border-t border-slate-50"></div>
+      </div>
+
+      {/* Bottom Labels */}
+      <div className="z-10 mt-auto flex w-full justify-between pt-4 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+        <span>Jan</span>
+        <span>Mar</span>
+        <span>May</span>
+        <span>Jul</span>
+        <span>Sep</span>
+        <span>Nov</span>
+      </div>
+    </div>
+  </div>
+
+  {/* Conversion Funnel */}
+  <div className="flex flex-col rounded-xl border border-slate-100/50 bg-surface-container-lowest p-4 shadow-sm sm:p-6 xl:col-span-4">
+    
+    <h3 className="mb-6 text-lg font-semibold tracking-tight text-on-surface">
+      Conversion Funnel
+    </h3>
+
+    <div className="flex flex-1 flex-col justify-center gap-2">
+      
+      <div className="group relative">
+        <div className="flex h-10 w-full items-center justify-between rounded-lg bg-indigo-600 px-4 opacity-100 transition-all hover:scale-[1.02]">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-white">
+            Applications
+          </span>
+
+          <span className="text-sm font-bold text-white">
+            2,482
+          </span>
+        </div>
+      </div>
+
+      <div className="group relative px-4">
+        <div className="flex h-10 w-full items-center justify-between rounded-lg bg-indigo-500 px-4 opacity-85 transition-all hover:scale-[1.02]">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-white">
+            Screening
+          </span>
+
+          <span className="text-sm font-bold text-white">
+            840
+          </span>
+        </div>
+      </div>
+
+      <div className="group relative px-8">
+        <div className="flex h-10 w-full items-center justify-between rounded-lg bg-indigo-400 px-4 opacity-70 transition-all hover:scale-[1.02]">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-white">
+            Interview
+          </span>
+
+          <span className="text-sm font-bold text-white">
+            112
+          </span>
+        </div>
+      </div>
+
+      <div className="group relative px-12">
+        <div className="flex h-10 w-full items-center justify-between rounded-lg bg-tertiary-container px-4 transition-all hover:scale-[1.02]">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-on-tertiary-container">
+            Offers
+          </span>
+
+          <span className="text-sm font-bold text-on-tertiary-container">
+            48
+          </span>
+        </div>
+      </div>
+
+      <div className="group relative px-16">
+        <div className="flex h-10 w-full items-center justify-between rounded-lg bg-tertiary px-4 transition-all hover:scale-[1.02]">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-white">
+            Hired
+          </span>
+
+          <span className="text-sm font-bold text-white">
+            42
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Application Volume */}
+  <div className="rounded-xl border border-slate-100/50 bg-surface-container-lowest p-4 shadow-sm sm:p-6 xl:col-span-6">
+    
+    <h3 className="mb-6 text-lg font-semibold tracking-tight text-on-surface">
+      Application Volume
+    </h3>
+
+    <div className="relative">
+      
+      <div className="flex h-48 items-end justify-between gap-3 px-2">
+        
+        <div className="group relative flex-1 rounded-t-lg bg-slate-100 transition-all hover:bg-indigo-100">
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 transition-opacity group-hover:opacity-100">
+            120
           </div>
-          <div className="col-span-6 bg-surface-container-lowest rounded-xl p-6 border border-slate-100/50 shadow-sm flex items-center gap-12">
-            <div className="w-40 h-40 rounded-full border-[12px] border-slate-50 flex items-center justify-center relative">
-              <div className="absolute inset-0 rounded-full border-[12px] border-indigo-600 border-t-transparent border-l-transparent transform rotate-45"></div>
-              <div className="absolute inset-0 rounded-full border-[12px] border-tertiary-container border-t-transparent border-r-transparent border-b-transparent transform -rotate-12"></div>
-              <div className="text-center">
-                <span className="block text-2xl font-bold">12</span>
-                <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
-                  Sources
-                </span>
-              </div>
-            </div>
-            <div className="flex-1 space-y-4">
-              <h3 className="text-lg font-semibold tracking-tight text-on-surface">
-                Hiring Sources
-              </h3>
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-indigo-600"></div>
-                    <span className="text-xs font-medium text-slate-600">
-                      Direct Referrals
-                    </span>
-                  </div>
-                  <span className="text-xs font-bold">45%</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-tertiary-container"></div>
-                    <span className="text-xs font-medium text-slate-600">
-                      LinkedIn Talent
-                    </span>
-                  </div>
-                  <span className="text-xs font-bold">30%</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-slate-200"></div>
-                    <span className="text-xs font-medium text-slate-600">
-                      Executive Search
-                    </span>
-                  </div>
-                  <span className="text-xs font-bold">25%</span>
-                </div>
-              </div>
-            </div>
+        </div>
+
+        <div className="group relative flex-1 rounded-t-lg bg-slate-100 transition-all hover:bg-indigo-100">
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 transition-opacity group-hover:opacity-100">
+            190
           </div>
+        </div>
+
+        <div className="group relative flex-1 rounded-t-lg bg-indigo-600 transition-all hover:opacity-90">
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 transition-opacity group-hover:opacity-100">
+            280
+          </div>
+        </div>
+
+        <div className="group relative flex-1 rounded-t-lg bg-slate-100 transition-all hover:bg-indigo-100">
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 transition-opacity group-hover:opacity-100">
+            160
+          </div>
+        </div>
+
+        <div className="group relative flex-1 rounded-t-lg bg-slate-100 transition-all hover:bg-indigo-100">
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 transition-opacity group-hover:opacity-100">
+            220
+          </div>
+        </div>
+
+        <div className="group relative flex-1 rounded-t-lg bg-slate-100 transition-all hover:bg-indigo-100">
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-bold opacity-0 transition-opacity group-hover:opacity-100">
+            130
+          </div>
+        </div>
+      </div>
+
+      {/* Days */}
+      <div className="mt-4 flex justify-between text-[10px] font-bold uppercase tracking-tighter text-slate-400">
+        <span>Mon</span>
+        <span>Tue</span>
+        <span>Wed</span>
+        <span>Thu</span>
+        <span>Fri</span>
+        <span>Sat</span>
+      </div>
+    </div>
+  </div>
+</div>
+          <div className="col-span-6 bg-surface-container-lowest rounded-xl p-6 border border-slate-100/50 shadow-sm flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+  
+  <div className="relative flex items-center justify-center">
+    <div className="w-36 h-36 sm:w-40 sm:h-40 rounded-full border-[12px] border-slate-50 flex items-center justify-center relative">
+      
+      <div className="absolute inset-0 rounded-full border-[12px] border-indigo-600 border-t-transparent border-l-transparent rotate-45"></div>
+
+      <div className="absolute inset-0 rounded-full border-[12px] border-emerald-400 border-t-transparent border-r-transparent border-b-transparent -rotate-12"></div>
+
+      <div className="text-center">
+        <span className="block text-2xl font-bold text-on-surface">
+          12
+        </span>
+
+        <span className="text-[10px] text-slate-400 font-bold uppercase tracking-widest">
+          Sources
+        </span>
+      </div>
+    </div>
+
+    <div className="absolute -bottom-2 -right-2 w-10 h-10 rounded-xl bg-indigo-600 text-white flex items-center justify-center shadow-lg">
+      <PieChart size={18} />
+    </div>
+  </div>
+
+  <div className="flex-1 w-full space-y-5">
+    
+    <div className="flex items-center gap-3">
+      <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
+        <BarChart3 size={20} />
+      </div>
+
+      <div>
+        <h3 className="text-lg font-semibold tracking-tight text-on-surface">
+          Hiring Sources
+        </h3>
+
+        <p className="text-xs text-slate-400">
+          Recruitment channel performance
+        </p>
+      </div>
+    </div>
+
+    <div className="space-y-3">
+      
+      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+        <div className="flex items-center gap-3">
+          <div className="w-3 h-3 rounded-full bg-indigo-600"></div>
+
+          <div className="flex items-center gap-2">
+            <Users size={14} className="text-slate-500" />
+
+            <span className="text-xs font-medium text-slate-600">
+              Direct Referrals
+            </span>
+          </div>
+        </div>
+
+        <span className="text-xs font-bold text-on-surface">
+          45%
+        </span>
+      </div>
+
+      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+        <div className="flex items-center gap-3">
+          <div className="w-3 h-3 rounded-full bg-emerald-400"></div>
+
+          <div className="flex items-center gap-2">
+            <Briefcase size={14} className="text-slate-500" />
+
+            <span className="text-xs font-medium text-slate-600">
+              LinkedIn Talent
+            </span>
+          </div>
+        </div>
+
+        <span className="text-xs font-bold text-on-surface">
+          30%
+        </span>
+      </div>
+
+      <div className="flex items-center justify-between rounded-xl bg-slate-50 px-4 py-3">
+        <div className="flex items-center gap-3">
+          <div className="w-3 h-3 rounded-full bg-slate-300"></div>
+
+          <div className="flex items-center gap-2">
+            <TrendingUp size={14} className="text-slate-500" />
+
+            <span className="text-xs font-medium text-slate-600">
+              Executive Search
+            </span>
+          </div>
+        </div>
+
+        <span className="text-xs font-bold text-on-surface">
+          25%
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
           {/* d */}
-          <div className="bg-surface-container-lowest rounded-xl overflow-hidden border border-slate-100/50 shadow-sm">
-            <div className="p-6 border-b border-slate-50 flex justify-between items-center">
-              <div>
-                <h3 className="text-lg font-semibold tracking-tight text-on-surface">
-                  Time to Hire Velocity
-                </h3>
-                <p className="text-xs text-slate-400">
-                  Efficiency metrics categorized by functional departments
-                </p>
+
+<div className="bg-surface-container-lowest rounded-xl overflow-hidden border border-slate-100/50 shadow-sm">
+  
+  <div className="p-6 border-b border-slate-50 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+    
+    <div>
+      <h3 className="text-lg font-semibold tracking-tight text-on-surface">
+        Time to Hire Velocity
+      </h3>
+
+      <p className="text-xs text-slate-400">
+        Efficiency metrics categorized by functional departments
+      </p>
+    </div>
+
+    <button className="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 uppercase tracking-widest hover:underline">
+      View All Departments
+      <ChevronRight size={14} />
+    </button>
+  </div>
+
+  <div className="overflow-x-auto">
+    <table className="w-full text-left min-w-[700px]">
+      
+      <thead className="bg-slate-50/50">
+        <tr>
+          <th className="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            Department
+          </th>
+
+          <th className="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            Active Roles
+          </th>
+
+          <th className="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            Avg. Time to Hire
+          </th>
+
+          <th className="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+            Trend
+          </th>
+
+          <th className="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-right">
+            Efficiency
+          </th>
+        </tr>
+      </thead>
+
+      <tbody className="divide-y divide-slate-50">
+        
+        <tr className="hover:bg-slate-50/30 transition-colors">
+          
+          <td className="px-6 py-5">
+            <div className="flex items-center gap-3">
+              
+              <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                <Code2 size={18} />
               </div>
-              <button className="text-xs font-bold text-indigo-600 uppercase tracking-widest hover:underline">
-                View All Departments
-              </button>
+
+              <span className="text-sm font-semibold text-on-surface">
+                Engineering
+              </span>
             </div>
-            <table className="w-full text-left">
-              <thead className="bg-slate-50/50">
-                <tr>
-                  <th className="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                    Department
-                  </th>
-                  <th className="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                    Active Roles
-                  </th>
-                  <th className="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                    Avg. Time to Hire
-                  </th>
-                  <th className="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                    Trend
-                  </th>
-                  <th className="px-6 py-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest text-right">
-                    Efficiency
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-slate-50">
-                <tr className="hover:bg-slate-50/30 transition-colors">
-                  <td className="px-6 py-5">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center">
-                        <span className="material-symbols-outlined text-lg">
-                          terminal
-                        </span>
-                      </div>
-                      <span className="text-sm font-semibold text-on-surface">
-                        Engineering
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-5 text-sm text-slate-600">
-                    12 Positions
-                  </td>
-                  <td className="px-6 py-5">
-                    <span className="text-sm font-bold text-on-surface">
-                      32 Days
-                    </span>
-                  </td>
-                  <td className="px-6 py-5">
-                    <div className="flex items-center gap-1 text-emerald-600">
-                      <span className="material-symbols-outlined text-sm">
-                        trending_down
-                      </span>
-                      <span className="text-[10px] font-bold">-4%</span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-5 text-right">
-                    <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase">
-                      Optimal
-                    </span>
-                  </td>
-                </tr>
-                <tr className="hover:bg-slate-50/30 transition-colors">
-                  <td className="px-6 py-5">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-tertiary-container/10 text-tertiary flex items-center justify-center">
-                        <span className="material-symbols-outlined text-lg">
-                          palette
-                        </span>
-                      </div>
-                      <span className="text-sm font-semibold text-on-surface">
-                        Design &amp; Creative
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-5 text-sm text-slate-600">
-                    4 Positions
-                  </td>
-                  <td className="px-6 py-5">
-                    <span className="text-sm font-bold text-on-surface">
-                      24 Days
-                    </span>
-                  </td>
-                  <td className="px-6 py-5">
-                    <div className="flex items-center gap-1 text-emerald-600">
-                      <span className="material-symbols-outlined text-sm">
-                        trending_down
-                      </span>
-                      <span className="text-[10px] font-bold">-12%</span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-5 text-right">
-                    <span className="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-[10px] font-bold uppercase">
-                      Elite
-                    </span>
-                  </td>
-                </tr>
-                <tr className="hover:bg-slate-50/30 transition-colors">
-                  <td className="px-6 py-5">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center">
-                        <span className="material-symbols-outlined text-lg">
-                          payments
-                        </span>
-                      </div>
-                      <span className="text-sm font-semibold text-on-surface">
-                        Sales &amp; Marketing
-                      </span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-5 text-sm text-slate-600">
-                    18 Positions
-                  </td>
-                  <td className="px-6 py-5">
-                    <span className="text-sm font-bold text-on-surface">
-                      45 Days
-                    </span>
-                  </td>
-                  <td className="px-6 py-5">
-                    <div className="flex items-center gap-1 text-rose-600">
-                      <span className="material-symbols-outlined text-sm">
-                        trending_up
-                      </span>
-                      <span className="text-[10px] font-bold">+8%</span>
-                    </div>
-                  </td>
-                  <td className="px-6 py-5 text-right">
-                    <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-[10px] font-bold uppercase">
-                      Warning
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          </td>
+
+          <td className="px-6 py-5 text-sm text-slate-600">
+            12 Positions
+          </td>
+
+          <td className="px-6 py-5">
+            <span className="text-sm font-bold text-on-surface">
+              32 Days
+            </span>
+          </td>
+
+          <td className="px-6 py-5">
+            <div className="flex items-center gap-1 text-emerald-600">
+              <ArrowDown size={16} />
+              <span className="text-[10px] font-bold">
+                -4%
+              </span>
+            </div>
+          </td>
+
+          <td className="px-6 py-5 text-right">
+            <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase">
+              Optimal
+            </span>
+          </td>
+        </tr>
+
+        <tr className="hover:bg-slate-50/30 transition-colors">
+          
+          <td className="px-6 py-5">
+            <div className="flex items-center gap-3">
+              
+              <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                <Palette size={18} />
+              </div>
+
+              <span className="text-sm font-semibold text-on-surface">
+                Design &amp; Creative
+              </span>
+            </div>
+          </td>
+
+          <td className="px-6 py-5 text-sm text-slate-600">
+            4 Positions
+          </td>
+
+          <td className="px-6 py-5">
+            <span className="text-sm font-bold text-on-surface">
+              24 Days
+            </span>
+          </td>
+
+          <td className="px-6 py-5">
+            <div className="flex items-center gap-1 text-emerald-600">
+              <ArrowDown size={16} />
+              <span className="text-[10px] font-bold">
+                -12%
+              </span>
+            </div>
+          </td>
+
+          <td className="px-6 py-5 text-right">
+            <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase">
+              Elite
+            </span>
+          </td>
+        </tr>
+
+        <tr className="hover:bg-slate-50/30 transition-colors">
+          
+          <td className="px-6 py-5">
+            <div className="flex items-center gap-3">
+              
+              <div className="w-8 h-8 rounded-lg bg-slate-100 text-slate-600 flex items-center justify-center">
+                <BriefcaseBusiness size={18} />
+              </div>
+
+              <span className="text-sm font-semibold text-on-surface">
+                Sales &amp; Marketing
+              </span>
+            </div>
+          </td>
+
+          <td className="px-6 py-5 text-sm text-slate-600">
+            18 Positions
+          </td>
+
+          <td className="px-6 py-5">
+            <span className="text-sm font-bold text-on-surface">
+              45 Days
+            </span>
+          </td>
+
+          <td className="px-6 py-5">
+            <div className="flex items-center gap-1 text-rose-600">
+              <ArrowUp size={16} />
+              <span className="text-[10px] font-bold">
+                +8%
+              </span>
+            </div>
+          </td>
+
+          <td className="px-6 py-5 text-right">
+            <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-[10px] font-bold uppercase">
+              Warning
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
         </section>
         <footer className="w-full py-6 mt-auto flex justify-between items-center px-8 border-t border-slate-100">
           <p className="text-xs font-medium uppercase tracking-widest text-slate-400">
