@@ -13,120 +13,8 @@ import { Edit, Inbox, Star, Mail, Eye,
 
 const page = () => {
   return (
-    <div className="bg-background text-on-surface overflow-hidden">
-      <aside className="h-screen w-64 fixed left-0 top-0 bg-slate-50 dark:bg-slate-900 border-r border-slate-200/50 dark:border-slate-800/50 flex flex-col py-8 px-4 font-sans tracking-tight leading-relaxed z-50">
-        <div className="mb-10 px-2">
-          <h1 className="text-lg font-bold text-indigo-700 dark:text-indigo-300">
-            The Curator
-          </h1>
-          <p className="text-xs text-slate-500 uppercase tracking-widest mt-1">
-            Elite Talent Partners
-          </p>
-        </div>
-        <nav className="flex-1 space-y-1">
-          <a
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
-            href="#"
-          >
-            <span className="material-symbols-outlined">dashboard</span>
-            <span className="text-sm font-medium">Dashboard</span>
-          </a>
-          <a
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
-            href="#"
-          >
-            <span className="material-symbols-outlined">add_circle</span>
-            <span className="text-sm font-medium">Post Job</span>
-          </a>
-          <a
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
-            href="#"
-          >
-            <span className="material-symbols-outlined">work</span>
-            <span className="text-sm font-medium">Manage Jobs</span>
-          </a>
-          <a
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
-            href="#"
-          >
-            <span className="material-symbols-outlined">group</span>
-            <span className="text-sm font-medium">Candidates</span>
-          </a>
-          <a
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
-            href="#"
-          >
-            <span className="material-symbols-outlined">event</span>
-            <span className="text-sm font-medium">Interviews</span>
-          </a>
-          <a
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-indigo-700 dark:text-indigo-400 font-semibold border-r-4 border-indigo-600 dark:border-indigo-400 bg-indigo-50/50 dark:bg-indigo-900/20 transition-all"
-            href="#"
-          >
-            <span className="material-symbols-outlined">mail</span>
-            <span className="text-sm">Messages</span>
-          </a>
-          <a
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
-            href="#"
-          >
-            <span className="material-symbols-outlined">insights</span>
-            <span className="text-sm font-medium">Analytics</span>
-          </a>
-          <a
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
-            href="#"
-          >
-            <span className="material-symbols-outlined">business</span>
-            <span className="text-sm font-medium">Company Profile</span>
-          </a>
-          <a
-            className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors duration-200"
-            href="#"
-          >
-            <span className="material-symbols-outlined">settings</span>
-            <span className="text-sm font-medium">Settings</span>
-          </a>
-        </nav>
-        <div className="mt-auto px-2">
-          <button className="w-full bg-primary-container text-white py-3 rounded-xl font-medium shadow-sm hover:opacity-90 active:scale-95 transition-all text-sm">
-            Quick Post
-          </button>
-        </div>
-      </aside>
-      <header className="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 bg-white/80 dark:bg-slate-950/80 backdrop-blur-md flex items-center justify-between px-8 z-40 shadow-sm dark:shadow-none font-sans text-sm tracking-wide">
-        <div className="flex items-center gap-4 flex-1">
-          <div className="relative w-full max-w-md focus-within:ring-2 focus-within:ring-indigo-500/20 rounded-lg">
-            <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">
-              search
-            </span>
-            <input
-              className="w-full bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-0 placeholder:text-slate-400"
-              placeholder="Search conversations or candidates..."
-              type="text"
-            />
-          </div>
-        </div>
-        <div className="flex items-center gap-6">
-          <button className="text-slate-500 dark:text-slate-400 hover:text-indigo-700 transition-colors relative">
-            <span className="material-symbols-outlined">notifications</span>
-            <span className="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
-          </button>
-          <div className="h-8 w-px bg-slate-200 dark:bg-slate-800"></div>
-          <div className="flex items-center gap-3">
-            <span className="font-medium text-slate-700 dark:text-slate-200">
-              The Editorial Executive
-            </span>
-            <img
-              alt="Recruiter profile"
-              className="h-8 w-8 rounded-full object-cover"
-              data-alt="professional portrait of a confident recruitment executive in a modern bright office setting with soft natural light"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwsJB1f1mCDNwC5vo5VgXnIngJ_5iw2p3-FTmN4_7SOwg-6NnLwB8xK8MIEoIG4CbpAuayJsplHtEJFcgeSWtbfx6guftksVigc8AnJEHEuhuj7mdUgSEJeFZpNvb90wC3pASTg3B_zgHt_Cd7hxvhr1rBrqfp8qOeNVHuGHcmZv-3V_e6tm3PU610ncj760pnODXzWd_GTGFjRR9USB69jUCsD-OK4h_gtXQaV7qp6jBwLQQRBNUAFIQlauO_t40BwTTahE5VpOaQ"
-            />
-          </div>
-        </div>
-      </header>
-      <main className="ml-64 pt-16 h-screen flex">
+    <div >      
+      <div className="h-screen flex">
         <section className="w-full sm:w-[380px] h-full flex flex-col bg-surface-container-low border-r border-outline-variant/20 overflow-hidden">
       
       {/* Header */}
@@ -442,7 +330,7 @@ const page = () => {
         </div>
       </footer>
     </section>
-      </main>
+      </div>
       <footer className="w-full py-6 mt-auto border-t border-slate-100 dark:border-slate-800 flex justify-between items-center px-8 w-[calc(100%-16rem)] ml-64 z-10 bg-white">
         <span className="text-xs font-medium uppercase tracking-widest text-slate-400">
           © 2024 Editorial Executive Recruitment. All rights reserved.
